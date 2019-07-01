@@ -1,0 +1,283 @@
+@font-face {
+ font-family: EnvyCodeRWeb;
+ src: url(/assets/fonts/envy_code_r-webfont.eot);
+ src: url(/assets/fonts/envy_code_r-webfont.woff) format('woff');
+ src: url(/assets/fonts/envy_code_r-webfont.ttf) format('truetype');
+ font-weight: 400;
+ font-style: normal;
+}
+
+.logo__text {
+  font-family: 'Oswald', sans-serif;
+  color: black;
+}
+.logo__text .hash {
+  font-weight: 500;
+  font-size: 20px;
+  color: #aaa;
+}
+
+.dark-theme .logo__text {
+  color: #ddd;
+}
+
+.post pre code {
+  font-family: EnvyCodeRWeb,Inter,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Helvetica,Arial,sans-serif;
+}
+
+.post pre.plain {
+  background: transparent;
+}
+
+header.header {
+  padding: 6px;
+}
+
+header a.logo {
+  padding: 0 6px;
+  display: inline;
+  line-height: 21px;
+}
+
+header .header__inner {
+  width: 800px;
+}
+
+pre code {
+  color: #ddd;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+.dark-theme pre code {
+  color: #ccc;
+}
+
+nav.menu a,
+nav.menu ul {
+  padding: 10px;
+  color: #666;
+  font-family: 'Oswald', sans-serif;
+  font-variant: all-petite-caps;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 10px;
+}
+
+.menu__sub-inner-more a:hover {
+  background: transparent !important;
+}
+
+a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+button a:hover {
+  background: transparent;
+}
+
+.content aside {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.content h2 {
+  font-size: 1.2rem;
+}
+
+.content h3 {
+  font-size: 1.1rem;
+}
+
+.content .taxonomy h1,
+.content .archive h1,
+.content .posts h1,
+.content .post h1 {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.content .taxonomy {
+  width: 800px;
+  text-align: left;
+}
+
+.content .taxonomy .terms {
+  font-family: EnvyCodeRWeb,Inter,monospace;
+}
+
+.content .taxonomy h1 {
+  padding: 0 0 8px;
+  border-bottom: 2px solid #333;
+}
+
+.content .taxonomy ul {
+  list-style-type: none;
+  text-align: left;
+  font-weight: lighter;
+  margin: 20px 0;
+}
+
+.content .taxonomy .count {
+  color: #777;
+}
+
+.content .taxonomy ul a {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.content .taxonomy ul a:hover {
+  text-decoration: underline;
+}
+
+.content .archive {
+  max-width: 800px;
+  padding: 0;
+}
+
+.content .archive h1 {
+  padding: 0 0 8px;
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+}
+
+.content .archive h2 {
+  font-size: 1rem;
+}
+
+.content .archive h3 {
+  font-size: 0.9rem;
+  margin: 0 0 10px;
+}
+
+.content .archive__group-month {
+  padding: 0;
+}
+
+.content .archive .archive__post {
+  padding: 0;
+}
+
+.content .archive .archive__post-date {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #aaa;
+}
+
+.content .archive .archive__post-title {
+  margin-bottom: 0;
+}
+
+.content .archive .archive__post-title a {
+  display: inline;
+}
+
+.content .archive .archive__group-year {
+  margin: 0;
+}
+
+.content .archive .archive__group-month {
+  border: none;
+  margin-bottom: 6px;
+}
+
+.archive__post {
+  border-bottom: none !important;
+}
+
+.content .post-meta {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #aaa;
+  margin: 2px 0;
+}
+
+.content .post {
+  min-width: 600px;
+  padding: 0;
+}
+
+.content .post:not(:last-of-type) {
+  border-bottom: 1px dotted var(--light-border-color);
+}
+
+.dark-theme .content .post:not(:last-of-type) {
+  border-bottom: 1px dotted var(--dark-border-color);
+}
+
+.content .post .read-more {
+  font-variant: all-petite-caps;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.8;
+  padding: 0 6px;
+  color: #666;
+}
+
+.content .post .read-more:hover {
+  opacity: 1;
+}
+
+.post-tags {
+  font-family: EnvyCodeRWeb,Inter,monospace;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.post-content {
+  font-weight: normal;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.post-content .highlight > div {
+  background: transparent !important;
+}
+
+.post-content .highlight table td:last-child {
+  width: 100%;
+}
+
+.post-content .highlight table pre {
+  border-radius: 0;
+}
+
+.footer__inner {
+  display: block;
+}
+
+.footer .copyright {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: lighter;
+}
+
+.dark-theme a:hover {
+  color: #eee;
+}
+
+.button {
+  font-weight: lighter;
+  font-size: 0.85rem;
+  font-variant: all-petite-caps;
+  border-radius: 3px;
+}
+
+.button a {
+  padding: 5px 10px;
+}
+
+.dark-theme .button a:hover {
+  background: #666;
+  border-radius: 3px;
+  color: #eee;
+}
+
+.dark-theme .content .posts h1 {
+  color: #ccc;
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Emacs Windows Switching :: Bit side of life — Technical notes of digital heart</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?
+The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://example.org/posts/emacs-windows-switching/" />
+
+
+
+
+
+<link rel="stylesheet" href="http://example.org/assets/style.css">
+
+
+<link rel="stylesheet" href="http://example.org/style.css">
+
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+
+<link rel="shortcut icon" href="http://example.org/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Emacs Windows Switching :: Bit side of life — Technical notes of digital heart" />
+<meta name="twitter:description" content="It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?
+The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows." />
+<meta name="twitter:site" content="http://example.org/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Emacs Windows Switching :: Bit side of life — Technical notes of digital heart">
+<meta property="og:description" content="It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?
+The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows." />
+<meta property="og:url" content="http://example.org/posts/emacs-windows-switching/" />
+<meta property="og:site_name" content="Emacs Windows Switching" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2016-10-09 00:00:00 &#43;0200 CEST" />
+
+
+
+  
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text"> <span class="hash"> :: </span> bit side of life  <span class="hash"> :: </span> </span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/"> Blog</a></li>
+        
+      
+        
+          <li><a href="/about">About me</a></li>
+        
+      
+        
+          <li><a href="/archive">Archive</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/"> Blog</a></li>
+      
+    
+      
+        <li><a href="/about">About me</a></li>
+      
+    
+      
+        <li><a href="/archive">Archive</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h1 class="post-title"><a href="http://example.org/posts/emacs-windows-switching/">Emacs Windows Switching</a></h1>
+    
+      <span class="post-tags">
+        
+          #<a href="http://example.org/tags/emacs/">emacs</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?</p>
+
+<p>The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows. Well, good luck with selecting windows this way longer than a day.</p>
+
+<p>But hey, there is a hope. Default windows switching is so insane that lot of people tried to address this problem with additional packages. One of the most popular is <a href="https://melpa.org/#/window-numbering">window numbering</a>:</p>
+
+<blockquote>
+<p>Enable window-numbering-mode and use M-1 through M-0 to navigate.</p>
+</blockquote>
+
+<p>Yup, that’s what we really need - simple shortcuts to activate immediately each window in a frame. But there is something more. Having frame split into multiple windows sooner or later makes some of them awfully hard to use beacuse of little space they occupy. Time to introduce a real hero - <a href="https://melpa.org/#/golden-ratio">golden ratio</a> package which resizes seleted windows to the size specified in the <a href="https://en.wikipedia.org/wiki/Golden%5Fratio">“Golden Ratio”</a>. Sounds cool, works even cooler when bound with shortcuts provided by window-numbering:</p>
+
+<pre><code class="language-lisp">(defadvice select-window-by-number (after select-window activate)
+  (golden-ratio))
+</code></pre>
+
+<p>This is how it looks like in action:</p>
+
+<p><video width="790" controls>
+  <source src="/images/emacs-window-switching.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video></p>
+
+    </div>
+
+    <div class="post-meta">
+      
+        <span class="post-date">
+            Edited on: &nbsp; 9 Oct 2016
+        </span>
+      
+      
+      
+    </div>
+
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="http://example.org/posts/bootize-your-project/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Boot-ize your project</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="http://example.org/posts/clojure-for-fun-and-profit/">
+                <span class="button__text">Clojure for fun &amp; profit</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="http://example.org/assets/main.js"></script>
+<script src="http://example.org/assets/prism.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>

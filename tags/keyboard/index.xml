@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>keyboard on Bit side of life</title>
+    <link>http://example.org/tags/keyboard/</link>
+    <description>Recent content in keyboard on Bit side of life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Jul 2012 00:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/keyboard/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How fast you type?</title>
+      <link>http://example.org/posts/how-fast-you-type/</link>
+      <pubDate>Mon, 09 Jul 2012 00:00:00 +0200</pubDate>
+      
+      <guid>http://example.org/posts/how-fast-you-type/</guid>
+      <description>&lt;p&gt;I found recently brilliant page, I’d like to share with. &lt;a href=&#34;http://play.typeracer.com/&#34;&gt;TypeRacer&lt;/a&gt; is the place where you can measure your typing speed and compare it with other participants. One word of warning - it’s horribly addicting.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

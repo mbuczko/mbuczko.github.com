@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>The Kill Ring :: Bit side of life — Technical notes of digital heart</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Sounds scary, but it’s not about killing (this time). Kill ring is a term used in Emacs to describe a list of cut (killed) blocks of text. Yes, that’s right. It’s about mutliple blocks of text that you can cut and paste. Emacs as an extraoridinary editor gives you ability to keep the history of what you have just killed. Be sure to close it before you start doing nasty things :)"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://example.org/posts/the-kill-ring/" />
+
+
+
+
+
+<link rel="stylesheet" href="http://example.org/assets/style.css">
+
+
+<link rel="stylesheet" href="http://example.org/style.css">
+
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+
+<link rel="shortcut icon" href="http://example.org/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="The Kill Ring :: Bit side of life — Technical notes of digital heart" />
+<meta name="twitter:description" content="Sounds scary, but it’s not about killing (this time). Kill ring is a term used in Emacs to describe a list of cut (killed) blocks of text. Yes, that’s right. It’s about mutliple blocks of text that you can cut and paste. Emacs as an extraoridinary editor gives you ability to keep the history of what you have just killed. Be sure to close it before you start doing nasty things :)" />
+<meta name="twitter:site" content="http://example.org/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Kill Ring :: Bit side of life — Technical notes of digital heart">
+<meta property="og:description" content="Sounds scary, but it’s not about killing (this time). Kill ring is a term used in Emacs to describe a list of cut (killed) blocks of text. Yes, that’s right. It’s about mutliple blocks of text that you can cut and paste. Emacs as an extraoridinary editor gives you ability to keep the history of what you have just killed. Be sure to close it before you start doing nasty things :)" />
+<meta property="og:url" content="http://example.org/posts/the-kill-ring/" />
+<meta property="og:site_name" content="The Kill Ring" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2011-12-16 00:00:00 &#43;0100 CET" />
+
+
+
+  
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text"> <span class="hash"> :: </span> bit side of life  <span class="hash"> :: </span> </span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/"> Blog</a></li>
+        
+      
+        
+          <li><a href="/about">About me</a></li>
+        
+      
+        
+          <li><a href="/archive">Archive</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/"> Blog</a></li>
+      
+    
+      
+        <li><a href="/about">About me</a></li>
+      
+    
+      
+        <li><a href="/archive">Archive</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h1 class="post-title"><a href="http://example.org/posts/the-kill-ring/">The Kill Ring</a></h1>
+    
+      <span class="post-tags">
+        
+          #<a href="http://example.org/tags/emacs/">emacs</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>Sounds scary, but it’s not about killing (this time). Kill ring is a term used in Emacs to describe a list of cut (killed) blocks of text. Yes, that’s right. It’s about mutliple blocks of text that you can cut and paste. Emacs as an extraoridinary editor gives you ability to keep the history of what you have just killed. Be sure to close it before you start doing nasty things :)</p>
+
+<p>Ok, so how to use our all-remembe-ring? Easy, as usual you need to tranform to octopus and put your 8 hands on a keyboard:</p>
+
+<ul>
+<li>the <code>C-y</code> (yank) reinserts the text of the most recent copy/cut action</li>
+<li>use <code>M-y</code> to iterate through the copy/cut history</li>
+</ul>
+
+<p>For example, you might want to copy 2 block of text and subsequently paste them somewhere into your buffer. To do this, select first block and copy it (<code>M-w</code>), do the same with second block. Next, go to place where you want to paste it, press <code>C-y</code> (for most recent copied block) or <code>C-y M-y</code> for block(s) copied earlier.</p>
+
+<p>Sometimes iterating through history might be a bit painful, in particluar when your history grows very dynamically. In this case we would like rather to see what’s in the kill ring and more interactively decide what to paste.</p>
+
+<p><em>browse-kill-ring.el</em> comes to rescue. put this into your load path, make it required:</p>
+
+<pre><code class="language-lisp">(require 'browse-kill-ring)
+</code></pre>
+
+<p>and use whenever you want with <code>M-x browse-kill-ring</code>.</p>
+
+<p>To move faster between history items, use n (for next) and p (for previous) keyboard shortcuts.</p>
+
+<p>But that’s not the real fun. The real fun comes when you discover <a href="http://www.emacswiki.org/emacs/Anything">anything</a>. Install it along with <a href="http://www.emacswiki.org/emacs/anything-config.el">anything-config</a> and enjoy awesome <code>anything-show-kill-ring</code>.</p>
+
+    </div>
+
+    <div class="post-meta">
+      
+        <span class="post-date">
+            Edited on: &nbsp; 16 Dec 2011
+        </span>
+      
+      
+      
+    </div>
+
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="http://example.org/posts/interactive-search-rediscovered/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Interactive search rediscovered</span>
+              </a>
+            </span>
+          
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="http://example.org/assets/main.js"></script>
+<script src="http://example.org/assets/prism.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>

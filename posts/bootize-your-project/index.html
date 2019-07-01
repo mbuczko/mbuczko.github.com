@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Boot-ize your project :: Bit side of life — Technical notes of digital heart</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Maven or gradle? Grunt or gulp? Leiningen or boot…?
+It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://example.org/posts/bootize-your-project/" />
+
+
+
+
+
+<link rel="stylesheet" href="http://example.org/assets/style.css">
+
+
+<link rel="stylesheet" href="http://example.org/style.css">
+
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+
+<link rel="shortcut icon" href="http://example.org/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Boot-ize your project :: Bit side of life — Technical notes of digital heart" />
+<meta name="twitter:description" content="Maven or gradle? Grunt or gulp? Leiningen or boot…?
+It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision." />
+<meta name="twitter:site" content="http://example.org/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Boot-ize your project :: Bit side of life — Technical notes of digital heart">
+<meta property="og:description" content="Maven or gradle? Grunt or gulp? Leiningen or boot…?
+It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision." />
+<meta property="og:url" content="http://example.org/posts/bootize-your-project/" />
+<meta property="og:site_name" content="Boot-ize your project" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2016-10-09 00:00:00 &#43;0200 CEST" />
+
+
+
+  
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text"> <span class="hash"> :: </span> bit side of life  <span class="hash"> :: </span> </span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/"> Blog</a></li>
+        
+      
+        
+          <li><a href="/about">About me</a></li>
+        
+      
+        
+          <li><a href="/archive">Archive</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/"> Blog</a></li>
+      
+    
+      
+        <li><a href="/about">About me</a></li>
+      
+    
+      
+        <li><a href="/archive">Archive</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h1 class="post-title"><a href="http://example.org/posts/bootize-your-project/">Boot-ize your project</a></h1>
+    
+      <span class="post-tags">
+        
+          #<a href="http://example.org/tags/clojure/">clojure</a>&nbsp;
+        
+          #<a href="http://example.org/tags/emacs/">emacs</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>Maven or gradle? Grunt or gulp? Leiningen or boot…?</p>
+
+<p>It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision. In particular it’s noticeable in javascript world where new ideas emerge with the speed of light. Do you know what’s the usual lifetime of shiny new javascript library, one of 4 hundreds coming out daily? Well, I don’t know too but I guess you wouldn’t be able to complete a todo app before the library of your choice became deprecated :)</p>
+
+<p>Speaking of project building tools, as a Clojurists we happily sit in a comfort zone. Up until recently, there was only one way to keep your clojure project organized - <a href="http://http//leiningen.org/">Leiningen</a>. Elegant declarative way which leiningen used to describe entire project with all its dependencies and profiles immediately reminded me of maven tons of hand-crafted pom.xmls. Easy when you finally get it, extremally hard when you try to customize.</p>
+
+<p>Right on the other corner stands Boot. Instead of declarative DSL it gives a full power of Clojure - each task is just a Clojure function. It’s even more fun when you realize that boot tasks can be called (just as regular functions) straight from REPL. Having seen that first time crazy idea sparkled in my mind…</p>
+
+<p>I guess every Clojurist already read <a href="http://thinkrelevance.com/blog/2013/06/04/clojure-workflow-reloaded">Clojure Workflow Reloaded</a>. General idea behind is dead simple. To have a reloadable “system” one needs to implement start/stop/reset functions and call them to start the system, to stop it and reload when needed. Now, let’s assume we have it already written, it works as expected and the only pain is to switch to repl and call our reset function each time something substantial has changed in our app.</p>
+
+<p>Wouldn’t it be nicer to have resetting under the Emacs shortcut so every Clojure project following Stuart’s reloadable flow (ie. having system start/stop/reset implemented) could be restarted just by a simple key stroke?</p>
+
+<p>This is where Boot really shines. To have system reloadable by Boot we need to implement reset task:</p>
+
+<pre><code class="language-clojure">(require '[foo.system])
+
+(deftask reset
+  &quot;Restarts system&quot;
+  []
+  (foo.system/reset))
+</code></pre>
+
+<p>Each boot-ized project following this simple rule immediately becomes reset-able just by calling boot.user/reset. That simply means, we could evaluate it directly from Emacs connected to REPL via glorious Cider:</p>
+
+<pre><code class="language-clojure">(defun repl-reset ()
+  &quot;Sends (reset) to currently running repl&quot;
+  (interactive)
+  (save-buffer)
+  (cider-interactive-eval &quot;(boot.user/reset)&quot;))
+
+(global-set-key (kbd &quot;C-x x&quot;) 'repl-reset)
+</code></pre>
+
+<p>Have a nice system resets ;)</p>
+
+    </div>
+
+    <div class="post-meta">
+      
+        <span class="post-date">
+            Edited on: &nbsp; 9 Oct 2016
+        </span>
+      
+      
+      
+    </div>
+
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="http://example.org/posts/focus-mode/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Focus Mode</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="http://example.org/posts/emacs-windows-switching/">
+                <span class="button__text">Emacs Windows Switching</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="http://example.org/assets/main.js"></script>
+<script src="http://example.org/assets/prism.js"></script>
+
+
+  
+</div>
+
+</body>
+</html>

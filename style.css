@@ -198,8 +198,6 @@ button a:hover {
 }
 
 .content .post {
-  min-width: 600px;
-  padding: 0;
 }
 
 .content .post:not(:last-of-type) {

@@ -2,75 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Bit side of life</title>
-    <link>http://example.org/tags/</link>
+    <link>https://blog.bitside.pl/tags/</link>
     <description>Recent content in Tags on Bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 12 Oct 2016 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.bitside.pl/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>emacs</title>
-      <link>http://example.org/tags/emacs/</link>
+      <link>https://blog.bitside.pl/tags/emacs/</link>
       <pubDate>Wed, 12 Oct 2016 00:00:00 +0200</pubDate>
       
-      <guid>http://example.org/tags/emacs/</guid>
+      <guid>https://blog.bitside.pl/tags/emacs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>clojure</title>
-      <link>http://example.org/tags/clojure/</link>
+      <link>https://blog.bitside.pl/tags/clojure/</link>
       <pubDate>Sun, 09 Oct 2016 00:00:00 +0200</pubDate>
       
-      <guid>http://example.org/tags/clojure/</guid>
+      <guid>https://blog.bitside.pl/tags/clojure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>javascript</title>
-      <link>http://example.org/tags/javascript/</link>
+      <link>https://blog.bitside.pl/tags/javascript/</link>
       <pubDate>Mon, 16 Jul 2012 00:00:00 +0200</pubDate>
       
-      <guid>http://example.org/tags/javascript/</guid>
+      <guid>https://blog.bitside.pl/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>keyboard</title>
-      <link>http://example.org/tags/keyboard/</link>
+      <link>https://blog.bitside.pl/tags/keyboard/</link>
       <pubDate>Mon, 09 Jul 2012 00:00:00 +0200</pubDate>
       
-      <guid>http://example.org/tags/keyboard/</guid>
+      <guid>https://blog.bitside.pl/tags/keyboard/</guid>
       <description></description>
     </item>
     
     <item>
       <title>octopress</title>
-      <link>http://example.org/tags/octopress/</link>
+      <link>https://blog.bitside.pl/tags/octopress/</link>
       <pubDate>Wed, 04 Jul 2012 00:00:00 +0200</pubDate>
       
-      <guid>http://example.org/tags/octopress/</guid>
+      <guid>https://blog.bitside.pl/tags/octopress/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gnus</title>
-      <link>http://example.org/tags/gnus/</link>
+      <link>https://blog.bitside.pl/tags/gnus/</link>
       <pubDate>Fri, 30 Mar 2012 00:00:00 +0200</pubDate>
       
-      <guid>http://example.org/tags/gnus/</guid>
+      <guid>https://blog.bitside.pl/tags/gnus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>orgmode</title>
-      <link>http://example.org/tags/orgmode/</link>
+      <link>https://blog.bitside.pl/tags/orgmode/</link>
       <pubDate>Wed, 04 Jan 2012 00:00:00 +0100</pubDate>
       
-      <guid>http://example.org/tags/orgmode/</guid>
+      <guid>https://blog.bitside.pl/tags/orgmode/</guid>
       <description></description>
     </item>
     

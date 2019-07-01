@@ -3,146 +3,146 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/posts/focus-mode/</loc>
+    <loc>https://blog.bitside.pl/posts/focus-mode/</loc>
     <lastmod>2016-10-12T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/bootize-your-project/</loc>
+    <loc>https://blog.bitside.pl/posts/bootize-your-project/</loc>
     <lastmod>2016-10-09T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/emacs-windows-switching/</loc>
+    <loc>https://blog.bitside.pl/posts/emacs-windows-switching/</loc>
     <lastmod>2016-10-09T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/clojure-for-fun-and-profit/</loc>
+    <loc>https://blog.bitside.pl/posts/clojure-for-fun-and-profit/</loc>
     <lastmod>2015-08-02T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/swank-js/</loc>
+    <loc>https://blog.bitside.pl/posts/swank-js/</loc>
     <lastmod>2012-07-16T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/how-fast-you-type/</loc>
+    <loc>https://blog.bitside.pl/posts/how-fast-you-type/</loc>
     <lastmod>2012-07-09T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/javascript-programming/</loc>
+    <loc>https://blog.bitside.pl/posts/javascript-programming/</loc>
     <lastmod>2012-07-05T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/be-social/</loc>
+    <loc>https://blog.bitside.pl/posts/be-social/</loc>
     <lastmod>2012-07-04T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/moving-to-octopress/</loc>
+    <loc>https://blog.bitside.pl/posts/moving-to-octopress/</loc>
     <lastmod>2012-07-04T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/gnus/</loc>
+    <loc>https://blog.bitside.pl/posts/gnus/</loc>
     <lastmod>2012-03-30T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/get-notified/</loc>
+    <loc>https://blog.bitside.pl/posts/get-notified/</loc>
     <lastmod>2012-01-04T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/world-of-bookmarks/</loc>
+    <loc>https://blog.bitside.pl/posts/world-of-bookmarks/</loc>
     <lastmod>2012-01-02T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/interactive-search-rediscovered/</loc>
+    <loc>https://blog.bitside.pl/posts/interactive-search-rediscovered/</loc>
     <lastmod>2011-12-16T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/the-kill-ring/</loc>
+    <loc>https://blog.bitside.pl/posts/the-kill-ring/</loc>
     <lastmod>2011-12-16T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://blog.bitside.pl/</loc>
     <lastmod>2016-10-12T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://blog.bitside.pl/posts/</loc>
     <lastmod>2016-10-12T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://blog.bitside.pl/tags/</loc>
     <lastmod>2016-10-12T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/emacs/</loc>
+    <loc>https://blog.bitside.pl/tags/emacs/</loc>
     <lastmod>2016-10-12T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/clojure/</loc>
+    <loc>https://blog.bitside.pl/tags/clojure/</loc>
     <lastmod>2016-10-09T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/javascript/</loc>
+    <loc>https://blog.bitside.pl/tags/javascript/</loc>
     <lastmod>2012-07-16T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/keyboard/</loc>
+    <loc>https://blog.bitside.pl/tags/keyboard/</loc>
     <lastmod>2012-07-09T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/octopress/</loc>
+    <loc>https://blog.bitside.pl/tags/octopress/</loc>
     <lastmod>2012-07-04T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/gnus/</loc>
+    <loc>https://blog.bitside.pl/tags/gnus/</loc>
     <lastmod>2012-03-30T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/orgmode/</loc>
+    <loc>https://blog.bitside.pl/tags/orgmode/</loc>
     <lastmod>2012-01-04T00:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/archive/</loc>
+    <loc>https://blog.bitside.pl/archive/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://blog.bitside.pl/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/about/</loc>
+    <loc>https://blog.bitside.pl/about/</loc>
   </url>
   
 </urlset>

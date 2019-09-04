@@ -155,15 +155,6 @@ This flow C-s C-w C-w M-s o selects 2 words starting at current cursor position 
     </item>
     
     <item>
-      <title>Archive</title>
-      <link>https://blog.bitside.pl/archive/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.bitside.pl/archive/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>about me</title>
       <link>https://blog.bitside.pl/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -173,6 +164,15 @@ This flow C-s C-w C-w M-s o selects 2 words starting at current cursor position 
 Natural born polyglot programmer, starting a day with cup of espresso and Clojure REPL. Coding, evaluating, testing, deploying. Beliver of church of Emacs (but hey, I know how to quit vim ;-) notoriously learning, obsessively reading.
 # more
 Linked-In ‧ Github ‧ Keybase ‧ Twitter</description>
+    </item>
+    
+    <item>
+      <title>Archive</title>
+      <link>https://blog.bitside.pl/archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.bitside.pl/archive/</guid>
+      <description></description>
     </item>
     
   </channel>

@@ -75,61 +75,55 @@
   <url>
     <loc>https://blog.bitside.pl/</loc>
     <lastmod>2016-10-12T00:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitside.pl/posts/</loc>
-    <lastmod>2016-10-12T00:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitside.pl/tags/</loc>
-    <lastmod>2016-10-12T00:00:00+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.bitside.pl/tags/emacs/</loc>
     <lastmod>2016-10-12T00:00:00+02:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitside.pl/posts/</loc>
+    <lastmod>2016-10-12T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitside.pl/tags/</loc>
+    <lastmod>2016-10-12T00:00:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.bitside.pl/tags/clojure/</loc>
     <lastmod>2016-10-09T00:00:00+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.bitside.pl/tags/javascript/</loc>
     <lastmod>2012-07-16T00:00:00+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.bitside.pl/tags/keyboard/</loc>
     <lastmod>2012-07-09T00:00:00+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.bitside.pl/tags/octopress/</loc>
     <lastmod>2012-07-04T00:00:00+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.bitside.pl/tags/gnus/</loc>
     <lastmod>2012-03-30T00:00:00+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.bitside.pl/tags/orgmode/</loc>
     <lastmod>2012-01-04T00:00:00+01:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitside.pl/about/</loc>
   </url>
   
   <url>
@@ -138,11 +132,6 @@
   
   <url>
     <loc>https://blog.bitside.pl/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitside.pl/about/</loc>
   </url>
   
 </urlset>

@@ -17,6 +17,7 @@ Lot of arcticles have been already written about Clojure and why it’s so attra
 
 
 <link rel="stylesheet" href="https://blog.bitside.pl/assets/style.css">
+<link rel="stylesheet" href="https://blog.bitside.pl/assets/prism.css">
 
 
 <link rel="stylesheet" href="https://blog.bitside.pl/style.css">
@@ -170,21 +171,19 @@ Lot of arcticles have been already written about Clojure and why it’s so attra
 
 <li><p>Read-Eval-Print-Loop (REPL). Since I used it first time, I knew I’ve just became REPL Driven Developer. Honestly, this is first time I could bring my weird ideas immediately into live just by pasting code into REPL and see the result. No recompilation, no restarts, just me and my idea without any technical obstacles. This is how I imagine instant prototyping and the productivity boost I experienced was tremendous.</p></li>
 
-<li><p>Functions as an API. It isn’t something raised up very often but having the code split into namespaces and structured well enough (+ some macro sugar added) you quickly discover that recently popular fluent API DSLs so horrible to write in Java are apparently pleasure to design in Clojure. With a few functions you may get something like this for free (sample from my branch of flux - clojure client for Solr):</p></li>
-</ul>
+<li><p>Functions as an API. It isn’t something raised up very often but having the code split into namespaces and structured well enough (+ some macro sugar added) you quickly discover that recently popular fluent API DSLs so horrible to write in Java are apparently pleasure to design in Clojure. With a few functions you may get something like this for free (sample from my branch of flux - clojure client for Solr):</p>
 
 <pre><code class="language-clojure">(use 'flux.criteria)
 
 (with-filter
-   (or
-     (has :description &quot;nówka sztuka&quot;)
-     (and
-        (is :currency &quot;PLN&quot;)
-        (between :price [5000 15000]))))
-</code></pre>
+(or
+ (has :description &quot;nówka sztuka&quot;)
+ (and
+    (is :currency &quot;PLN&quot;)
+    (between :price [5000 15000]))))
+</code></pre></li>
 
-<ul>
-<li>No frameworks. That’s the least impressive but very important point. Coming into Clojure world you immediately discover there are no fully blown web frameworks, dependency injection frameworks, whatsoever frameworks. Seems sad at the beginning but while your experience grow you realise it’s much easier to grab few popular libraries and tie them together by yourself rather than spend next few months on debugging framework code and wonder how to implement a thing that wasn’t planned by framework creators before.</li>
+<li><p>No frameworks. That’s the least impressive but very important point. Coming into Clojure world you immediately discover there are no fully blown web frameworks, dependency injection frameworks, whatsoever frameworks. Seems sad at the beginning but while your experience grow you realise it’s much easier to grab few popular libraries and tie them together by yourself rather than spend next few months on debugging framework code and wonder how to implement a thing that wasn’t planned by framework creators before.</p></li>
 </ul>
 
 <p>Still interested in Clojure? Good to hear. In a next few posts I’ll try to describe in detail few libraries/tools that impressed me the most while I was experimenting with Clojure functional programming. To have a track of all articles and repositories that occured to be really useful I’ve created a github repo containing all the links: <a href="https://github.com/mbuczko/awesome-clojure">awesome-clojure</a>.</p>

@@ -172,6 +172,10 @@ button a:hover {
   color: #aaa;
 }
 
+.dark-theme .content .archive .archive__post-date {
+  color: #668;
+}
+
 .content .archive .archive__post-title {
   margin-bottom: 0;
 }

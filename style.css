@@ -57,13 +57,13 @@ blockquote {
 
 nav.menu a,
 nav.menu ul {
-  padding: 10px;
   color: #666;
   font-family: 'Oswald', sans-serif;
   font-variant: all-petite-caps;
-  font-size: 1.04rem;
-  font-weight: 500;
-  line-height: 10px;
+  font-size: 1.05em;
+  font-weight: 400;
+  position: relative;
+  top: -.05em;
 }
 
 .menu__sub-inner-more a:hover {

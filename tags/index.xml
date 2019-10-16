@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Bit side of life</title>
+    <title>Tags on bit side of life</title>
     <link>https://blog.bitside.pl/tags/</link>
-    <description>Recent content in Tags on Bit side of life</description>
+    <description>Recent content in Tags on bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Oct 2016 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2019 17:16:00 +0200</lastBuildDate>
     
 	<atom:link href="https://blog.bitside.pl/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>emacs</title>
       <link>https://blog.bitside.pl/tags/emacs/</link>
-      <pubDate>Wed, 12 Oct 2016 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 16 Oct 2019 17:16:00 +0200</pubDate>
       
       <guid>https://blog.bitside.pl/tags/emacs/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title>clojure</title>
       <link>https://blog.bitside.pl/tags/clojure/</link>
-      <pubDate>Sun, 09 Oct 2016 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 09 Oct 2016 13:40:00 +0200</pubDate>
       
       <guid>https://blog.bitside.pl/tags/clojure/</guid>
       <description></description>
@@ -32,7 +32,7 @@
     <item>
       <title>javascript</title>
       <link>https://blog.bitside.pl/tags/javascript/</link>
-      <pubDate>Mon, 16 Jul 2012 00:00:00 +0200</pubDate>
+      <pubDate>Mon, 16 Jul 2012 21:20:00 +0200</pubDate>
       
       <guid>https://blog.bitside.pl/tags/javascript/</guid>
       <description></description>
@@ -41,7 +41,7 @@
     <item>
       <title>keyboard</title>
       <link>https://blog.bitside.pl/tags/keyboard/</link>
-      <pubDate>Mon, 09 Jul 2012 00:00:00 +0200</pubDate>
+      <pubDate>Mon, 09 Jul 2012 18:50:00 +0200</pubDate>
       
       <guid>https://blog.bitside.pl/tags/keyboard/</guid>
       <description></description>
@@ -50,7 +50,7 @@
     <item>
       <title>octopress</title>
       <link>https://blog.bitside.pl/tags/octopress/</link>
-      <pubDate>Wed, 04 Jul 2012 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
       
       <guid>https://blog.bitside.pl/tags/octopress/</guid>
       <description></description>
@@ -59,7 +59,7 @@
     <item>
       <title>gnus</title>
       <link>https://blog.bitside.pl/tags/gnus/</link>
-      <pubDate>Fri, 30 Mar 2012 00:00:00 +0200</pubDate>
+      <pubDate>Fri, 30 Mar 2012 21:30:00 +0200</pubDate>
       
       <guid>https://blog.bitside.pl/tags/gnus/</guid>
       <description></description>
@@ -68,7 +68,7 @@
     <item>
       <title>orgmode</title>
       <link>https://blog.bitside.pl/tags/orgmode/</link>
-      <pubDate>Wed, 04 Jan 2012 00:00:00 +0100</pubDate>
+      <pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
       
       <guid>https://blog.bitside.pl/tags/orgmode/</guid>
       <description></description>

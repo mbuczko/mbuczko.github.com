@@ -6,7 +6,7 @@
     <description>Recent content in Posts on bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Oct 2019 17:16:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 16 Oct 2016 17:16:00 +0200</lastBuildDate>
     
 	<atom:link href="https://blog.bitside.pl/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Focus Mode</title>
       <link>https://blog.bitside.pl/posts/focus-mode/</link>
-      <pubDate>Wed, 16 Oct 2019 17:16:00 +0200</pubDate>
+      <pubDate>Sun, 16 Oct 2016 17:16:00 +0200</pubDate>
       
       <guid>https://blog.bitside.pl/posts/focus-mode/</guid>
       <description>Focus is one of those additions which turns Emacs usage into real joy and makes programmer’s life happier.

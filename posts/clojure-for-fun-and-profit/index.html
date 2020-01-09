@@ -17,8 +17,7 @@ Lot of arcticles have been already written about Clojure and why it’s so attra
 
 
 <link rel="stylesheet" href="https://blog.bitside.pl/assets/style.css">
-<link rel="stylesheet" href="https://blog.bitside.pl/assets/prism-dark.css">
-<link rel="stylesheet" href="https://blog.bitside.pl/assets/prism-light.css">
+<link rel="stylesheet" href="https://blog.bitside.pl/assets/syntax.css">
 
 
 <link rel="stylesheet" href="https://blog.bitside.pl/style.css">
@@ -156,43 +155,38 @@ Lot of arcticles have been already written about Clojure and why it’s so attra
 
     <div class="post-content">
       <p>This is my initial blog note - first from series I’m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.</p>
-
 <p>Lot of arcticles have been already written about Clojure and why it’s so attractive. Not to repeat all of these oh’s and ah’s I would like to sum up things most important for me as a long-time professional java programmer:</p>
-
 <ul>
-<li><p>Clojure is concise. This is the very first impression you’ll get coming from Java world. And this is also the first pain and mind-bender for someone grown from object-oriented world - Clojure is more about ‘what’ you want to implement rather than ‘how’. Simple example: loops. It’s quite unusual to see for-loop in Clojure sources. Why? In a Java world loops are usually introduced (or were introduced before streams came along with Java 8) to iterate on collection of objects either to produce a new collection or to generate result based on all iterated objects. Well, in Clojure world you have a map &amp; reduce functions doing exactly the same thing, so why bother with iterating by hand?</p></li>
-
-<li><p>Clojure is dynamically typed. That sounds a bit scary for Java programmer. No types? Isn’t it a smell of Javascript with all its fancy type coercion? Not really. First of all you may always enforce type checking, eg. by using Prismatic Schema or core.typed. Secondly as Clojure website says:</p>
-
+<li>
+<p>Clojure is concise. This is the very first impression you’ll get coming from Java world. And this is also the first pain and mind-bender for someone grown from object-oriented world - Clojure is more about ‘what’ you want to implement rather than ‘how’. Simple example: loops. It’s quite unusual to see for-loop in Clojure sources. Why? In a Java world loops are usually introduced (or were introduced before streams came along with Java 8) to iterate on collection of objects either to produce a new collection or to generate result based on all iterated objects. Well, in Clojure world you have a map &amp; reduce functions doing exactly the same thing, so why bother with iterating by hand?</p>
+</li>
+<li>
+<p>Clojure is dynamically typed. That sounds a bit scary for Java programmer. No types? Isn’t it a smell of Javascript with all its fancy type coercion? Not really. First of all you may always enforce type checking, eg. by using Prismatic Schema or core.typed. Secondly as Clojure website says:</p>
 <blockquote>
 <p>First and foremost, Clojure is dynamic. That means that a Clojure program is not just something you compile and run, but something with which you can interact.</p>
 </blockquote>
-
-<p>which leads to the most favourite thing that Clojure puts into programmer’s hand: REPL</p></li>
-
-<li><p>Read-Eval-Print-Loop (REPL). Since I used it first time, I knew I’ve just became REPL Driven Developer. Honestly, this is first time I could bring my weird ideas immediately into live just by pasting code into REPL and see the result. No recompilation, no restarts, just me and my idea without any technical obstacles. This is how I imagine instant prototyping and the productivity boost I experienced was tremendous.</p></li>
-
-<li><p>Functions as an API. It isn’t something raised up very often but having the code split into namespaces and structured well enough (+ some macro sugar added) you quickly discover that recently popular fluent API DSLs so horrible to write in Java are apparently pleasure to design in Clojure. With a few functions you may get something like this for free (sample from my branch of flux - clojure client for Solr):</p></li>
+<p>which leads to the most favourite thing that Clojure puts into programmer’s hand: REPL</p>
+</li>
+<li>
+<p>Read-Eval-Print-Loop (REPL). Since I used it first time, I knew I’ve just became REPL Driven Developer. Honestly, this is first time I could bring my weird ideas immediately into live just by pasting code into REPL and see the result. No recompilation, no restarts, just me and my idea without any technical obstacles. This is how I imagine instant prototyping and the productivity boost I experienced was tremendous.</p>
+</li>
+<li>
+<p>Functions as an API. It isn’t something raised up very often but having the code split into namespaces and structured well enough (+ some macro sugar added) you quickly discover that recently popular fluent API DSLs so horrible to write in Java are apparently pleasure to design in Clojure. With a few functions you may get something like this for free (sample from my branch of flux - clojure client for Solr):</p>
+</li>
 </ul>
-
 <!--listend-->
+<div class="highlight"><pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="nf">use</span> <span class="ss">&#39;flux.criteria</span><span class="p">)</span>
 
-<pre><code class="language-clojure">(use 'flux.criteria)
-
-(with-filter
-   (or
-     (has :description &quot;nówka sztuka&quot;)
-     (and
-        (is :currency &quot;PLN&quot;)
-        (between :price [5000 15000]))))
-</code></pre>
-
-<ul>
+<span class="p">(</span><span class="nf">with-filter</span>
+   <span class="p">(</span><span class="nf">or</span>
+     <span class="p">(</span><span class="nf">has</span> <span class="ss">:description</span> <span class="s">&#34;nówka sztuka&#34;</span><span class="p">)</span>
+     <span class="p">(</span><span class="nf">and</span>
+        <span class="p">(</span><span class="nf">is</span> <span class="ss">:currency</span> <span class="s">&#34;PLN&#34;</span><span class="p">)</span>
+        <span class="p">(</span><span class="nf">between</span> <span class="ss">:price</span> <span class="p">[</span><span class="mi">5000</span> <span class="mi">15000</span><span class="p">]</span><span class="p">)</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+</code></pre></div><ul>
 <li>No frameworks. That’s the least impressive but very important point. Coming into Clojure world you immediately discover there are no fully blown web frameworks, dependency injection frameworks, whatsoever frameworks. Seems sad at the beginning but while your experience grow you realise it’s much easier to grab few popular libraries and tie them together by yourself rather than spend next few months on debugging framework code and wonder how to implement a thing that wasn’t planned by framework creators before.</li>
 </ul>
-
 <p>Still interested in Clojure? Good to hear. In a next few posts I’ll try to describe in detail few libraries/tools that impressed me the most while I was experimenting with Clojure functional programming. To have a track of all articles and repositories that occured to be really useful I’ve created a github repo containing all the links: <a href="https://github.com/mbuczko/awesome-clojure">awesome-clojure</a>.</p>
-
 <p>Enjoy!</p>
 
     </div>
@@ -245,14 +239,13 @@ Lot of arcticles have been already written about Clojure and why it’s so attra
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2019 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
+        <span>© 2020 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
       </div>
     
   </div>
 </footer>
 
 <script src="https://blog.bitside.pl/assets/main.js"></script>
-<script src="https://blog.bitside.pl/assets/prism.js"></script>
 
 
   

@@ -16,8 +16,7 @@
 
 
 <link rel="stylesheet" href="https://blog.bitside.pl/assets/style.css">
-<link rel="stylesheet" href="https://blog.bitside.pl/assets/prism-dark.css">
-<link rel="stylesheet" href="https://blog.bitside.pl/assets/prism-light.css">
+<link rel="stylesheet" href="https://blog.bitside.pl/assets/syntax.css">
 
 
 <link rel="stylesheet" href="https://blog.bitside.pl/style.css">
@@ -153,40 +152,28 @@
 
     <div class="post-content">
       <p>Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention <a href="http://nodejs.org/">node.js</a>) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn’t support it at all.</p>
-
 <p>Today, looks like we have quite different situation. We have <a href="http://www.sublimetext.com/">Sublime Text</a>, <a href="http://www.eclipse.org/">Eclipse</a> with tons of plugins, and (surprise) Emacs with <a href="https://github.com/mooz/js2-mode">js2-mode</a>. If you are considering Emacs as your primary IDE for javascript - js2-mode is a must.</p>
-
 <p>Recently, its co-author - Dmitry Gutov implemented one thing that convinced me to drop other editors (yes, including Sublime). Let’s start with a few words of explanation what the ‘imenu’ is.</p>
-
 <p><a href="http://emacswiki.org/emacs/ImenuMode">Imenu mode</a> is a list of functions and definitions gathered from current buffer. It allows you switching immediately between them just with few keys stokes. The list is presented either in system menu or as mini-buffer completion (which may be boosted by ido) or by awesome anything-imenu.</p>
-
 <p>js2-mode supported imenu for a long time but it was not able to recognize few javascript constructions, thus the list of functions was horribly limited. I opened a <a href="https://github.com/mooz/js2-mode/issues/27">ticket</a> on github kindly trying to ask Dmitry for a few enhancements.</p>
-
 <p>And voila! Since June we may admire js2-mode with imenu in action having code like this (<a href="http://backbonejs.org/">backbone based</a>):</p>
-
-<pre><code class="language-javascript">App.Views.Shelf = Backbone.View.extend({
-    template: JST['app/shelf'],
-    el: '#container .shelf',
-    events: {
-    },
-    initialize: function() {
-    },
-    render: function() {
-    }
-})
-</code></pre>
-
-<p>or ‘module’ patterns like this:</p>
-
-<pre><code class="language-javascript">(function($) {
-    return {
-        bar: function() { }
-    };
-})(jQuery);
-</code></pre>
-
-<p>The pleasure of using Emacs with javascript has just raised by 100% :)</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">App</span><span class="p">.</span><span class="nx">Views</span><span class="p">.</span><span class="nx">Shelf</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="p">{</span>
+    <span class="nx">template</span><span class="o">:</span> <span class="nx">JST</span><span class="p">[</span><span class="s1">&#39;app/shelf&#39;</span><span class="p">]</span><span class="p">,</span>
+    <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#container .shelf&#39;</span><span class="p">,</span>
+    <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">}</span><span class="p">,</span>
+    <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span><span class="p">,</span>
+    <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
+<span class="p">}</span><span class="p">)</span>
+</code></pre></div><p>or ‘module’ patterns like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">bar</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="p">}</span><span class="p">;</span>
+<span class="p">}</span><span class="p">)</span><span class="p">(</span><span class="nx">jQuery</span><span class="p">)</span><span class="p">;</span>
+</code></pre></div><p>The pleasure of using Emacs with javascript has just raised by 100% :)</p>
 <p>Thanks Dmitry!</p>
 
     </div>
@@ -239,14 +226,13 @@
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2019 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
+        <span>© 2020 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
       </div>
     
   </div>
 </footer>
 
 <script src="https://blog.bitside.pl/assets/main.js"></script>
-<script src="https://blog.bitside.pl/assets/prism.js"></script>
 
 
   

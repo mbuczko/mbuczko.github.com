@@ -19,8 +19,7 @@
 
 
 <link rel="stylesheet" href="https://blog.bitside.pl/assets/style.css">
-<link rel="stylesheet" href="https://blog.bitside.pl/assets/prism-dark.css">
-<link rel="stylesheet" href="https://blog.bitside.pl/assets/prism-light.css">
+<link rel="stylesheet" href="https://blog.bitside.pl/assets/syntax.css">
 
 
 <link rel="stylesheet" href="https://blog.bitside.pl/style.css">
@@ -162,13 +161,10 @@
 
     <div class="post-content">
       <p>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:</p>
-
 <blockquote>
 <p>Richer bookmarks. They record more. They are more accurate.</p>
 </blockquote>
-
 <p>A few things we get here for free:</p>
-
 <ul>
 <li>Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting and filtering.</li>
 <li>Usage ‘statistics’. you may sort and filter your bookmarks basing on how often they were used.</li>
@@ -176,44 +172,27 @@
 <li>A bit more useful thing is bookmarking a region. Region gets activated each time you select corresponding bookmark.</li>
 <li>According to the documentation bookmarks+ are better relocated, which means they track the point they are assigned to in a smarter way.</li>
 </ul>
-
 <p>Coming back to bookmark types. Beside the function, sequence and variable-list bookmarks mentioned before, bookmark+ is happy to introduce a few more types:</p>
-
 <ol>
 <li>Dired bookmarks - dired buffers get restored immedately as they were bookmarked. That’s especially useful when used with tramp-mode.</li>
 <li>Bookmark-list bookmarks - saves and restores the state of bookmarks list :) Once again, sounds weird but it’s might be helpful when you carefully adjust your bookmarks list by setting up filters or the way it’s sorted and you want to restore exactly the same list later.</li>
 <li>Desktop bookmarks - these ones I find really useful. They allow me switching between projects in a second.</li>
 <li>Gnus bookmarks - if you use Gnus, it’s something for you. And who doesn’t use Gnus after all?</li>
 </ol>
-
 <p>Now, let’s leave the marketing buzz and focus on everyday usage.</p>
-
 <p>There are at least 2 things which I think make it worth switching to bookmark+.</p>
-
 <p>The first one is, as mentioned, ability to bookmark the current session of your emacs, so called desktop. Having more than one active project it’s crucial to switch between them in rational way. By switching I mean restoring the last remembered desktop of project I want to ‘visit’.</p>
-
 <p>To make desktops working you have to enable them first (described here: <a href="http://www.emacswiki.org/emacs/DeskTop">http://www.emacswiki.org/emacs/DeskTop</a>).</p>
-
 <p>Next, enable bookmark+ (link at the top) and, with 4 fingers crossed, type <code>C-x p K</code> and point the file where your desktop will be saved. If you want to restore your desktop, display list of bookmarks: <code>C-x r l</code> and select previously created bookmark.</p>
-
 <p>To make things a bit more convenient I usually prefix my ‘desktop-bookmarks’ with (desktop) (eg. (desktop) my-secret-project) and sort bookmarks alphabetically. To make things even more convenient I use anything (surprise!):</p>
-
-<pre><code class="language-lisp">(global-set-key (kbd &quot;C-c b&quot;) 'anything-c-pp-bookmarks)
-</code></pre>
-
-<p>There is also second feature which makes bookmark+ attractive alternative for vanilla bookmarks. It’s something called Autonamed bookmarks.</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c b&#34;</span><span class="p">)</span> <span class="ss">&#39;anything-c-pp-bookmarks</span><span class="p">)</span>
+</code></pre></div><p>There is also second feature which makes bookmark+ attractive alternative for vanilla bookmarks. It’s something called Autonamed bookmarks.</p>
 <p>What it is used for?</p>
-
 <p>Quite often I need to create a temporary bookmark to remember the line of code I’m just working on and I immediately jump into different place to modify some other parameter/variable/whatever. I don’t want to keep this bookmark forever so inventing a name is just a waste of time. Instead of creating a plain bookmark, I create a ‘autonamed’ one (<code>C-x p RET</code>) which means that Emacs takes care of inventing the bookmark name for me. Moreover, having the highlighting configured as <code>'(bmkp-auto-light-when-set (quote autonamed-bookmark))</code> I have visually marked all autonamed bookmark created so far.</p>
-
 <p>As autonamed bookmarks bacame part of my life, I wanted to jump between them in fastest possible way. This is why I reused meta-shift up and down keys:</p>
-
-<pre><code class="language-lisp">(global-set-key [(M-S-down)] 'bmkp-next-bookmark-this-file)
-(global-set-key [(M-S-up)]   'bmkp-previous-bookmark-this-file)
-</code></pre>
-
-<p>This post covers only the top of bookmark+ iceberg. I highly recommend reading the emacs wiki and going deeper into secret world of bookmarks :)</p>
+<div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-down</span><span class="p">)</span><span class="nv">]</span> <span class="ss">&#39;bmkp-next-bookmark-this-file</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-up</span><span class="p">)</span><span class="nv">]</span>   <span class="ss">&#39;bmkp-previous-bookmark-this-file</span><span class="p">)</span>
+</code></pre></div><p>This post covers only the top of bookmark+ iceberg. I highly recommend reading the emacs wiki and going deeper into secret world of bookmarks :)</p>
 
     </div>
 
@@ -265,14 +244,13 @@
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2019 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
+        <span>© 2020 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
       </div>
     
   </div>
 </footer>
 
 <script src="https://blog.bitside.pl/assets/main.js"></script>
-<script src="https://blog.bitside.pl/assets/prism.js"></script>
 
 
   

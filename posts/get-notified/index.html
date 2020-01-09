@@ -18,8 +18,7 @@ Unfortunately, org-mode by default will not warn you about upcoming event."/>
 
 
 <link rel="stylesheet" href="https://blog.bitside.pl/assets/style.css">
-<link rel="stylesheet" href="https://blog.bitside.pl/assets/prism-dark.css">
-<link rel="stylesheet" href="https://blog.bitside.pl/assets/prism-light.css">
+<link rel="stylesheet" href="https://blog.bitside.pl/assets/syntax.css">
 
 
 <link rel="stylesheet" href="https://blog.bitside.pl/style.css">
@@ -161,50 +160,30 @@ Unfortunately, org-mode by default will not warn you about upcoming event." />
 
     <div class="post-content">
       <p><a href="http://orgmode.org/">org-mode</a> is definitely one of the most versatile notes &amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.</p>
-
 <p>Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.</p>
-
 <p>Unfortunately, org-mode by default will not warn you about upcoming event. It’s very easy to overlook it, especially when you are deep in your matrix trying to decrypt one more perl script…</p>
-
 <p>But don’t despair. Notifications come to the rescue - few minutes before meeting you will get a growl/growl-like message (possibly with shocking biiing-booong sound) reminding you about your crucial appointment.</p>
-
 <p>To make it working on windows, I used ToDoChiKu along with Snarl which displays fancy growl-like messages. The dark side of this solution is that ToDoChiKu is no longer compatible with Snarl 2.5. You will see no messages without a simple todochiku.el patch.</p>
-
 <p>Having ToDoChiKu patched we need to register emacs app to get notifications. Go into <code>C:\Program Files\full phat\Snarl\tools</code> where you should find a heysnarl.exe. Next, type in console:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bat" data-lang="bat">heysnarl.exe “register?app-sig=app/emacs<span class="p">&amp;</span><span class="k">title</span>=Emacs Org-Mode<span class="p">&amp;</span>icon=C:\Program Files\full phat\Snarl\etc\icons\emacs.png”
+</code></pre></div><p>app/emacs is our application signature used by ToDoChiku, and icon is a path to whatever icon you want. I used this one. Once emacs is installed, you should see it on the list of registered Snarl applications. You may also test if messages appear correctly:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bat" data-lang="bat">heysnarl.exe “notify?app-sig=app/emacs<span class="p">&amp;</span><span class="k">title</span>=Simple test<span class="p">&amp;</span>text=dupa”
+</code></pre></div><p>Oki, we have Snarl working, let’s go back to Emacs. To complete our ToDoChiku configuration we need following stuff, a bit of magic to ask org-mode to use ToDoChiku as notification tool:</p>
+<div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span>
+  <span class="nv">todochiku-command</span> <span class="s">&#34;C:/Program Files/full phat/Snarl/tools/heysnarl.exe&#34;</span>
+  <span class="nv">org-show-notification-handler</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">notification</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="nv">todochiku-message</span> <span class="s">&#34;org-mode notification&#34;</span> <span class="nv">notification</span> <span class="p">(</span><span class="nv">todochiku-icon</span> <span class="ss">&#39;emacs</span><span class="p">)</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
 
-<pre><code class="language-nil">heysnarl.exe “register?app-sig=app/emacs&amp;title=Emacs Org-Mode&amp;icon=C:\Program Files\full phat\Snarl\etc\icons\emacs.png”
-</code></pre>
-
-<p>app/emacs is our application signature used by ToDoChiku, and icon is a path to whatever icon you want. I used this one. Once emacs is installed, you should see it on the list of registered Snarl applications. You may also test if messages appear correctly:</p>
-
-<pre><code class="language-nil">heysnarl.exe “notify?app-sig=app/emacs&amp;title=Simple test&amp;text=dupa”
-</code></pre>
-
-<p>Oki, we have Snarl working, let’s go back to Emacs. To complete our ToDoChiku configuration we need following stuff, a bit of magic to ask org-mode to use ToDoChiku as notification tool:</p>
-
-<pre><code class="language-lisp">(setq
-  todochiku-command &quot;C:/Program Files/full phat/Snarl/tools/heysnarl.exe&quot;
-  org-show-notification-handler '(lambda (notification)
-                                   (todochiku-message &quot;org-mode notification&quot; notification (todochiku-icon 'emacs))))
-
-(require 'todochiku)
-</code></pre>
-
-<p>Note that requiring ‘todochiku should be placed after setting up the todochiku-command. Otherwise you will get a “respawn process” error while starting up your emacs next time.</p>
-
+<span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;todochiku</span><span class="p">)</span>
+</code></pre></div><p>Note that requiring ‘todochiku should be placed after setting up the todochiku-command. Otherwise you will get a “respawn process” error while starting up your emacs next time.</p>
 <p>Assuming todochiku is working correctly (you may verify that, eg. by evaluating in your <em>scratch</em> buffer something like <code>(todochiku-message &quot;Simple test&quot; &quot;dupa&quot; nil))</code> we finally need to enable appointments:</p>
-
-<pre><code class="language-lisp">(setq
-  appt-activate 1
-  appt-message-warning-time 15
-  appt-display-mode-line t
-  appt-display-format 'window)
-</code></pre>
-
-<p>With above settings appointments will be displayed in two modes: in your mode-line and in separate popup. ToDoChiku by default overrides appt-disp-window-function redirecting all messages to Snarl process, so we don’t need to do that by ourselves.</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span>
+  <span class="nv">appt-activate</span> <span class="mi">1</span>
+  <span class="nv">appt-message-warning-time</span> <span class="mi">15</span>
+  <span class="nv">appt-display-mode-line</span> <span class="no">t</span>
+  <span class="nv">appt-display-format</span> <span class="ss">&#39;window</span><span class="p">)</span>
+</code></pre></div><p>With above settings appointments will be displayed in two modes: in your mode-line and in separate popup. ToDoChiku by default overrides appt-disp-window-function redirecting all messages to Snarl process, so we don’t need to do that by ourselves.</p>
 <p>Ok, time for final test. Create an appointment in your org-mode and wait…</p>
-
 
   <figure class="left" >
     <img src="/images/get_notified_2.png"   />
@@ -263,14 +242,13 @@ Unfortunately, org-mode by default will not warn you about upcoming event." />
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2019 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
+        <span>© 2020 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
       </div>
     
   </div>
 </footer>
 
 <script src="https://blog.bitside.pl/assets/main.js"></script>
-<script src="https://blog.bitside.pl/assets/prism.js"></script>
 
 
   

@@ -17,8 +17,7 @@ It doesn’t matter whether you’re a front- or back-end dev, sooner or later y
 
 
 <link rel="stylesheet" href="https://blog.bitside.pl/assets/style.css">
-<link rel="stylesheet" href="https://blog.bitside.pl/assets/prism-dark.css">
-<link rel="stylesheet" href="https://blog.bitside.pl/assets/prism-light.css">
+<link rel="stylesheet" href="https://blog.bitside.pl/assets/syntax.css">
 
 
 <link rel="stylesheet" href="https://blog.bitside.pl/style.css">
@@ -158,39 +157,27 @@ It doesn’t matter whether you’re a front- or back-end dev, sooner or later y
 
     <div class="post-content">
       <p>Maven or gradle? Grunt or gulp? Leiningen or boot…?</p>
-
 <p>It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision. In particular it’s noticeable in javascript world where new ideas emerge with the speed of light. Do you know what’s the usual lifetime of shiny new javascript library, one of 4 hundreds coming out daily? Well, I don’t know too but I guess you wouldn’t be able to complete a todo app before the library of your choice became deprecated :)</p>
-
 <p>Speaking of project building tools, as a Clojurists we happily sit in a comfort zone. Up until recently, there was only one way to keep your clojure project organized - <a href="http://http//leiningen.org/">Leiningen</a>. Elegant declarative way which leiningen used to describe entire project with all its dependencies and profiles immediately reminded me of maven tons of hand-crafted pom.xmls. Easy when you finally get it, extremally hard when you try to customize.</p>
-
 <p>Right on the other corner stands Boot. Instead of declarative DSL it gives a full power of Clojure - each task is just a Clojure function. It’s even more fun when you realize that boot tasks can be called (just as regular functions) straight from REPL. Having seen that first time crazy idea sparkled in my mind…</p>
-
 <p>I guess every Clojurist already read <a href="http://thinkrelevance.com/blog/2013/06/04/clojure-workflow-reloaded">Clojure Workflow Reloaded</a>. General idea behind is dead simple. To have a reloadable “system” one needs to implement start/stop/reset functions and call them to start the system, to stop it and reload when needed. Now, let’s assume we have it already written, it works as expected and the only pain is to switch to repl and call our reset function each time something substantial has changed in our app.</p>
-
 <p>Wouldn’t it be nicer to have resetting under the Emacs shortcut so every Clojure project following Stuart’s reloadable flow (ie. having system start/stop/reset implemented) could be restarted just by a simple key stroke?</p>
-
 <p>This is where Boot really shines. To have system reloadable by Boot we need to implement reset task:</p>
+<div class="highlight"><pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="nf">require</span> <span class="o">&#39;</span><span class="p">[</span><span class="nv">foo.system</span><span class="p">]</span><span class="p">)</span>
 
-<pre><code class="language-clojure">(require '[foo.system])
+<span class="p">(</span><span class="nf">deftask</span> <span class="nv">reset</span>
+  <span class="s">&#34;Restarts system&#34;</span>
+  <span class="p">[</span><span class="p">]</span>
+  <span class="p">(</span><span class="nf">foo.system/reset</span><span class="p">)</span><span class="p">)</span>
+</code></pre></div><p>Each boot-ized project following this simple rule immediately becomes reset-able just by calling boot.user/reset. That simply means, we could evaluate it directly from Emacs connected to REPL via glorious Cider:</p>
+<div class="highlight"><pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="nf">defun</span> <span class="nv">repl-reset</span> <span class="p">(</span><span class="p">)</span>
+  <span class="s">&#34;Sends (reset) to currently running repl&#34;</span>
+  <span class="p">(</span><span class="nf">interactive</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">save-buffer</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">cider-interactive-eval</span> <span class="s">&#34;(boot.user/reset)&#34;</span><span class="p">)</span><span class="p">)</span>
 
-(deftask reset
-  &quot;Restarts system&quot;
-  []
-  (foo.system/reset))
-</code></pre>
-
-<p>Each boot-ized project following this simple rule immediately becomes reset-able just by calling boot.user/reset. That simply means, we could evaluate it directly from Emacs connected to REPL via glorious Cider:</p>
-
-<pre><code class="language-clojure">(defun repl-reset ()
-  &quot;Sends (reset) to currently running repl&quot;
-  (interactive)
-  (save-buffer)
-  (cider-interactive-eval &quot;(boot.user/reset)&quot;))
-
-(global-set-key (kbd &quot;C-x x&quot;) 'repl-reset)
-</code></pre>
-
-<p>Have a nice system resets ;)</p>
+<span class="p">(</span><span class="nf">global-set-key</span> <span class="p">(</span><span class="nf">kbd</span> <span class="s">&#34;C-x x&#34;</span><span class="p">)</span> <span class="ss">&#39;repl-reset</span><span class="p">)</span>
+</code></pre></div><p>Have a nice system resets ;)</p>
 
     </div>
 
@@ -242,14 +229,13 @@ It doesn’t matter whether you’re a front- or back-end dev, sooner or later y
   <div class="footer__inner">
     
       <div class="copyright">
-        <span>© 2019 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
+        <span>© 2020 Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://orgmode.org/">org-mode</a></span>
       </div>
     
   </div>
 </footer>
 
 <script src="https://blog.bitside.pl/assets/main.js"></script>
-<script src="https://blog.bitside.pl/assets/prism.js"></script>
 
 
   

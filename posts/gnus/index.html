@@ -228,7 +228,7 @@ Emacs*font: DejaVu Sans Mono-9
     <span class="nv">gnus-sum-thread-tree-single-indent</span> <span class="s">&#34;&#34;</span>
     <span class="nv">gnus-sum-thread-tree-leaf-with-other</span> <span class="s">&#34;├─►&#34;</span>
     <span class="nv">gnus-sum-thread-tree-vertical</span> <span class="s">&#34;│ &#34;</span>
-    <span class="nv">gnus-sum-thread-tree-single-leaf</span> <span class="s">&#34;└─►&#34;</span><span class="p">)</span><span class="p">)</span>
+    <span class="nv">gnus-sum-thread-tree-single-leaf</span> <span class="s">&#34;└─►&#34;</span><span class="p">))</span>
 </code></pre></div><p>What <code>(when window-system …)</code> does is limiting above change to GUI version of Emacs only, this change won’t be applied to Gnus run in console.</p>
 <p>Let’s look again at out gnus-summary-line-format. Something strange hides there inside: <code>%6{%-4,4ur%}</code></p>
 <p>What does it mean? As manual says, <code>%u</code> and following letter corresponds to user defined function <code>gnus-user-format-function-X</code> (where X is a symbol which goes right after <code>%u</code>). So, <code>%ur</code> will be used to inject the return value from <code>gnus-user-format-function-r</code> and <code>$-4,4</code> instructs to align this value to length of 4 characters. Prepending <code>%6</code> suggests to apply <code>gnus-face-6</code> to everything inside curly parentheses.</p>
@@ -245,11 +245,11 @@ Emacs*font: DejaVu Sans Mono-9
 <p>Red 4-letter labels distinguish interesting emails from the overall noise. This is realised exactly by previously mentioned snippet <code>%6{%-4,4ur%}</code> put inside our gnus-summary-line-format. As we remember <code>%-4,4ur</code> injects result of <code>gnus-user-format-function-r</code> function. This is how this function looks like:</p>
 <div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">rs-gnus-get-label</span> <span class="p">(</span><span class="nv">header</span><span class="p">)</span>
   <span class="s">&#34;Returns label from X-Label header&#34;</span>
-  <span class="p">(</span><span class="nb">or</span> <span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nv">assq</span> <span class="ss">&#39;X-Label</span> <span class="p">(</span><span class="nv">mail-header-extra</span> <span class="nv">header</span><span class="p">)</span><span class="p">)</span><span class="p">)</span> <span class="s">&#34;&#34;</span><span class="p">)</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">or</span> <span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nv">assq</span> <span class="ss">&#39;X-Label</span> <span class="p">(</span><span class="nv">mail-header-extra</span> <span class="nv">header</span><span class="p">)))</span> <span class="s">&#34;&#34;</span><span class="p">))</span>
 
 <span class="p">(</span><span class="nv">defalias</span> <span class="ss">&#39;gnus-user-format-function-r</span> <span class="ss">&#39;rs-gnus-get-label</span><span class="p">)</span>
 </code></pre></div><p>Additionally, we need to list this header in nnmail-extra-headers variable:</p>
-<div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">nnmail-extra-headers</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">To</span> <span class="nv">X-Label</span> <span class="nv">Newsgroups</span> <span class="nv">Content-Type</span><span class="p">)</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">nnmail-extra-headers</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">To</span> <span class="nv">X-Label</span> <span class="nv">Newsgroups</span> <span class="nv">Content-Type</span><span class="p">))</span>
 </code></pre></div><p>&hellip;and apply red color:</p>
 <div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">copy-face</span> <span class="ss">&#39;default</span> <span class="ss">&#39;face-label</span><span class="p">)</span>
 <span class="p">(</span><span class="nv">set-face-foreground</span> <span class="ss">&#39;face-label</span> <span class="s">&#34;red&#34;</span><span class="p">)</span>
@@ -261,8 +261,8 @@ Emacs*font: DejaVu Sans Mono-9
   <span class="p">(</span><span class="nv">interactive</span>
    <span class="p">(</span><span class="nc">list</span> <span class="p">(</span><span class="nv">read-string</span>
      <span class="p">(</span><span class="nf">format</span> <span class="s">&#34;%s label (regexp): &#34;</span>
-     <span class="p">(</span><span class="k">if</span> <span class="nv">current-prefix-arg</span> <span class="s">&#34;Exclude&#34;</span> <span class="s">&#34;Limit to&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span> <span class="nv">current-prefix-arg</span><span class="p">)</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">gnus-summary-limit-to-extra</span> <span class="ss">&#39;X-Label</span> <span class="nv">regexp</span> <span class="nv">not-matching</span><span class="p">)</span><span class="p">)</span>
+     <span class="p">(</span><span class="k">if</span> <span class="nv">current-prefix-arg</span> <span class="s">&#34;Exclude&#34;</span> <span class="s">&#34;Limit to&#34;</span><span class="p">)))</span> <span class="nv">current-prefix-arg</span><span class="p">))</span>
+  <span class="p">(</span><span class="nv">gnus-summary-limit-to-extra</span> <span class="ss">&#39;X-Label</span> <span class="nv">regexp</span> <span class="nv">not-matching</span><span class="p">))</span>
 </code></pre></div><p>Next, invoke this function <code>M-x rs-gnus-summary-limit-to-label</code> providing the label you want to filter by (use tab to autocomplete!) and enjoy with result:</p>
 
   <figure class="left" >
@@ -272,11 +272,11 @@ Emacs*font: DejaVu Sans Mono-9
 
 
 <p>Simple and easy, isn’t it?</p>
-<p>Let's get also list of articles sorted from the newest to the oldest ones, and filter out unnecessary headers from detailed view:</p>
+<p>Let&rsquo;s get also list of articles sorted from the newest to the oldest ones, and filter out unnecessary headers from detailed view:</p>
 <div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span>
-  <span class="nv">gnus-thread-sort-functions</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">t1</span> <span class="nv">t2</span><span class="p">)</span> <span class="p">(</span><span class="nf">not</span> <span class="p">(</span><span class="nv">gnus-thread-sort-by-date</span> <span class="nv">t1</span> <span class="nv">t2</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+  <span class="nv">gnus-thread-sort-functions</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">t1</span> <span class="nv">t2</span><span class="p">)</span> <span class="p">(</span><span class="nf">not</span> <span class="p">(</span><span class="nv">gnus-thread-sort-by-date</span> <span class="nv">t1</span> <span class="nv">t2</span><span class="p">)))</span>
   <span class="nv">gnus-visible-headers</span> <span class="s">&#34;^From:|^To:|^Subject:|^Newsgroups:|^Date:|^Organization:|^X-Newsreader:|^User-Agent:&#34;</span>
-  <span class="nv">gnus-extra-headers</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">To</span> <span class="nv">Newsgroups</span> <span class="nv">Content-Type</span><span class="p">)</span><span class="p">)</span>
+  <span class="nv">gnus-extra-headers</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">To</span> <span class="nv">Newsgroups</span> <span class="nv">Content-Type</span><span class="p">))</span>
 </code></pre></div><h2 id="grand-finale">Grand finale</h2>
 <p>Last thing last - nasty HTML emails. This is something we definitely don’t like but there are always people around who love to bomb us with tons of HTML.</p>
 <p>How can we handle this sh^H^H ehm.. this kind of emails with beloved Gnus?</p>

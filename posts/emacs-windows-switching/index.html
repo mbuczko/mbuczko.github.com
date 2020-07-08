@@ -162,12 +162,9 @@ The most obvious way is to use mouse/touchpad of course. It’s easy at the begi
 </blockquote>
 <p>Yup, that’s what we really need - simple shortcuts to activate immediately each window in a frame. But there is something more. Having frame split into multiple windows sooner or later makes some of them awfully hard to use beacuse of little space they occupy. Time to introduce a real hero - <a href="https://melpa.org/#/golden-ratio">golden ratio</a> package which resizes seleted windows to the size specified in the <a href="https://en.wikipedia.org/wiki/Golden%5Fratio">“Golden Ratio”</a>. Sounds cool, works even cooler when bound with shortcuts provided by window-numbering:</p>
 <div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">defadvice</span> <span class="nv">select-window-by-number</span> <span class="p">(</span><span class="nv">after</span> <span class="nv">select-window</span> <span class="nv">activate</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">golden-ratio</span><span class="p">)</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">golden-ratio</span><span class="p">))</span>
 </code></pre></div><p>This is how it looks like in action:</p>
- <video width="760" controls>
-  <source src="/images/emacs-window-switching.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<img src="/images/emacs-window-switching.gif" width="760">
 
     </div>
 

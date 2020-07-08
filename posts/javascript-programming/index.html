@@ -157,22 +157,22 @@
 <p><a href="http://emacswiki.org/emacs/ImenuMode">Imenu mode</a> is a list of functions and definitions gathered from current buffer. It allows you switching immediately between them just with few keys stokes. The list is presented either in system menu or as mini-buffer completion (which may be boosted by ido) or by awesome anything-imenu.</p>
 <p>js2-mode supported imenu for a long time but it was not able to recognize few javascript constructions, thus the list of functions was horribly limited. I opened a <a href="https://github.com/mooz/js2-mode/issues/27">ticket</a> on github kindly trying to ask Dmitry for a few enhancements.</p>
 <p>And voila! Since June we may admire js2-mode with imenu in action having code like this (<a href="http://backbonejs.org/">backbone based</a>):</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">App</span><span class="p">.</span><span class="nx">Views</span><span class="p">.</span><span class="nx">Shelf</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="p">{</span>
-    <span class="nx">template</span><span class="o">:</span> <span class="nx">JST</span><span class="p">[</span><span class="s1">&#39;app/shelf&#39;</span><span class="p">]</span><span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">App</span><span class="p">.</span><span class="nx">Views</span><span class="p">.</span><span class="nx">Shelf</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+    <span class="nx">template</span><span class="o">:</span> <span class="nx">JST</span><span class="p">[</span><span class="s1">&#39;app/shelf&#39;</span><span class="p">],</span>
     <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#container .shelf&#39;</span><span class="p">,</span>
     <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
-    <span class="p">}</span><span class="p">,</span>
-    <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-    <span class="p">}</span><span class="p">,</span>
-    <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="p">}</span>
-<span class="p">}</span><span class="p">)</span>
+<span class="p">})</span>
 </code></pre></div><p>or ‘module’ patterns like this:</p>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">{</span>
-        <span class="nx">bar</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
-    <span class="p">}</span><span class="p">;</span>
-<span class="p">}</span><span class="p">)</span><span class="p">(</span><span class="nx">jQuery</span><span class="p">)</span><span class="p">;</span>
+        <span class="nx">bar</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+    <span class="p">};</span>
+<span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
 </code></pre></div><p>The pleasure of using Emacs with javascript has just raised by 100% :)</p>
 <p>Thanks Dmitry!</p>
 

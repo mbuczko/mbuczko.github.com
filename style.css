@@ -43,10 +43,10 @@ blockquote {
 
 nav.menu a,
 nav.menu ul {
-  color: #666;
+  color: #888;
   font-family: 'Oswald', sans-serif;
   font-variant: all-petite-caps;
-  font-size: 1.05em;
+  font-size: 1.1em;
   font-weight: 400;
   position: relative;
   top: -.05em;

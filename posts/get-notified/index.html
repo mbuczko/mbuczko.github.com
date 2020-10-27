@@ -172,7 +172,7 @@ Unfortunately, org-mode by default will not warn you about upcoming event." />
 <div class="highlight"><pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span>
   <span class="nv">todochiku-command</span> <span class="s">&#34;C:/Program Files/full phat/Snarl/tools/heysnarl.exe&#34;</span>
   <span class="nv">org-show-notification-handler</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">notification</span><span class="p">)</span>
-                                   <span class="p">(</span><span class="nv">todochiku-message</span> <span class="s">&#34;org-mode notification&#34;</span> <span class="nv">notification</span> <span class="p">(</span><span class="nv">todochiku-icon</span> <span class="ss">&#39;emacs</span><span class="p">)</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="nv">todochiku-message</span> <span class="s">&#34;org-mode notification&#34;</span> <span class="nv">notification</span> <span class="p">(</span><span class="nv">todochiku-icon</span> <span class="ss">&#39;emacs</span><span class="p">))))</span>
 
 <span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;todochiku</span><span class="p">)</span>
 </code></pre></div><p>Note that requiring ‘todochiku should be placed after setting up the todochiku-command. Otherwise you will get a “respawn process” error while starting up your emacs next time.</p>

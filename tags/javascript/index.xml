@@ -6,11 +6,7 @@
     <description>Recent content in javascript on bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Jul 2012 21:20:00 +0200</lastBuildDate>
-    
-	<atom:link href="https://blog.bitside.pl/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 16 Jul 2012 21:20:00 +0200</lastBuildDate><atom:link href="https://blog.bitside.pl/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Swank JS</title>
       <link>https://blog.bitside.pl/posts/swank-js/</link>

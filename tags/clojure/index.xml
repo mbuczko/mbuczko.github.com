@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clojure on Bit side of life</title>
+    <link>https://blog.bitside.pl/tags/clojure/</link>
+    <description>Recent content in clojure on Bit side of life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Oct 2016 13:40:00 +0200</lastBuildDate><atom:link href="https://blog.bitside.pl/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Boot-ize your project</title>
+      <link>https://blog.bitside.pl/posts/bootize-your-project/</link>
+      <pubDate>Sun, 09 Oct 2016 13:40:00 +0200</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/bootize-your-project/</guid>
+      <description>Maven or gradle? Grunt or gulp? Leiningen or boot…?
+It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision.</description>
+    </item>
+    
+    <item>
+      <title>Clojure for fun &amp; profit</title>
+      <link>https://blog.bitside.pl/posts/clojure-for-fun-and-profit/</link>
+      <pubDate>Sun, 02 Aug 2015 11:29:00 +0200</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/clojure-for-fun-and-profit/</guid>
+      <description>This is my initial blog note - first from series I’m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.
+Lot of arcticles have been already written about Clojure and why it’s so attractive. Not to repeat all of these oh’s and ah’s I would like to sum up things most important for me as a long-time professional java programmer:</description>
+    </item>
+    
+  </channel>
+</rss>

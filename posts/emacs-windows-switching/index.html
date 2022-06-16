@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?
+The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows." />
+<meta name="keywords" content=", emacs" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://blog.bitside.pl/posts/emacs-windows-switching/" />
+
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+
+    <title>
+        
+            Emacs Windows Switching :: Bit side of life 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet" type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.585990f4320ff03ddf167db07e375271983e3abf94c2b30098ed18946f3054b3.css">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="Emacs Windows Switching">
+<meta itemprop="description" content="It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?
+The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows."><meta itemprop="datePublished" content="2016-10-09T16:52:00+02:00" />
+<meta itemprop="dateModified" content="2020-07-09T01:14:27+02:00" />
+<meta itemprop="wordCount" content="226">
+<meta itemprop="keywords" content="emacs," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs Windows Switching"/>
+<meta name="twitter:description" content="It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?
+The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2016-10-09 16:52:00 &#43;0200 CEST" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__text"> <span class="hash"> :: </span> bit side of life <span class="hash"> :: </span></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts/">Posts</a></li><li><a href="/tags/">Tags</a></li><li><a href="/about">About me</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        2 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://blog.bitside.pl/posts/emacs-windows-switching/">Emacs Windows Switching</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <p>It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?</p>
+<p>The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows. Well, good luck with selecting windows this way longer than a day.</p>
+<p>But hey, there is a hope. Default windows switching is so insane that lot of people tried to address this problem with additional packages. One of the most popular is <a href="https://melpa.org/#/window-numbering">window numbering</a>:</p>
+<blockquote>
+<p>Enable window-numbering-mode and use M-1 through M-0 to navigate.</p>
+</blockquote>
+<p>Yup, that’s what we really need - simple shortcuts to activate immediately each window in a frame. But there is something more. Having frame split into multiple windows sooner or later makes some of them awfully hard to use beacuse of little space they occupy. Time to introduce a real hero - <a href="https://melpa.org/#/golden-ratio">golden ratio</a> package which resizes seleted windows to the size specified in the <a href="https://en.wikipedia.org/wiki/Golden%5Fratio">“Golden Ratio”</a>. Sounds cool, works even cooler when bound with shortcuts provided by window-numbering:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">defadvice</span> <span class="nv">select-window-by-number</span> <span class="p">(</span><span class="nv">after</span> <span class="nv">select-window</span> <span class="nv">activate</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">golden-ratio</span><span class="p">))</span>
+</code></pre></div><p>This is how it looks like in action:</p>
+<img src="/images/emacs-window-switching.gif" width="760">
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://blog.bitside.pl/tags/emacs/">emacs</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        226 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2016-10-09 16:52
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://blog.bitside.pl/posts/bootize-your-project/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">Boot-ize your project</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="https://blog.bitside.pl/posts/clojure-for-fun-and-profit/">
+                    <span class="button__text">Clojure for fun &amp; profit</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2022</span>
+            <span><a href="https://blog.bitside.pl"></a></span>
+            <span></span>
+            <span><a href="https://blog.bitside.pl/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://orgmode.org">org-mode</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.68da98ead9a7043300acc03575c363c98f79b646f714bdeaabf6c7325758e7a43f68d68822f92be240ebe6f1ea7cca6dad99a3b7be329df3c0175beb96d353c8.js" integrity="sha512-aNqY6tmnBDMArMA1dcNjyY95tkb3FL3qq/bHMldY56Q/aNaIIvkr4kDr5vHqfMptrZmjt74ynfPAF1vrltNTyA=="></script>
+
+
+
+    </body>
+</html>

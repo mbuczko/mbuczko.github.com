@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Bit side of life</title>
+    <link>https://blog.bitside.pl/tags/javascript/</link>
+    <description>Recent content in javascript on Bit side of life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Jul 2012 21:20:00 +0200</lastBuildDate><atom:link href="https://blog.bitside.pl/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swank JS</title>
+      <link>https://blog.bitside.pl/posts/swank-js/</link>
+      <pubDate>Mon, 16 Jul 2012 21:20:00 +0200</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/swank-js/</guid>
+      <description>Have you ever dreamed about changing the content displayed by your web browser straight from text editor?
+Latest Episode 11 at Emacs Rocks discovers how you may speed up your web development with awesome swank-js. Btw. if you still don’t have Emacs Rocks in your RSS reader, I highly recommend adding this source right now. It’s excellent place of tips &amp;amp; tricks especially helpful during daily work with emacs.
+What is swank-js?</description>
+    </item>
+    
+    <item>
+      <title>Javascript programming</title>
+      <link>https://blog.bitside.pl/posts/javascript-programming/</link>
+      <pubDate>Thu, 05 Jul 2012 20:30:00 +0200</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/javascript-programming/</guid>
+      <description>Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention node.js) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn’t support it at all.</description>
+    </item>
+    
+  </channel>
+</rss>

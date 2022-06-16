@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>emacs on Bit side of life</title>
+    <link>https://blog.bitside.pl/tags/emacs/</link>
+    <description>Recent content in emacs on Bit side of life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Oct 2016 17:16:00 +0200</lastBuildDate><atom:link href="https://blog.bitside.pl/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Focus Mode</title>
+      <link>https://blog.bitside.pl/posts/focus-mode/</link>
+      <pubDate>Sun, 16 Oct 2016 17:16:00 +0200</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/focus-mode/</guid>
+      <description>Focus is one of those additions which turns Emacs usage into real joy and makes programmer’s life happier.
+Having to look at tons of code 8 hrs per day might become a bit painful. Readable font is often first choice to improve this situation but it doesn’t help much when one needs to focus on concrete block of code. This is where Focus comes to the rescue - it dims text outside the function pointed by cursor and visually brings that code block at user’s attention.</description>
+    </item>
+    
+    <item>
+      <title>Boot-ize your project</title>
+      <link>https://blog.bitside.pl/posts/bootize-your-project/</link>
+      <pubDate>Sun, 09 Oct 2016 13:40:00 +0200</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/bootize-your-project/</guid>
+      <description>Maven or gradle? Grunt or gulp? Leiningen or boot…?
+It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision.</description>
+    </item>
+    
+    <item>
+      <title>Emacs Windows Switching</title>
+      <link>https://blog.bitside.pl/posts/emacs-windows-switching/</link>
+      <pubDate>Sun, 09 Oct 2016 16:52:00 +0200</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/emacs-windows-switching/</guid>
+      <description>It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?
+The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows.</description>
+    </item>
+    
+    <item>
+      <title>Swank JS</title>
+      <link>https://blog.bitside.pl/posts/swank-js/</link>
+      <pubDate>Mon, 16 Jul 2012 21:20:00 +0200</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/swank-js/</guid>
+      <description>Have you ever dreamed about changing the content displayed by your web browser straight from text editor?
+Latest Episode 11 at Emacs Rocks discovers how you may speed up your web development with awesome swank-js. Btw. if you still don’t have Emacs Rocks in your RSS reader, I highly recommend adding this source right now. It’s excellent place of tips &amp;amp; tricks especially helpful during daily work with emacs.
+What is swank-js?</description>
+    </item>
+    
+    <item>
+      <title>Be social</title>
+      <link>https://blog.bitside.pl/posts/be-social/</link>
+      <pubDate>Wed, 04 Jul 2012 21:10:00 +0200</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/be-social/</guid>
+      <description>Emacs isn’t only a best-class editor which offers you productivity boost for free. It’s also all-in-one environment which embeds most frequently used tools like console (eshell), irc (erc), news reader (gnus) and… well known “social” gadgets like gtalk and twitter. Yes, that means, you may communicate with friends and check your tweets not even leaving editor window.
+Let me show how to configure both.
+GTalk Gtalk bases on open protocol (jabber), so the only thing we need is a jabber client.</description>
+    </item>
+    
+    <item>
+      <title>Gnus</title>
+      <link>https://blog.bitside.pl/posts/gnus/</link>
+      <pubDate>Fri, 30 Mar 2012 21:30:00 +0200</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/gnus/</guid>
+      <description>A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition. If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that’s definitely wrong place.
+On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU’s Not Unix, you’re welcomed to read further.</description>
+    </item>
+    
+    <item>
+      <title>Get notified</title>
+      <link>https://blog.bitside.pl/posts/get-notified/</link>
+      <pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/get-notified/</guid>
+      <description>org-mode is definitely one of the most versatile notes &amp;amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.
+Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.
+Unfortunately, org-mode by default will not warn you about upcoming event.</description>
+    </item>
+    
+    <item>
+      <title>World of Bookmarks</title>
+      <link>https://blog.bitside.pl/posts/world-of-bookmarks/</link>
+      <pubDate>Mon, 02 Jan 2012 10:20:00 +0100</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/world-of-bookmarks/</guid>
+      <description>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:
+ Richer bookmarks. They record more. They are more accurate.
+ A few things we get here for free:
+ Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting and filtering. Usage ‘statistics’. you may sort and filter your bookmarks basing on how often they were used.</description>
+    </item>
+    
+    <item>
+      <title>Interactive search rediscovered</title>
+      <link>https://blog.bitside.pl/posts/interactive-search-rediscovered/</link>
+      <pubDate>Fri, 16 Dec 2011 22:10:00 +0100</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/interactive-search-rediscovered/</guid>
+      <description>Nice tip I found while searching interactively (C-s).
+If you want to see all the occurences of what you’re just searching for, press M-s o and you will see new buffer listing all the desired occurences. Moreover, you may extend searching convieniently by selecting next words with C-w.
+This flow C-s C-w C-w M-s o selects 2 words starting at current cursor position and lists all their occurences in current buffer.</description>
+    </item>
+    
+    <item>
+      <title>The Kill Ring</title>
+      <link>https://blog.bitside.pl/posts/the-kill-ring/</link>
+      <pubDate>Fri, 16 Dec 2011 17:20:00 +0100</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/the-kill-ring/</guid>
+      <description>Sounds scary, but it’s not about killing (this time). Kill ring is a term used in Emacs to describe a list of cut (killed) blocks of text. Yes, that’s right. It’s about mutliple blocks of text that you can cut and paste. Emacs as an extraoridinary editor gives you ability to keep the history of what you have just killed. Be sure to close it before you start doing nasty things :)</description>
+    </item>
+    
+  </channel>
+</rss>

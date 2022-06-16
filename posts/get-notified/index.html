@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="org-mode is definitely one of the most versatile notes &amp;amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.
+Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.
+Unfortunately, org-mode by default will not warn you about upcoming event." />
+<meta name="keywords" content=", emacs, orgmode" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://blog.bitside.pl/posts/get-notified/" />
+
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+
+    <title>
+        
+            Get notified :: Bit side of life 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet" type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.585990f4320ff03ddf167db07e375271983e3abf94c2b30098ed18946f3054b3.css">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="Get notified">
+<meta itemprop="description" content="org-mode is definitely one of the most versatile notes &amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.
+Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.
+Unfortunately, org-mode by default will not warn you about upcoming event."><meta itemprop="datePublished" content="2012-01-04T17:38:00+01:00" />
+<meta itemprop="dateModified" content="2020-07-09T01:13:38+02:00" />
+<meta itemprop="wordCount" content="414">
+<meta itemprop="keywords" content="emacs,orgmode," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Get notified"/>
+<meta name="twitter:description" content="org-mode is definitely one of the most versatile notes &amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.
+Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.
+Unfortunately, org-mode by default will not warn you about upcoming event."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2012-01-04 17:38:00 &#43;0100 CET" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__text"> <span class="hash"> :: </span> bit side of life <span class="hash"> :: </span></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts/">Posts</a></li><li><a href="/tags/">Tags</a></li><li><a href="/about">About me</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        2 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://blog.bitside.pl/posts/get-notified/">Get notified</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <p><a href="http://orgmode.org/">org-mode</a> is definitely one of the most versatile notes &amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.</p>
+<p>Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.</p>
+<p>Unfortunately, org-mode by default will not warn you about upcoming event. It’s very easy to overlook it, especially when you are deep in your matrix trying to decrypt one more perl script…</p>
+<p>But don’t despair. Notifications come to the rescue - few minutes before meeting you will get a growl/growl-like message (possibly with shocking biiing-booong sound) reminding you about your crucial appointment.</p>
+<p>To make it working on windows, I used ToDoChiKu along with Snarl which displays fancy growl-like messages. The dark side of this solution is that ToDoChiKu is no longer compatible with Snarl 2.5. You will see no messages without a simple todochiku.el patch.</p>
+<p>Having ToDoChiKu patched we need to register emacs app to get notifications. Go into <code>C:\Program Files\full phat\Snarl\tools</code> where you should find a heysnarl.exe. Next, type in console:</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “register?app-sig=app/emacs&amp;title=Emacs Org-Mode&amp;icon=C:\Program Files\full phat\Snarl\etc\icons\emacs.png”
+</code></pre><p>app/emacs is our application signature used by ToDoChiku, and icon is a path to whatever icon you want. I used this one. Once emacs is installed, you should see it on the list of registered Snarl applications. You may also test if messages appear correctly:</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “notify?app-sig=app/emacs&amp;title=Simple test&amp;text=dupa”
+</code></pre><p>Oki, we have Snarl working, let’s go back to Emacs. To complete our ToDoChiku configuration we need following stuff, a bit of magic to ask org-mode to use ToDoChiku as notification tool:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span>
+  <span class="nv">todochiku-command</span> <span class="s">&#34;C:/Program Files/full phat/Snarl/tools/heysnarl.exe&#34;</span>
+  <span class="nv">org-show-notification-handler</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">notification</span><span class="p">)</span>
+                                   <span class="p">(</span><span class="nv">todochiku-message</span> <span class="s">&#34;org-mode notification&#34;</span> <span class="nv">notification</span> <span class="p">(</span><span class="nv">todochiku-icon</span> <span class="ss">&#39;emacs</span><span class="p">))))</span>
+
+<span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;todochiku</span><span class="p">)</span>
+</code></pre></div><p>Note that requiring ‘todochiku should be placed after setting up the todochiku-command. Otherwise you will get a “respawn process” error while starting up your emacs next time.</p>
+<p>Assuming todochiku is working correctly (you may verify that, eg. by evaluating in your <em>scratch</em> buffer something like <code>(todochiku-message &quot;Simple test&quot; &quot;dupa&quot; nil))</code> we finally need to enable appointments:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span>
+  <span class="nv">appt-activate</span> <span class="mi">1</span>
+  <span class="nv">appt-message-warning-time</span> <span class="mi">15</span>
+  <span class="nv">appt-display-mode-line</span> <span class="no">t</span>
+  <span class="nv">appt-display-format</span> <span class="ss">&#39;window</span><span class="p">)</span>
+</code></pre></div><p>With above settings appointments will be displayed in two modes: in your mode-line and in separate popup. ToDoChiku by default overrides appt-disp-window-function redirecting all messages to Snarl process, so we don’t need to do that by ourselves.</p>
+<p>Ok, time for final test. Create an appointment in your org-mode and wait…</p>
+<figure><img src="/images/get_notified_2.png"/>
+</figure>
+
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://blog.bitside.pl/tags/emacs/">emacs</a></span>
+        <span class="tag"><a href="https://blog.bitside.pl/tags/orgmode/">orgmode</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        414 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2012-01-04 17:38
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://blog.bitside.pl/posts/gnus/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">Gnus</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="https://blog.bitside.pl/posts/world-of-bookmarks/">
+                    <span class="button__text">World of Bookmarks</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2022</span>
+            <span><a href="https://blog.bitside.pl"></a></span>
+            <span></span>
+            <span><a href="https://blog.bitside.pl/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://orgmode.org">org-mode</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.68da98ead9a7043300acc03575c363c98f79b646f714bdeaabf6c7325758e7a43f68d68822f92be240ebe6f1ea7cca6dad99a3b7be329df3c0175beb96d353c8.js" integrity="sha512-aNqY6tmnBDMArMA1dcNjyY95tkb3FL3qq/bHMldY56Q/aNaIIvkr4kDr5vHqfMptrZmjt74ynfPAF1vrltNTyA=="></script>
+
+
+
+    </body>
+</html>

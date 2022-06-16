@@ -43,7 +43,7 @@ On the other hand, if you value your time, simplicity and usability, and the onl
 <meta itemprop="name" content="Gnus">
 <meta itemprop="description" content="A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition. If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that’s definitely wrong place.
 On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU’s Not Unix, you’re welcomed to read further."><meta itemprop="datePublished" content="2012-03-30T21:30:00+02:00" />
-<meta itemprop="dateModified" content="2020-07-09T01:13:38+02:00" />
+<meta itemprop="dateModified" content="2022-06-16T22:12:57+02:00" />
 <meta itemprop="wordCount" content="1420">
 <meta itemprop="keywords" content="emacs,gnus," />
 <meta name="twitter:card" content="summary"/>
@@ -162,10 +162,10 @@ Emacs*font: DejaVu Sans Mono-9
 <p>If you use linux and you have just modified your .Xresources, time to reload it: <code>xrdb -load ~/.Xresources</code></p>
 <h2 id="groups-configuration">Groups configuration</h2>
 <p>Groups are exactly what you see on first screenshot above. These are “folders” containing articles from different sources. As you can see, they can be additionally grouped under common topics. I have splitted sources of my articles to make them visually separated. Polish NNTP servers are grouped under usenet topic, articles coming from Gmane are under gmane and results of recent searches go into searches topic.</p>
-<p>Creating, modification of topics and moving groups between them is pretty simple and is described <a href="http://www.gnu.org/software/emacs//manual/html%5Fnode/gnus/Group-Topics.html#Group-Topics">here</a>.</p>
+<p>Creating, modification of topics and moving groups between them is pretty simple and is described <a href="http://www.gnu.org/software/emacs//manual/html_node/gnus/Group-Topics.html#Group-Topics">here</a>.</p>
 <p>However, the most interesting is the look of our groups. It’s configurable (as everything else in Gnus) through appropriate variable set in ~/.gnus file:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-group-line-format</span> <span class="s">&#34;%P%M%St%(%g%) (%y)n&#34;</span><span class="p">)</span>
-</code></pre></div><p>Description of formatting characters you may find <a href="http://www.gnu.org/software/emacs/manual/html%5Fnode/gnus/Group-Line-Specification.html#Group-Line-Specification">here</a>.</p>
+</code></pre></div><p>Description of formatting characters you may find <a href="http://www.gnu.org/software/emacs/manual/html_node/gnus/Group-Line-Specification.html#Group-Line-Specification">here</a>.</p>
 <p>Ok, Gnus looks much better now. But there is one little caveat. Everytime when Gnus starts, it tries to actualize our groups connecting to servers that groups are based on. It’s nothing wrong when you have one or two groups, but having them more may cause a long, irritating delay. Thanks God, there is something called levels, which modifies a bit this behaviour.</p>
 <p>How do levels work? They are assigned to each group and instruct Gnus, among others, when to update the content. If given level is equal or below the value assigned to gnus-activate-level variable, the group it is assigned to updates itself automatically at startup. Higher value says “leave me alone, I will update myself right after I get selected”.</p>
 <p>Let’s set the default activation level to 3:</p>
@@ -189,7 +189,7 @@ Emacs*font: DejaVu Sans Mono-9
 <h2 id="configuration-of-articles-list">Configuration of articles list</h2>
 <p>List of articles is something you see after choosing the group. And this is the place which we may deeply customize. First of all, let’s format the way how articles are presented. To do that, I suggest to modify gnus-summary-line-format variable:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-summary-line-format</span> <span class="s">&#34;%1{%U%R%z: %}%2{%d%}%5{ %[%4i%] %}%4{%-24,24n%}%6{%-4,4ur%}%5{| %}%(%1{%B%}%s%)n&#34;</span><span class="p">)</span>
-</code></pre></div><p>Again, full description of used characters you may find <a href="http://www.gnu.org/software/emacs/manual/html%5Fnode/gnus/Summary-Buffer-Lines.html#Summary-Buffer-Lines">here</a>.</p>
+</code></pre></div><p>Again, full description of used characters you may find <a href="http://www.gnu.org/software/emacs/manual/html_node/gnus/Summary-Buffer-Lines.html#Summary-Buffer-Lines">here</a>.</p>
 <p>Now, a few words of explanation. Text between %( and %) will be highlighted using gnus-mouse-face immediately when mouse pointer hovers over given article. In our example <code>%(%1{%B%}%s%)</code> means that we want article subject <code>(%s)</code> and a corresponding part of thread’s tree <code>(%B)</code> highlighted on mouse hover. By default, thread is presented with plain ascii characters, just like this:</p>
 <pre class="plain">
 ->

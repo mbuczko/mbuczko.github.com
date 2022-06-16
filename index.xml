@@ -6,7 +6,7 @@
     <description>Recent content on Bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jun 2022 23:59:17 +0200</lastBuildDate><atom:link href="https://blog.bitside.pl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Oct 2016 17:16:00 +0200</lastBuildDate><atom:link href="https://blog.bitside.pl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Focus Mode</title>
       <link>https://blog.bitside.pl/posts/focus-mode/</link>
@@ -148,104 +148,6 @@ This flow C-s C-w C-w M-s o selects 2 words starting at current cursor position 
       
       <guid>https://blog.bitside.pl/posts/the-kill-ring/</guid>
       <description>Sounds scary, but it’s not about killing (this time). Kill ring is a term used in Emacs to describe a list of cut (killed) blocks of text. Yes, that’s right. It’s about mutliple blocks of text that you can cut and paste. Emacs as an extraoridinary editor gives you ability to keep the history of what you have just killed. Be sure to close it before you start doing nasty things :)</description>
-    </item>
-    
-    <item>
-      <title>Bit side of life</title>
-      <link>https://blog.bitside.pl/posts/posts/</link>
-      <pubDate>Thu, 16 Jun 2022 23:59:17 +0200</pubDate>
-      
-      <guid>https://blog.bitside.pl/posts/posts/</guid>
-      <description>&lt;h2 id=&#34;setting-up-gitea-on-synology&#34;&gt;&lt;span class=&#34;org-todo todo TODO&#34;&gt;TODO&lt;/span&gt; setting up gitea on synology &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;synology&#34;&gt;synology&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;make-your-own-pinboard&#34;&gt;&lt;span class=&#34;org-todo todo TODO&#34;&gt;TODO&lt;/span&gt; make your own pinboard &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;rust&#34;&gt;rust&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;hacking-keyboard&#34;&gt;&lt;span class=&#34;org-todo todo TODO&#34;&gt;TODO&lt;/span&gt; hacking keyboard &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;keyboard&#34;&gt;keyboard&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;kinesis-advantage-keyboard&#34;&gt;&lt;span class=&#34;org-todo todo TODO&#34;&gt;TODO&lt;/span&gt; kinesis advantage keyboard &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;keyboard&#34;&gt;keyboard&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;org-mode-and-github-via-hub&#34;&gt;&lt;span class=&#34;org-todo todo TODO&#34;&gt;TODO&lt;/span&gt; org mode and github via &amp;ldquo;hub&amp;rdquo; &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;emacs&#34;&gt;emacs&lt;/span&gt;&lt;span class=&#34;orgmode&#34;&gt;orgmode&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;helm-clojuredocs&#34;&gt;&lt;span class=&#34;org-todo todo TODO&#34;&gt;TODO&lt;/span&gt; Helm Clojuredocs &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;clojure&#34;&gt;clojure&lt;/span&gt;&lt;span class=&#34;emacs&#34;&gt;emacs&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;cerber-oauth2-provider&#34;&gt;&lt;span class=&#34;org-todo todo TODO&#34;&gt;TODO&lt;/span&gt; Cerber OAuth2 provider &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;oauth2&#34;&gt;oauth2&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;revolt-introduction&#34;&gt;&lt;span class=&#34;org-todo todo TODO&#34;&gt;TODO&lt;/span&gt; Revolt - introduction &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;clojure&#34;&gt;clojure&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;ring-based-webapps-with-failjure&#34;&gt;&lt;span class=&#34;org-todo todo TODO&#34;&gt;TODO&lt;/span&gt; Ring-based webapps with failjure &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;clojure&#34;&gt;clojure&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;h2 id=&#34;focus-mode&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Focus Mode &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;emacs&#34;&gt;emacs&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/larstvei/Focus&#34;&gt;Focus&lt;/a&gt; is one of those additions which turns Emacs usage into real joy and makes programmer’s life happier.&lt;/p&gt;
-&lt;p&gt;Having to look at tons of code 8 hrs per day might become a bit painful. &lt;a href=&#34;https://github.com/tonsky/FiraCode&#34;&gt;Readable font&lt;/a&gt; is often first choice to improve this situation but it doesn’t help much when one needs to focus on concrete block of code. This is where Focus comes to the rescue - it dims text outside the function pointed by cursor and visually brings that code block at user’s attention.&lt;/p&gt;
-&lt;p&gt;Try it out and keep calm while watching your code.&lt;/p&gt;
-&lt;h2 id=&#34;bootize-your-project&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Boot-ize your project &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;clojure&#34;&gt;clojure&lt;/span&gt;&lt;span class=&#34;emacs&#34;&gt;emacs&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;Maven or gradle? Grunt or gulp? Leiningen or boot…?&lt;/p&gt;
-&lt;p&gt;It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision. In particular it’s noticeable in javascript world where new ideas emerge with the speed of light. Do you know what’s the usual lifetime of shiny new javascript library, one of 4 hundreds coming out daily? Well, I don’t know too but I guess you wouldn’t be able to complete a todo app before the library of your choice became deprecated :)&lt;/p&gt;
-&lt;p&gt;Speaking of project building tools, as a Clojurists we happily sit in a comfort zone. Up until recently, there was only one way to keep your clojure project organized - &lt;a href=&#34;http://http//leiningen.org/&#34;&gt;Leiningen&lt;/a&gt;. Elegant declarative way which leiningen used to describe entire project with all its dependencies and profiles immediately reminded me of maven tons of hand-crafted pom.xmls. Easy when you finally get it, extremally hard when you try to customize.&lt;/p&gt;
-&lt;p&gt;Right on the other corner stands Boot. Instead of declarative DSL it gives a full power of Clojure - each task is just a Clojure function. It’s even more fun when you realize that boot tasks can be called (just as regular functions) straight from REPL. Having seen that first time crazy idea sparkled in my mind…&lt;/p&gt;
-&lt;p&gt;I guess every Clojurist already read &lt;a href=&#34;http://thinkrelevance.com/blog/2013/06/04/clojure-workflow-reloaded&#34;&gt;Clojure Workflow Reloaded&lt;/a&gt;. General idea behind is dead simple. To have a reloadable “system” one needs to implement start/stop/reset functions and call them to start the system, to stop it and reload when needed. Now, let’s assume we have it already written, it works as expected and the only pain is to switch to repl and call our reset function each time something substantial has changed in our app.&lt;/p&gt;
-&lt;p&gt;Wouldn’t it be nicer to have resetting under the Emacs shortcut so every Clojure project following Stuart’s reloadable flow (ie. having system start/stop/reset implemented) could be restarted just by a simple key stroke?&lt;/p&gt;
-&lt;p&gt;This is where Boot really shines. To have system reloadable by Boot we need to implement reset task:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;require&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;foo.system&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
-
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;deftask&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;reset&lt;/span&gt;
-  &lt;span class=&#34;s&#34;&gt;&amp;#34;Restarts system&amp;#34;&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;foo.system/reset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Each boot-ized project following this simple rule immediately becomes reset-able just by calling boot.user/reset. That simply means, we could evaluate it directly from Emacs connected to REPL via glorious Cider:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;repl-reset&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-  &lt;span class=&#34;s&#34;&gt;&amp;#34;Sends (reset) to currently running repl&amp;#34;&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;interactive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;save-buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;cider-interactive-eval&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;(boot.user/reset)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;global-set-key&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;kbd&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;C-x x&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;repl-reset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Have a nice system resets ;)&lt;/p&gt;
-&lt;h2 id=&#34;emacs-windows-switching&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Emacs Windows Switching &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;emacs&#34;&gt;emacs&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?&lt;/p&gt;
-&lt;p&gt;The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows. Well, good luck with selecting windows this way longer than a day.&lt;/p&gt;
-&lt;p&gt;But hey, there is a hope. Default windows switching is so insane that lot of people tried to address this problem with additional packages. One of the most popular is &lt;a href=&#34;https://melpa.org/#/window-numbering&#34;&gt;window numbering&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&amp;gt; Enable window-numbering-mode and use M-1 through M-0 to navigate.&lt;/p&gt;
-&lt;p&gt;Yup, that’s what we really need - simple shortcuts to activate immediately each window in a frame. But there is something more. Having frame split into multiple windows sooner or later makes some of them awfully hard to use beacuse of little space they occupy. Time to introduce a real hero - &lt;a href=&#34;https://melpa.org/#/golden-ratio&#34;&gt;golden ratio&lt;/a&gt; package which resizes seleted windows to the size specified in the &lt;a href=&#34;https://en.wikipedia.org/wiki/Golden_ratio&#34;&gt;“Golden Ratio”&lt;/a&gt;. Sounds cool, works even cooler when bound with shortcuts provided by window-numbering:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lisp&#34; data-lang=&#34;lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;defadvice&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;select-window-by-number&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;after&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;select-window&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;activate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;golden-ratio&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is how it looks like in action:&lt;/p&gt;
-&lt;img src=&#34;https://blog.bitside.pl/images/emacs-window-switching.gif&#34; width=&#34;760&#34;&gt;
-&lt;h2 id=&#34;clojure-for-fun-and-profit&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Clojure for fun &amp;amp; profit &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;clojure&#34;&gt;clojure&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;This is my initial blog note - first from series I’m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.&lt;/p&gt;
-&lt;p&gt;Lot of arcticles have been already written about Clojure and why it’s so attractive. Not to repeat all of these oh’s and ah’s I would like to sum up things most important for me as a long-time professional java programmer:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Clojure is concise. This is the very first impression you’ll get coming from Java world. And this is also the first pain and mind-bender for someone grown from object-oriented world - Clojure is more about ‘what’ you want to implement rather than ‘how’. Simple example: loops. It’s quite unusual to see for-loop in Clojure sources. Why? In a Java world loops are usually introduced (or were introduced before streams came along with Java 8) to iterate on collection of objects either to produce a new collection or to generate result based on all iterated objects. Well, in Clojure world you have a map &amp;amp; reduce functions doing exactly the same thing, so why bother with iterating by hand?&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Clojure is dynamically typed. That sounds a bit scary for Java programmer. No types? Isn’t it a smell of Javascript with all its fancy type coercion? Not really. First of all you may always enforce type checking, eg. by using Prismatic Schema or core.typed. Secondly as Clojure website says:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;First and foremost, Clojure is dynamic. That means that a Clojure program is not just something you compile and run, but something with which you can interact.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;which leads to the most favourite thing that Clojure puts into programmer’s hand: REPL&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Read-Eval-Print-Loop (REPL). Since I used it first time, I knew I’ve just became REPL Driven Developer. Honestly, this is first time I could bring my weird ideas immediately into live just by pasting code into REPL and see the result. No recompilation, no restarts, just me and my idea without any technical obstacles. This is how I imagine instant prototyping and the productivity boost I experienced was tremendous.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Functions as an API. It isn’t something raised up very often but having the code split into namespaces and structured well enough (+ some macro sugar added) you quickly discover that recently popular fluent API DSLs so horrible to write in Java are apparently pleasure to design in Clojure. With a few functions you may get something like this for free (sample from my branch of flux - clojure client for Solr):&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!--listend--&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-clojure&#34; data-lang=&#34;clojure&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;flux.criteria&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;with-filter&lt;/span&gt;
-   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;or&lt;/span&gt;
-     &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;has&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:description&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;nówka sztuka&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-     &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;and&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:currency&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;PLN&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;between&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:price&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5000&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;15000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;No frameworks. That’s the least impressive but very important point. Coming into Clojure world you immediately discover there are no fully blown web frameworks, dependency injection frameworks, whatsoever frameworks. Seems sad at the beginning but while your experience grow you realise it’s much easier to grab few popular libraries and tie them together by yourself rather than spend next few months on debugging framework code and wonder how to implement a thing that wasn’t planned by framework creators before.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Still interested in Clojure? Good to hear. In a next few posts I’ll try to describe in detail few libraries/tools that impressed me the most while I was experimenting with Clojure functional programming. To have a track of all articles and repositories that occured to be really useful I’ve created a github repo containing all the links: &lt;a href=&#34;https://github.com/mbuczko/awesome-clojure&#34;&gt;awesome-clojure&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Enjoy!&lt;/p&gt;
-&lt;h2 id=&#34;swank-js&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; Swank JS &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;javascript&#34;&gt;javascript&lt;/span&gt;&lt;span class=&#34;emacs&#34;&gt;emacs&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;Have you ever dreamed about changing the content displayed by your web browser straight from text editor?&lt;/p&gt;
-&lt;p&gt;Latest &lt;a href=&#34;http://emacsrocks.com/e11.html&#34;&gt;Episode 11&lt;/a&gt; at Emacs Rocks discovers how you may speed up your web development with awesome swank-js. Btw. if you still don’t have Emacs Rocks in your RSS reader, I highly recommend adding this source right now. It’s excellent place of tips &amp;amp; tricks especially helpful during daily work with emacs.&lt;/p&gt;
-&lt;p&gt;What is swank-js? As description on github says, it provides javascript REPL (read-eval-print loop) attached magically (well, actually through Socket.IO to browser. It simply means, all javascript expressions typed in REPL shell affect immediately page we’re connected to. Moreover, there is no need to use shell, we may send code and CSSes to browser directly from working buffer!&lt;/p&gt;
-&lt;p&gt;Sounds familiar? No? Take a look at Bret Victor’s presentation &lt;a href=&#34;http://vimeo.com/36579366&#34;&gt;Inventing on Principle&lt;/a&gt;, one of these tech talks which stays in mind for a long time.&lt;/p&gt;
-&lt;p&gt;swank-js was a missing part in my web developer’s toolbox which I tried to replace with &lt;a href=&#34;https://github.com/bard/mozrepl/wiki/&#34;&gt;moz-repl&lt;/a&gt;. Unfortunately, moz-repl has some limitations, eg. as name suggests it works only with mozilla-based browsers (like firefox). Yup, no Chrome, no Safari.&lt;/p&gt;
-&lt;p&gt;Now, I’m extremally happy to have Chrome opened on one screen, Emacs on the other and immediately visualize changes on my web page just with one &lt;code&gt;C-c C-c&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;how-fast-you-type&#34;&gt;&lt;span class=&#34;org-todo done DONE&#34;&gt;DONE&lt;/span&gt; How fast you type? &lt;span class=&#34;tag&#34;&gt;&lt;span class=&#34;keyboard&#34;&gt;keyboard&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;I found recently brilliant page, I’d like to share with. &lt;a href=&#34;http://play.typeracer.com/&#34;&gt;TypeRacer&lt;/a&gt; is the place where you can measure your typing speed and compare it with other participants. One word of warning - it’s horribly addicting.&lt;/p&gt;</description>
     </item>
     
     <item>

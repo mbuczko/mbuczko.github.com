@@ -43,8 +43,8 @@ The most obvious way is to use mouse/touchpad of course. It’s easy at the begi
 <meta itemprop="name" content="Emacs Windows Switching">
 <meta itemprop="description" content="It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?
 The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows."><meta itemprop="datePublished" content="2016-10-09T16:52:00+02:00" />
-<meta itemprop="dateModified" content="2022-06-16T22:12:56+02:00" />
-<meta itemprop="wordCount" content="227">
+<meta itemprop="dateModified" content="2022-06-19T16:01:42+02:00" />
+<meta itemprop="wordCount" content="226">
 <meta itemprop="keywords" content="emacs," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Emacs Windows Switching"/>
@@ -136,7 +136,9 @@ The most obvious way is to use mouse/touchpad of course. It’s easy at the begi
         <p>It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?</p>
 <p>The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows. Well, good luck with selecting windows this way longer than a day.</p>
 <p>But hey, there is a hope. Default windows switching is so insane that lot of people tried to address this problem with additional packages. One of the most popular is <a href="https://melpa.org/#/window-numbering">window numbering</a>:</p>
-<p>&gt; Enable window-numbering-mode and use M-1 through M-0 to navigate.</p>
+<blockquote>
+<p>Enable window-numbering-mode and use M-1 through M-0 to navigate.</p>
+</blockquote>
 <p>Yup, that’s what we really need - simple shortcuts to activate immediately each window in a frame. But there is something more. Having frame split into multiple windows sooner or later makes some of them awfully hard to use beacuse of little space they occupy. Time to introduce a real hero - <a href="https://melpa.org/#/golden-ratio">golden ratio</a> package which resizes seleted windows to the size specified in the <a href="https://en.wikipedia.org/wiki/Golden_ratio">“Golden Ratio”</a>. Sounds cool, works even cooler when bound with shortcuts provided by window-numbering:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">defadvice</span> <span class="nv">select-window-by-number</span> <span class="p">(</span><span class="nv">after</span> <span class="nv">select-window</span> <span class="nv">activate</span><span class="p">)</span>
   <span class="p">(</span><span class="nv">golden-ratio</span><span class="p">))</span>
@@ -167,7 +169,7 @@ The most obvious way is to use mouse/touchpad of course. It’s easy at the begi
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        227 Words
+        226 Words
       </p>
 
       <p>

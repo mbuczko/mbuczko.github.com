@@ -42,8 +42,8 @@
 
 <meta itemprop="name" content="HugSQLx - SQL queries turned into Rust functions">
 <meta itemprop="description" content="Clojure world is lucky to have HugSQL &amp; conman - 2 brilliant libraries which make daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files, and conman transforms (interns) queries into plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments."><meta itemprop="datePublished" content="2022-10-30T14:57:00+01:00" />
-<meta itemprop="dateModified" content="2022-10-30T15:04:30+01:00" />
-<meta itemprop="wordCount" content="344">
+<meta itemprop="dateModified" content="2022-10-30T15:22:29+01:00" />
+<meta itemprop="wordCount" content="327">
 <meta itemprop="keywords" content="clojure,rust,sql," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="HugSQLx - SQL queries turned into Rust functions"/>
@@ -137,13 +137,13 @@
 <p>Seems like we can.</p>
 <img src="/images/hugsqlx.png">
 <h2 id="motivation">Motivation</h2>
-<p>There are 3 main points where couple <span class="underline">(hugsql, conman)</span> really shines when dealing with SQLs:</p>
+<p>There are 3 main points where couple <code>(hugsql, conman)</code> really shines when dealing with SQLs:</p>
 <ul>
-<li>queries separated from the code - that brings proper formatting, syntax highlighting and better documentation (ability to add readable comments) out of the box. Your IDE is way happier to edit .sql file rather than SQLs inside rust source.</li>
-<li>named queries - query becomes easier to identify. Easier to indentify in a code, easier to reason about in logs when one needs to deduce which query just blown up production. Your IDE is happy too being able to find query by name.</li>
+<li>queries separated from the code - that brings proper formatting, syntax highlighting and better documentation (readable comments) out of the box. Your IDE is way happier to edit .sql file rather than SQLs inside rust source.</li>
+<li>named queries - query becomes easier to identify. Easier to indentify in a code, easier to deduce in logs when one looks for query that just blown up production.</li>
 <li>queries as documented functions - better way to understand author&rsquo;s intention - what the query does in summary, what to expect in result?</li>
-<li>last but not least - queries turned into functions enable auto-completion and quick doc view out of the box (if you&rsquo;re lucky enough with your LSP)</li>
 </ul>
+<p>Last but not least - queries turned into functions enable auto-completion and quick doc view out of the box (if you&rsquo;re lucky enough with your LSP)</p>
 <h2 id="solution--poc">Solution (PoC)</h2>
 <p><a href="https://github.com/mbuczko/hugsqlx">HugSqlx</a> is still kind of proof-of-concept, doing its best to materialize these ideas. Although crate is at its newborn stage, it should be quite functional. Standing on the shoulders of awesome <a href="https://github.com/launchbadge/sqlx">SQLx</a> it implements query-as-a-function concept for 3 major databases: postgres, sqlite and mysql. From a technical point of view, entire logic comes down to a simple (more or less..) code transformation which generates a static trait functions for your struct.</p>
 <p>First results seem to be promising. I de-cluttered my sources, enjoy LSP happily providing me queries names via auto-completion. And, most importantly, I learned a lot about <a href="https://doc.rust-lang.org/reference/procedural-macros.html">procedural macros</a>.</p>
@@ -174,7 +174,7 @@
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        344 Words
+        327 Words
       </p>
 
       <p>

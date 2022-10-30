@@ -6,7 +6,16 @@
     <description>Recent content on Bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Oct 2016 17:16:00 +0200</lastBuildDate><atom:link href="https://blog.bitside.pl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Oct 2022 14:57:00 +0100</lastBuildDate><atom:link href="https://blog.bitside.pl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HugSQLx - SQL queries turned into Rust functions</title>
+      <link>https://blog.bitside.pl/posts/hugsqlx/</link>
+      <pubDate>Sun, 30 Oct 2022 14:57:00 +0100</pubDate>
+      
+      <guid>https://blog.bitside.pl/posts/hugsqlx/</guid>
+      <description>Clojure world is lucky to have HugSQL &amp;amp; conman - 2 brilliant libraries which make daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files, and conman transforms (interns) queries into plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</description>
+    </item>
+    
     <item>
       <title>Focus Mode</title>
       <link>https://blog.bitside.pl/posts/focus-mode/</link>

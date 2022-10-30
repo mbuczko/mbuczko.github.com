@@ -6,22 +6,40 @@
     <description>Recent content in Tags on Bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Oct 2016 17:16:00 +0200</lastBuildDate><atom:link href="https://blog.bitside.pl/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Oct 2022 14:57:00 +0100</lastBuildDate><atom:link href="https://blog.bitside.pl/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>clojure</title>
+      <link>https://blog.bitside.pl/tags/clojure/</link>
+      <pubDate>Sun, 30 Oct 2022 14:57:00 +0100</pubDate>
+      
+      <guid>https://blog.bitside.pl/tags/clojure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>https://blog.bitside.pl/tags/rust/</link>
+      <pubDate>Sun, 30 Oct 2022 14:57:00 +0100</pubDate>
+      
+      <guid>https://blog.bitside.pl/tags/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sql</title>
+      <link>https://blog.bitside.pl/tags/sql/</link>
+      <pubDate>Sun, 30 Oct 2022 14:57:00 +0100</pubDate>
+      
+      <guid>https://blog.bitside.pl/tags/sql/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>emacs</title>
       <link>https://blog.bitside.pl/tags/emacs/</link>
       <pubDate>Sun, 16 Oct 2016 17:16:00 +0200</pubDate>
       
       <guid>https://blog.bitside.pl/tags/emacs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>clojure</title>
-      <link>https://blog.bitside.pl/tags/clojure/</link>
-      <pubDate>Sun, 09 Oct 2016 13:40:00 +0200</pubDate>
-      
-      <guid>https://blog.bitside.pl/tags/clojure/</guid>
       <description></description>
     </item>
     

@@ -5,12 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="Focus is one of those additions which turns Emacs usage into real joy and makes programmer’s life happier.
-Having to look at tons of code 8 hrs per day might become a bit painful. Readable font is often first choice to improve this situation but it doesn’t help much when one needs to focus on concrete block of code. This is where Focus comes to the rescue - it dims text outside the function pointed by cursor and visually brings that code block at user’s attention." />
-<meta name="keywords" content=", emacs" />
+<meta name="description" content="Clojure world is lucky to have HugSQL &amp;amp; conman - 2 brilliant libraries which make daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files, and conman transforms (interns) queries into plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments." />
+<meta name="keywords" content=", clojure, rust, sql" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
-<link rel="canonical" href="https://blog.bitside.pl/posts/focus-mode/" />
+<link rel="canonical" href="https://blog.bitside.pl/posts/hugsqlx/" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +17,7 @@ Having to look at tons of code 8 hrs per day might become a bit painful. Readabl
 
     <title>
         
-            Focus Mode :: Bit side of life 
+            HugSQLx - SQL queries turned into Rust functions :: Bit side of life 
         
     </title>
 
@@ -41,16 +40,14 @@ Having to look at tons of code 8 hrs per day might become a bit painful. Readabl
     <meta name="msapplication-TileColor" content="">
 
 
-<meta itemprop="name" content="Focus Mode">
-<meta itemprop="description" content="Focus is one of those additions which turns Emacs usage into real joy and makes programmer’s life happier.
-Having to look at tons of code 8 hrs per day might become a bit painful. Readable font is often first choice to improve this situation but it doesn’t help much when one needs to focus on concrete block of code. This is where Focus comes to the rescue - it dims text outside the function pointed by cursor and visually brings that code block at user’s attention."><meta itemprop="datePublished" content="2016-10-16T17:16:00+02:00" />
-<meta itemprop="dateModified" content="2022-06-16T22:12:56+02:00" />
-<meta itemprop="wordCount" content="96">
-<meta itemprop="keywords" content="emacs," />
+<meta itemprop="name" content="HugSQLx - SQL queries turned into Rust functions">
+<meta itemprop="description" content="Clojure world is lucky to have HugSQL &amp; conman - 2 brilliant libraries which make daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files, and conman transforms (interns) queries into plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments."><meta itemprop="datePublished" content="2022-10-30T14:57:00+01:00" />
+<meta itemprop="dateModified" content="2022-10-30T15:04:30+01:00" />
+<meta itemprop="wordCount" content="344">
+<meta itemprop="keywords" content="clojure,rust,sql," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Focus Mode"/>
-<meta name="twitter:description" content="Focus is one of those additions which turns Emacs usage into real joy and makes programmer’s life happier.
-Having to look at tons of code 8 hrs per day might become a bit painful. Readable font is often first choice to improve this situation but it doesn’t help much when one needs to focus on concrete block of code. This is where Focus comes to the rescue - it dims text outside the function pointed by cursor and visually brings that code block at user’s attention."/>
+<meta name="twitter:title" content="HugSQLx - SQL queries turned into Rust functions"/>
+<meta name="twitter:description" content="Clojure world is lucky to have HugSQL &amp; conman - 2 brilliant libraries which make daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files, and conman transforms (interns) queries into plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments."/>
 
 
 
@@ -58,7 +55,7 @@ Having to look at tons of code 8 hrs per day might become a bit painful. Readabl
 
 
 
-    <meta property="article:published_time" content="2016-10-16 17:16:00 &#43;0200 CEST" />
+    <meta property="article:published_time" content="2022-10-30 14:57:00 &#43;0100 CET" />
 
 
 
@@ -116,7 +113,7 @@ Having to look at tons of code 8 hrs per day might become a bit painful. Readabl
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        One minute
+        2 minutes
 
         
       </p>
@@ -124,7 +121,7 @@ Having to look at tons of code 8 hrs per day might become a bit painful. Readabl
 
     <article>
       <h1 class="post-title">
-        <a href="https://blog.bitside.pl/posts/focus-mode/">Focus Mode</a>
+        <a href="https://blog.bitside.pl/posts/hugsqlx/">HugSQLx - SQL queries turned into Rust functions</a>
       </h1>
 
       
@@ -134,9 +131,22 @@ Having to look at tons of code 8 hrs per day might become a bit painful. Readabl
       
 
       <div class="post-content">
-        <p><a href="https://github.com/larstvei/Focus">Focus</a> is one of those additions which turns Emacs usage into real joy and makes programmer’s life happier.</p>
-<p>Having to look at tons of code 8 hrs per day might become a bit painful. <a href="https://github.com/tonsky/FiraCode">Readable font</a> is often first choice to improve this situation but it doesn’t help much when one needs to focus on concrete block of code. This is where Focus comes to the rescue - it dims text outside the function pointed by cursor and visually brings that code block at user’s attention.</p>
-<p>Try it out and keep calm while watching your code.</p>
+        <p>Clojure world is lucky to have <a href="https://www.hugsql.org/">HugSQL</a> &amp; <a href="https://github.com/luminus-framework/conman">conman</a> - 2 brilliant libraries which make daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files, and conman transforms (interns) queries into plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</p>
+<p>Simple, yet so effective&hellip;</p>
+<p>Can we have something simmilar in Rust?</p>
+<p>Seems like we can.</p>
+<img src="/images/hugsqlx.png">
+<h2 id="motivation">Motivation</h2>
+<p>There are 3 main points where couple <span class="underline">(hugsql, conman)</span> really shines when dealing with SQLs:</p>
+<ul>
+<li>queries separated from the code - that brings proper formatting, syntax highlighting and better documentation (ability to add readable comments) out of the box. Your IDE is way happier to edit .sql file rather than SQLs inside rust source.</li>
+<li>named queries - query becomes easier to identify. Easier to indentify in a code, easier to reason about in logs when one needs to deduce which query just blown up production. Your IDE is happy too being able to find query by name.</li>
+<li>queries as documented functions - better way to understand author&rsquo;s intention - what the query does in summary, what to expect in result?</li>
+<li>last but not least - queries turned into functions enable auto-completion and quick doc view out of the box (if you&rsquo;re lucky enough with your LSP)</li>
+</ul>
+<h2 id="solution--poc">Solution (PoC)</h2>
+<p><a href="https://github.com/mbuczko/hugsqlx">HugSqlx</a> is still kind of proof-of-concept, doing its best to materialize these ideas. Although crate is at its newborn stage, it should be quite functional. Standing on the shoulders of awesome <a href="https://github.com/launchbadge/sqlx">SQLx</a> it implements query-as-a-function concept for 3 major databases: postgres, sqlite and mysql. From a technical point of view, entire logic comes down to a simple (more or less..) code transformation which generates a static trait functions for your struct.</p>
+<p>First results seem to be promising. I de-cluttered my sources, enjoy LSP happily providing me queries names via auto-completion. And, most importantly, I learned a lot about <a href="https://doc.rust-lang.org/reference/procedural-macros.html">procedural macros</a>.</p>
 
       </div>
     </article>
@@ -148,7 +158,9 @@ Having to look at tons of code 8 hrs per day might become a bit painful. Readabl
     <p>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
 
-        <span class="tag"><a href="https://blog.bitside.pl/tags/emacs/">emacs</a></span>
+        <span class="tag"><a href="https://blog.bitside.pl/tags/clojure/">clojure</a></span>
+        <span class="tag"><a href="https://blog.bitside.pl/tags/rust/">rust</a></span>
+        <span class="tag"><a href="https://blog.bitside.pl/tags/sql/">sql</a></span>
         
     </p>
 
@@ -162,7 +174,7 @@ Having to look at tons of code 8 hrs per day might become a bit painful. Readabl
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        96 Words
+        344 Words
       </p>
 
       <p>
@@ -173,7 +185,7 @@ Having to look at tons of code 8 hrs per day might become a bit painful. Readabl
           <line x1="3" y1="10" x2="21" y2="10"></line>
         </svg>
         
-          2016-10-16 17:16
+          2022-10-30 14:57
         
       </p>
     </div>
@@ -184,18 +196,11 @@ Having to look at tons of code 8 hrs per day might become a bit painful. Readabl
 
         <div class="pagination__buttons">
             
-            <span class="button previous">
-                <a href="https://blog.bitside.pl/posts/hugsqlx/">
-                    <span class="button__icon">←</span>
-                    <span class="button__text">HugSQLx - SQL queries turned into Rust functions</span>
-                </a>
-            </span>
-            
 
             
             <span class="button next">
-                <a href="https://blog.bitside.pl/posts/bootize-your-project/">
-                    <span class="button__text">Boot-ize your project</span>
+                <a href="https://blog.bitside.pl/posts/focus-mode/">
+                    <span class="button__text">Focus Mode</span>
                     <span class="button__icon">→</span>
                 </a>
             </span>

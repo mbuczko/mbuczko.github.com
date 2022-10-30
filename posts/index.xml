@@ -5,8 +5,34 @@
         <description>Recent content in Posts on Bit side of life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 16 Oct 2016 17:16:00 +0200</lastBuildDate>
+        <lastBuildDate>Sun, 30 Oct 2022 14:57:00 +0100</lastBuildDate>
         <atom:link href="https://blog.bitside.pl/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>HugSQLx - SQL queries turned into Rust functions</title>
+            <link>https://blog.bitside.pl/posts/hugsqlx/</link>
+            <pubDate>Sun, 30 Oct 2022 14:57:00 +0100</pubDate>
+            
+            <guid>https://blog.bitside.pl/posts/hugsqlx/</guid>
+            <description>Clojure world is lucky to have HugSQL &amp;amp; conman - 2 brilliant libraries which make daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files, and conman transforms (interns) queries into plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</description>
+            <content type="html"><![CDATA[<p>Clojure world is lucky to have <a href="https://www.hugsql.org/">HugSQL</a> &amp; <a href="https://github.com/luminus-framework/conman">conman</a> - 2 brilliant libraries which make daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files, and conman transforms (interns) queries into plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</p>
+<p>Simple, yet so effective&hellip;</p>
+<p>Can we have something simmilar in Rust?</p>
+<p>Seems like we can.</p>
+<img src="/images/hugsqlx.png">
+<h2 id="motivation">Motivation</h2>
+<p>There are 3 main points where couple <span class="underline">(hugsql, conman)</span> really shines when dealing with SQLs:</p>
+<ul>
+<li>queries separated from the code - that brings proper formatting, syntax highlighting and better documentation (ability to add readable comments) out of the box. Your IDE is way happier to edit .sql file rather than SQLs inside rust source.</li>
+<li>named queries - query becomes easier to identify. Easier to indentify in a code, easier to reason about in logs when one needs to deduce which query just blown up production. Your IDE is happy too being able to find query by name.</li>
+<li>queries as documented functions - better way to understand author&rsquo;s intention - what the query does in summary, what to expect in result?</li>
+<li>last but not least - queries turned into functions enable auto-completion and quick doc view out of the box (if you&rsquo;re lucky enough with your LSP)</li>
+</ul>
+<h2 id="solution--poc">Solution (PoC)</h2>
+<p><a href="https://github.com/mbuczko/hugsqlx">HugSqlx</a> is still kind of proof-of-concept, doing its best to materialize these ideas. Although crate is at its newborn stage, it should be quite functional. Standing on the shoulders of awesome <a href="https://github.com/launchbadge/sqlx">SQLx</a> it implements query-as-a-function concept for 3 major databases: postgres, sqlite and mysql. From a technical point of view, entire logic comes down to a simple (more or less..) code transformation which generates a static trait functions for your struct.</p>
+<p>First results seem to be promising. I de-cluttered my sources, enjoy LSP happily providing me queries names via auto-completion. And, most importantly, I learned a lot about <a href="https://doc.rust-lang.org/reference/procedural-macros.html">procedural macros</a>.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Focus Mode</title>

@@ -6,35 +6,28 @@
     <description>Recent content in clojure on Bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Oct 2022 14:57:00 +0100</lastBuildDate><atom:link href="https://blog.bitside.pl/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Feb 2024 19:02:59 +0100</lastBuildDate>
+    <atom:link href="https://blog.bitside.pl/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HugSQLx - SQL queries turned into Rust functions</title>
       <link>https://blog.bitside.pl/posts/hugsqlx/</link>
       <pubDate>Sun, 30 Oct 2022 14:57:00 +0100</pubDate>
-      
       <guid>https://blog.bitside.pl/posts/hugsqlx/</guid>
-      <description>Clojure world is lucky to have HugSQL &amp;amp; conman - 2 brilliant libraries which make daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files, and conman transforms (interns) queries into plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</description>
+      <description>Clojure world is lucky to have HugSQL - brilliant library which makes daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files and transforms (interns into a namespace) queries to plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</description>
     </item>
-    
     <item>
       <title>Boot-ize your project</title>
       <link>https://blog.bitside.pl/posts/bootize-your-project/</link>
       <pubDate>Sun, 09 Oct 2016 13:40:00 +0200</pubDate>
-      
       <guid>https://blog.bitside.pl/posts/bootize-your-project/</guid>
-      <description>Maven or gradle? Grunt or gulp? Leiningen or boot…?
-It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision.</description>
+      <description>Maven or gradle? Grunt or gulp? Leiningen or boot…?&#xA;It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision.</description>
     </item>
-    
     <item>
       <title>Clojure for fun &amp; profit</title>
       <link>https://blog.bitside.pl/posts/clojure-for-fun-and-profit/</link>
       <pubDate>Sun, 02 Aug 2015 11:29:00 +0200</pubDate>
-      
       <guid>https://blog.bitside.pl/posts/clojure-for-fun-and-profit/</guid>
-      <description>This is my initial blog note - first from series I’m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.
-Lot of arcticles have been already written about Clojure and why it’s so attractive. Not to repeat all of these oh’s and ah’s I would like to sum up things most important for me as a long-time professional java programmer:</description>
+      <description>This is my initial blog note - first from series I’m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.&#xA;Lot of arcticles have been already written about Clojure and why it’s so attractive. Not to repeat all of these oh’s and ah’s I would like to sum up things most important for me as a long-time professional java programmer:</description>
     </item>
-    
   </channel>
 </rss>

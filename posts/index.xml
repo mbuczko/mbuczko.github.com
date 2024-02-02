@@ -14,14 +14,14 @@
             <pubDate>Sun, 30 Oct 2022 14:57:00 +0100</pubDate>
             
             <guid>https://blog.bitside.pl/posts/hugsqlx/</guid>
-            <description>Clojure world is lucky to have HugSQL &amp;amp; conman - 2 brilliant libraries which make daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files, and conman transforms (interns) queries into plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</description>
-            <content type="html"><![CDATA[<p>Clojure world is lucky to have <a href="https://www.hugsql.org/">HugSQL</a> &amp; <a href="https://github.com/luminus-framework/conman">conman</a> - 2 brilliant libraries which make daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files, and conman transforms (interns) queries into plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</p>
+            <description>Clojure world is lucky to have HugSQL - brilliant library which makes daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files and transforms (interns into a namespace) queries to plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</description>
+            <content type="html"><![CDATA[<p>Clojure world is lucky to have <a href="https://www.hugsql.org/">HugSQL</a> - brilliant library which makes daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files and transforms (interns into a namespace) queries to plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</p>
 <p>Simple, yet so effective&hellip;</p>
 <p>Can we have something simmilar in Rust?</p>
 <p>Seems like we can.</p>
 <img src="/images/hugsqlx.png">
 <h2 id="motivation">Motivation</h2>
-<p>There are 3 main points where couple <code>(hugsql, conman)</code> really shines when dealing with SQLs:</p>
+<p>There are 3 main points where <code>hugsqlx</code> really shines when dealing with SQLs:</p>
 <ul>
 <li>queries separated from the code - that brings proper formatting, syntax highlighting and better documentation (readable comments) out of the box. Your IDE is way happier to edit .sql file rather than SQLs inside rust source.</li>
 <li>named queries - query becomes easier to identify. Easier to indentify in a code, easier to deduce in logs when one looks for query that just blown up production.</li>
@@ -63,21 +63,21 @@ It doesn’t matter whether you’re a front- or back-end dev, sooner or later y
 <p>I guess every Clojurist already read <a href="http://thinkrelevance.com/blog/2013/06/04/clojure-workflow-reloaded">Clojure Workflow Reloaded</a>. General idea behind is dead simple. To have a reloadable “system” one needs to implement start/stop/reset functions and call them to start the system, to stop it and reload when needed. Now, let’s assume we have it already written, it works as expected and the only pain is to switch to repl and call our reset function each time something substantial has changed in our app.</p>
 <p>Wouldn’t it be nicer to have resetting under the Emacs shortcut so every Clojure project following Stuart’s reloadable flow (ie. having system start/stop/reset implemented) could be restarted just by a simple key stroke?</p>
 <p>This is where Boot really shines. To have system reloadable by Boot we need to implement reset task:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="nf">require</span> <span class="o">&#39;</span><span class="p">[</span><span class="nv">foo.system</span><span class="p">])</span>
-
-<span class="p">(</span><span class="nf">deftask</span> <span class="nv">reset</span>
-  <span class="s">&#34;Restarts system&#34;</span>
-  <span class="p">[]</span>
-  <span class="p">(</span><span class="nf">foo.system/reset</span><span class="p">))</span>
-</code></pre></div><p>Each boot-ized project following this simple rule immediately becomes reset-able just by calling boot.user/reset. That simply means, we could evaluate it directly from Emacs connected to REPL via glorious Cider:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="nf">defun</span> <span class="nv">repl-reset</span> <span class="p">()</span>
-  <span class="s">&#34;Sends (reset) to currently running repl&#34;</span>
-  <span class="p">(</span><span class="nf">interactive</span><span class="p">)</span>
-  <span class="p">(</span><span class="nf">save-buffer</span><span class="p">)</span>
-  <span class="p">(</span><span class="nf">cider-interactive-eval</span> <span class="s">&#34;(boot.user/reset)&#34;</span><span class="p">))</span>
-
-<span class="p">(</span><span class="nf">global-set-key</span> <span class="p">(</span><span class="nf">kbd</span> <span class="s">&#34;C-x x&#34;</span><span class="p">)</span> <span class="ss">&#39;repl-reset</span><span class="p">)</span>
-</code></pre></div><p>Have a nice system resets ;)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="o">&#39;</span><span class="p">[</span><span class="nv">foo.system</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">deftask</span> <span class="nv">reset</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;Restarts system&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">foo.system/reset</span><span class="p">))</span>
+</span></span></code></pre></div><p>Each boot-ized project following this simple rule immediately becomes reset-able just by calling boot.user/reset. That simply means, we could evaluate it directly from Emacs connected to REPL via glorious Cider:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">defun</span> <span class="nv">repl-reset</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;Sends (reset) to currently running repl&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">interactive</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">save-buffer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">cider-interactive-eval</span> <span class="s">&#34;(boot.user/reset)&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">global-set-key</span> <span class="p">(</span><span class="nf">kbd</span> <span class="s">&#34;C-x x&#34;</span><span class="p">)</span> <span class="ss">&#39;repl-reset</span><span class="p">)</span>
+</span></span></code></pre></div><p>Have a nice system resets ;)</p>
 ]]></content>
         </item>
         
@@ -96,9 +96,9 @@ The most obvious way is to use mouse/touchpad of course. It’s easy at the begi
 <p>Enable window-numbering-mode and use M-1 through M-0 to navigate.</p>
 </blockquote>
 <p>Yup, that’s what we really need - simple shortcuts to activate immediately each window in a frame. But there is something more. Having frame split into multiple windows sooner or later makes some of them awfully hard to use beacuse of little space they occupy. Time to introduce a real hero - <a href="https://melpa.org/#/golden-ratio">golden ratio</a> package which resizes seleted windows to the size specified in the <a href="https://en.wikipedia.org/wiki/Golden_ratio">“Golden Ratio”</a>. Sounds cool, works even cooler when bound with shortcuts provided by window-numbering:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">defadvice</span> <span class="nv">select-window-by-number</span> <span class="p">(</span><span class="nv">after</span> <span class="nv">select-window</span> <span class="nv">activate</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">golden-ratio</span><span class="p">))</span>
-</code></pre></div><p>This is how it looks like in action:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">defadvice</span> <span class="nv">select-window-by-number</span> <span class="p">(</span><span class="nv">after</span> <span class="nv">select-window</span> <span class="nv">activate</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">golden-ratio</span><span class="p">))</span>
+</span></span></code></pre></div><p>This is how it looks like in action:</p>
 <img src="/images/emacs-window-switching.gif" width="760">
 ]]></content>
         </item>
@@ -132,15 +132,15 @@ Lot of arcticles have been already written about Clojure and why it’s so attra
 </li>
 </ul>
 <!--listend-->
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="nf">use</span> <span class="ss">&#39;flux.criteria</span><span class="p">)</span>
-
-<span class="p">(</span><span class="nf">with-filter</span>
-   <span class="p">(</span><span class="nf">or</span>
-     <span class="p">(</span><span class="nf">has</span> <span class="ss">:description</span> <span class="s">&#34;nówka sztuka&#34;</span><span class="p">)</span>
-     <span class="p">(</span><span class="nf">and</span>
-        <span class="p">(</span><span class="nf">is</span> <span class="ss">:currency</span> <span class="s">&#34;PLN&#34;</span><span class="p">)</span>
-        <span class="p">(</span><span class="nf">between</span> <span class="ss">:price</span> <span class="p">[</span><span class="mi">5000</span> <span class="mi">15000</span><span class="p">]))))</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">use</span> <span class="ss">&#39;flux.criteria</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">with-filter</span>
+</span></span><span class="line"><span class="cl">   <span class="p">(</span><span class="nf">or</span>
+</span></span><span class="line"><span class="cl">     <span class="p">(</span><span class="nf">has</span> <span class="ss">:description</span> <span class="s">&#34;nówka sztuka&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">     <span class="p">(</span><span class="nf">and</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nf">is</span> <span class="ss">:currency</span> <span class="s">&#34;PLN&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nf">between</span> <span class="ss">:price</span> <span class="p">[</span><span class="mi">5000</span> <span class="mi">15000</span><span class="p">]))))</span>
+</span></span></code></pre></div><ul>
 <li>No frameworks. That’s the least impressive but very important point. Coming into Clojure world you immediately discover there are no fully blown web frameworks, dependency injection frameworks, whatsoever frameworks. Seems sad at the beginning but while your experience grow you realise it’s much easier to grab few popular libraries and tie them together by yourself rather than spend next few months on debugging framework code and wonder how to implement a thing that wasn’t planned by framework creators before.</li>
 </ul>
 <p>Still interested in Clojure? Good to hear. In a next few posts I’ll try to describe in detail few libraries/tools that impressed me the most while I was experimenting with Clojure functional programming. To have a track of all articles and repositories that occured to be really useful I’ve created a github repo containing all the links: <a href="https://github.com/mbuczko/awesome-clojure">awesome-clojure</a>.</p>
@@ -190,23 +190,23 @@ What is swank-js?</description>
 <p><a href="http://emacswiki.org/emacs/ImenuMode">Imenu mode</a> is a list of functions and definitions gathered from current buffer. It allows you switching immediately between them just with few keys stokes. The list is presented either in system menu or as mini-buffer completion (which may be boosted by ido) or by awesome anything-imenu.</p>
 <p>js2-mode supported imenu for a long time but it was not able to recognize few javascript constructions, thus the list of functions was horribly limited. I opened a <a href="https://github.com/mooz/js2-mode/issues/27">ticket</a> on github kindly trying to ask Dmitry for a few enhancements.</p>
 <p>And voila! Since June we may admire js2-mode with imenu in action having code like this (<a href="http://backbonejs.org/">backbone based</a>):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">App</span><span class="p">.</span><span class="nx">Views</span><span class="p">.</span><span class="nx">Shelf</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-    <span class="nx">template</span><span class="o">:</span> <span class="nx">JST</span><span class="p">[</span><span class="s1">&#39;app/shelf&#39;</span><span class="p">],</span>
-    <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#container .shelf&#39;</span><span class="p">,</span>
-    <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
-    <span class="p">},</span>
-    <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="p">},</span>
-    <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="p">}</span>
-<span class="p">})</span>
-</code></pre></div><p>or ‘module’ patterns like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-        <span class="nx">bar</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
-    <span class="p">};</span>
-<span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
-</code></pre></div><p>The pleasure of using Emacs with javascript has just raised by 100% :)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">App</span><span class="p">.</span><span class="nx">Views</span><span class="p">.</span><span class="nx">Shelf</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">template</span><span class="o">:</span> <span class="nx">JST</span><span class="p">[</span><span class="s1">&#39;app/shelf&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#container .shelf&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div><p>or ‘module’ patterns like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">bar</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
+</span></span></code></pre></div><p>The pleasure of using Emacs with javascript has just raised by 100% :)</p>
 <p>Thanks Dmitry!</p>
 ]]></content>
         </item>
@@ -226,58 +226,58 @@ GTalk Gtalk bases on open protocol (jabber), so the only thing we need is a jabb
 <p>Gtalk bases on open protocol (jabber), so the only thing we need is a jabber client. Looking at emacs wiki you will easily find <a href="http://www.emacswiki.org/emacs/JabberEl">this one</a> along with exhaustive documentation.</p>
 <p>There is also additional <a href="http://www.emacswiki.org/emacs/GoogleTalk">wiki page</a> dedicated to jabber+gtalk configuration, so if you need details take a look at it.</p>
 <p>You may also base on my own configuration:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">jabber-account-list</span> <span class="o">&#39;</span><span class="p">((</span><span class="s">&#34;username@gmail.com&#34;</span>
-                              <span class="p">(</span><span class="ss">:password</span> <span class="o">.</span> <span class="no">nil</span><span class="p">)</span>
-                              <span class="p">(</span><span class="ss">:network-server</span> <span class="o">.</span> <span class="s">&#34;talk.google.com&#34;</span><span class="p">)</span>
-                              <span class="p">(</span><span class="ss">:port</span> <span class="o">.</span> <span class="mi">443</span><span class="p">)</span>
-                              <span class="p">(</span><span class="ss">:connection-type</span> <span class="o">.</span> <span class="nv">ssl</span><span class="p">)))</span>
-
-      <span class="nv">jabber-vcard-avatars-retrieve</span> <span class="no">nil</span>
-
-      <span class="nv">my-chat-prompt</span> <span class="s">&#34;[%t] %n &#34;</span>
-      <span class="nv">jabber-muc-private-foreign-prompt-format</span> <span class="s">&#34;[%t] %g/%n &#34;</span>
-      <span class="nv">jabber-chat-foreign-prompt-format</span> <span class="nv">my-chat-prompt</span>
-      <span class="nv">jabber-chat-local-prompt-format</span> <span class="nv">my-chat-prompt</span>
-      <span class="nv">jabber-groupchat-prompt-format</span> <span class="nv">my-chat-prompt</span>
-
-      <span class="nv">jabber-chat-header-line-format</span>
-      <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34; &#34;</span> <span class="p">(</span><span class="ss">:eval</span> <span class="p">(</span><span class="nv">jabber-jid-displayname</span> <span class="nv">jabber-chatting-with</span><span class="p">))</span>
-      <span class="s">&#34; &#34;</span> <span class="p">(</span><span class="ss">:eval</span> <span class="p">(</span><span class="nv">jabber-jid-resource</span> <span class="nv">jabber-chatting-with</span><span class="p">))</span> <span class="s">&#34;\t&#34;</span><span class="c1">;</span>
-      <span class="p">(</span><span class="ss">:eval</span> <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">buddy</span> <span class="p">(</span><span class="nv">jabber-jid-symbol</span> <span class="nv">jabber-chatting-with</span><span class="p">)))</span>
-                 <span class="p">(</span><span class="nv">propertize</span>
-                  <span class="p">(</span><span class="nb">or</span>
-                   <span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nf">assoc</span> <span class="p">(</span><span class="nf">get</span> <span class="nv">buddy</span> <span class="ss">&#39;show</span><span class="p">)</span> <span class="nv">jabber-presence-strings</span><span class="p">))</span>
-                   <span class="p">(</span><span class="nf">get</span> <span class="nv">buddy</span> <span class="ss">&#39;show</span><span class="p">))</span>
-                  <span class="ss">&#39;face</span>
-                  <span class="p">(</span><span class="nb">or</span> <span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nf">assoc</span> <span class="p">(</span><span class="nf">get</span> <span class="nv">buddy</span> <span class="ss">&#39;show</span><span class="p">)</span> <span class="nv">jabber-presence-faces</span><span class="p">))</span>
-                      <span class="ss">&#39;jabber-roster-user-online</span><span class="p">))))</span>
-      <span class="s">&#34;\t&#34;</span> <span class="p">(</span><span class="ss">:eval</span> <span class="p">(</span><span class="nf">get</span> <span class="p">(</span><span class="nv">jabber-jid-symbol</span> <span class="nv">jabber-chatting-with</span><span class="p">)</span> <span class="ss">&#39;status</span><span class="p">))</span>
-      <span class="p">(</span><span class="ss">:eval</span> <span class="p">(</span><span class="nb">unless</span> <span class="p">(</span><span class="nf">equal</span> <span class="s">&#34;&#34;</span> <span class="vg">*jabber-current-show*</span><span class="p">)</span>
-                 <span class="p">(</span><span class="nv">concat</span> <span class="s">&#34;\t You&#39;re &#34;</span> <span class="vg">*jabber-current-show*</span>
-                         <span class="s">&#34; (&#34;</span> <span class="vg">*jabber-current-status*</span> <span class="s">&#34;)&#34;</span><span class="p">)))))</span>
-</code></pre></div><p>It looks complicated at the first sight, but in fact there is nothing more than setting account details <code>jabber-account-list</code>, disabling retrieval of other people’s avatars <code>jabber-vcard-avatars-retrieve</code> and customizing prompts and header line <code>jabber-chat-header-line-format</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">jabber-account-list</span> <span class="o">&#39;</span><span class="p">((</span><span class="s">&#34;username@gmail.com&#34;</span>
+</span></span><span class="line"><span class="cl">                              <span class="p">(</span><span class="ss">:password</span> <span class="o">.</span> <span class="no">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                              <span class="p">(</span><span class="ss">:network-server</span> <span class="o">.</span> <span class="s">&#34;talk.google.com&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                              <span class="p">(</span><span class="ss">:port</span> <span class="o">.</span> <span class="mi">443</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                              <span class="p">(</span><span class="ss">:connection-type</span> <span class="o">.</span> <span class="nv">ssl</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="nv">jabber-vcard-avatars-retrieve</span> <span class="no">nil</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="nv">my-chat-prompt</span> <span class="s">&#34;[%t] %n &#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">jabber-muc-private-foreign-prompt-format</span> <span class="s">&#34;[%t] %g/%n &#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">jabber-chat-foreign-prompt-format</span> <span class="nv">my-chat-prompt</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">jabber-chat-local-prompt-format</span> <span class="nv">my-chat-prompt</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">jabber-groupchat-prompt-format</span> <span class="nv">my-chat-prompt</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="nv">jabber-chat-header-line-format</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34; &#34;</span> <span class="p">(</span><span class="ss">:eval</span> <span class="p">(</span><span class="nv">jabber-jid-displayname</span> <span class="nv">jabber-chatting-with</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="s">&#34; &#34;</span> <span class="p">(</span><span class="ss">:eval</span> <span class="p">(</span><span class="nv">jabber-jid-resource</span> <span class="nv">jabber-chatting-with</span><span class="p">))</span> <span class="s">&#34;\t&#34;</span><span class="c1">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="ss">:eval</span> <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">buddy</span> <span class="p">(</span><span class="nv">jabber-jid-symbol</span> <span class="nv">jabber-chatting-with</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nv">propertize</span>
+</span></span><span class="line"><span class="cl">                  <span class="p">(</span><span class="nb">or</span>
+</span></span><span class="line"><span class="cl">                   <span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nf">assoc</span> <span class="p">(</span><span class="nf">get</span> <span class="nv">buddy</span> <span class="ss">&#39;show</span><span class="p">)</span> <span class="nv">jabber-presence-strings</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                   <span class="p">(</span><span class="nf">get</span> <span class="nv">buddy</span> <span class="ss">&#39;show</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                  <span class="ss">&#39;face</span>
+</span></span><span class="line"><span class="cl">                  <span class="p">(</span><span class="nb">or</span> <span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nf">assoc</span> <span class="p">(</span><span class="nf">get</span> <span class="nv">buddy</span> <span class="ss">&#39;show</span><span class="p">)</span> <span class="nv">jabber-presence-faces</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                      <span class="ss">&#39;jabber-roster-user-online</span><span class="p">))))</span>
+</span></span><span class="line"><span class="cl">      <span class="s">&#34;\t&#34;</span> <span class="p">(</span><span class="ss">:eval</span> <span class="p">(</span><span class="nf">get</span> <span class="p">(</span><span class="nv">jabber-jid-symbol</span> <span class="nv">jabber-chatting-with</span><span class="p">)</span> <span class="ss">&#39;status</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="ss">:eval</span> <span class="p">(</span><span class="nb">unless</span> <span class="p">(</span><span class="nf">equal</span> <span class="s">&#34;&#34;</span> <span class="vg">*jabber-current-show*</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                 <span class="p">(</span><span class="nv">concat</span> <span class="s">&#34;\t You&#39;re &#34;</span> <span class="vg">*jabber-current-show*</span>
+</span></span><span class="line"><span class="cl">                         <span class="s">&#34; (&#34;</span> <span class="vg">*jabber-current-status*</span> <span class="s">&#34;)&#34;</span><span class="p">)))))</span>
+</span></span></code></pre></div><p>It looks complicated at the first sight, but in fact there is nothing more than setting account details <code>jabber-account-list</code>, disabling retrieval of other people’s avatars <code>jabber-vcard-avatars-retrieve</code> and customizing prompts and header line <code>jabber-chat-header-line-format</code>.</p>
 <p>To launch jabber just with one command I use following function:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">jabber</span><span class="p">()</span>
-  <span class="p">(</span><span class="nv">interactive</span><span class="p">)</span>
-
-  <span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;jabber</span><span class="p">)</span>
-  <span class="p">(</span><span class="k">setq</span> <span class="nv">jabber-chat-fill-long-lines</span> <span class="no">nil</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">auto-fill-mode</span> <span class="mi">-1</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">jabber-connect-all</span><span class="p">))</span>
-</code></pre></div><p>Now, <code>M-x jabber</code> connects immediately to gtalk kindly asking for password.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">jabber</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">interactive</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;jabber</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">setq</span> <span class="nv">jabber-chat-fill-long-lines</span> <span class="no">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">auto-fill-mode</span> <span class="mi">-1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">jabber-connect-all</span><span class="p">))</span>
+</span></span></code></pre></div><p>Now, <code>M-x jabber</code> connects immediately to gtalk kindly asking for password.</p>
 <h2 id="twitter">Twitter</h2>
 <p><a href="http://www.emacswiki.org/emacs/TwitteringMode">Twittering Mode</a> is all you need here. Similar to gtalk, I wrote a function which simplifies twitter launching:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">twitter</span><span class="p">()</span>
-  <span class="p">(</span><span class="nv">interactive</span><span class="p">)</span>
-  <span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;twittering-mode</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">twit</span><span class="p">))</span>
-</code></pre></div><p>and simple configuration:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">twittering-use-master-password</span> <span class="no">t</span>
-      <span class="nv">twittering-initial-timeline-spec-string</span>
-      <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;:home&#34;</span>
-        <span class="s">&#34;:replies&#34;</span>
-        <span class="s">&#34;:direct_messages&#34;</span><span class="p">))</span>
-</code></pre></div><p><code>twittering-use-master-password</code> avoid having to authorize twittering-mode each time it’s launched. It keeps tokens in encrypted <code>=.twittering-mode.gpg</code> file. As you noticed, encryption is based on gpg so you also need <a href="http://www.emacswiki.org/emacs/GnuPG">GnuPG</a> and either <a href="http://www.emacswiki.org/emacs/EasyPG">EasyPG</a> or alpaca.el which I found <a href="https://github.com/unpluggd/alpaca.el">here</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">twitter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">interactive</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;twittering-mode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">twit</span><span class="p">))</span>
+</span></span></code></pre></div><p>and simple configuration:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">twittering-use-master-password</span> <span class="no">t</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">twittering-initial-timeline-spec-string</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;:home&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;:replies&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;:direct_messages&#34;</span><span class="p">))</span>
+</span></span></code></pre></div><p><code>twittering-use-master-password</code> avoid having to authorize twittering-mode each time it’s launched. It keeps tokens in encrypted <code>=.twittering-mode.gpg</code> file. As you noticed, encryption is based on gpg so you also need <a href="http://www.emacswiki.org/emacs/GnuPG">GnuPG</a> and either <a href="http://www.emacswiki.org/emacs/EasyPG">EasyPG</a> or alpaca.el which I found <a href="https://github.com/unpluggd/alpaca.el">here</a>.</p>
 <p>Once it’s all installed, you are ready to start twittering mode <code>M-x twitter</code>. If it’s run first time, twittering mode will ask for authorizing PIN number which you can gather from twitter page. This page shows up immediately in your browser if you only allow emacs running web browser for you.</p>
 <p>Last thing is setting a password to <code>.twittering-mode.gpg</code> and exactly this password you have to provide each time you will run twittering-mode in the future.</p>
 <p>Good luck!</p>
@@ -291,7 +291,7 @@ GTalk Gtalk bases on open protocol (jabber), so the only thing we need is a jabb
             
             <guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
             <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:
- I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That’s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
+I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That’s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
             <content type="html"><![CDATA[<p>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:</p>
 <ul>
 <li>I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That’s really awesome for programmer like me.</li>
@@ -342,32 +342,32 @@ Emacs*font: DejaVu Sans Mono-9
 <p>Groups are exactly what you see on first screenshot above. These are “folders” containing articles from different sources. As you can see, they can be additionally grouped under common topics. I have splitted sources of my articles to make them visually separated. Polish NNTP servers are grouped under usenet topic, articles coming from Gmane are under gmane and results of recent searches go into searches topic.</p>
 <p>Creating, modification of topics and moving groups between them is pretty simple and is described <a href="http://www.gnu.org/software/emacs//manual/html_node/gnus/Group-Topics.html#Group-Topics">here</a>.</p>
 <p>However, the most interesting is the look of our groups. It’s configurable (as everything else in Gnus) through appropriate variable set in ~/.gnus file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-group-line-format</span> <span class="s">&#34;%P%M%St%(%g%) (%y)n&#34;</span><span class="p">)</span>
-</code></pre></div><p>Description of formatting characters you may find <a href="http://www.gnu.org/software/emacs/manual/html_node/gnus/Group-Line-Specification.html#Group-Line-Specification">here</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-group-line-format</span> <span class="s">&#34;%P%M%St%(%g%) (%y)n&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Description of formatting characters you may find <a href="http://www.gnu.org/software/emacs/manual/html_node/gnus/Group-Line-Specification.html#Group-Line-Specification">here</a>.</p>
 <p>Ok, Gnus looks much better now. But there is one little caveat. Everytime when Gnus starts, it tries to actualize our groups connecting to servers that groups are based on. It’s nothing wrong when you have one or two groups, but having them more may cause a long, irritating delay. Thanks God, there is something called levels, which modifies a bit this behaviour.</p>
 <p>How do levels work? They are assigned to each group and instruct Gnus, among others, when to update the content. If given level is equal or below the value assigned to gnus-activate-level variable, the group it is assigned to updates itself automatically at startup. Higher value says “leave me alone, I will update myself right after I get selected”.</p>
 <p>Let’s set the default activation level to 3:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-activate-level</span> <span class="mi">3</span><span class="p">)</span>
-</code></pre></div><p>Now, each group which doesn’t need to be updated automatically should have level &gt; 3 assigned. To do that, it’s enough to highlight the group, press <code>S l</code> shortcut, and adjust level. You will soon notice visual difference between “automatically updated” and “lazy” groups. First ones show number of collected articles, second ones show only meaningless “*”.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-activate-level</span> <span class="mi">3</span><span class="p">)</span>
+</span></span></code></pre></div><p>Now, each group which doesn’t need to be updated automatically should have level &gt; 3 assigned. To do that, it’s enough to highlight the group, press <code>S l</code> shortcut, and adjust level. You will soon notice visual difference between “automatically updated” and “lazy” groups. First ones show number of collected articles, second ones show only meaningless “*”.</p>
 <p>Additionally, each group has variable associated with styling (faces).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;; Mailing groups</span>
-<span class="nv">gnus-group-mail-1</span>    <span class="nv">gnus-group-mail-1-empty</span>
-<span class="nv">gnus-group-mail-2</span>    <span class="nv">gnus-group-mail-2-empty</span>
-<span class="nv">gnus-group-mail-3</span>    <span class="nv">gnus-group-mail-3-empty</span>
-
-<span class="c1">;; News groups</span>
-<span class="nv">gnus-group-news-1</span>    <span class="nv">gnus-group-news-1-empty</span>
-<span class="nv">gnus-group-news-2</span>    <span class="nv">gnus-group-news-2-empty</span>
-<span class="nv">gnus-group-news-3</span>    <span class="nv">gnus-group-news-3-empty</span>
-<span class="nv">gnus-group-news-4</span>    <span class="nv">gnus-group-news-4-empty</span>
-<span class="nv">gnus-group-news-5</span>    <span class="nv">gnus-group-news-5-empty</span>
-</code></pre></div><p>So, to have blue empty mailing group, we need to set in ~/.gnus something like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">set-face-foreground</span> <span class="ss">&#39;gnus-group-mail-1-empty</span> <span class="s">&#34;blue&#34;</span><span class="p">)</span>
-</code></pre></div><p>One note here. Empty groups mean those with 0 articles AND those lazy ones which do not update the content automatically.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="c1">;; Mailing groups</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gnus-group-mail-1</span>    <span class="nv">gnus-group-mail-1-empty</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gnus-group-mail-2</span>    <span class="nv">gnus-group-mail-2-empty</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gnus-group-mail-3</span>    <span class="nv">gnus-group-mail-3-empty</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">;; News groups</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gnus-group-news-1</span>    <span class="nv">gnus-group-news-1-empty</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gnus-group-news-2</span>    <span class="nv">gnus-group-news-2-empty</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gnus-group-news-3</span>    <span class="nv">gnus-group-news-3-empty</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gnus-group-news-4</span>    <span class="nv">gnus-group-news-4-empty</span>
+</span></span><span class="line"><span class="cl"><span class="nv">gnus-group-news-5</span>    <span class="nv">gnus-group-news-5-empty</span>
+</span></span></code></pre></div><p>So, to have blue empty mailing group, we need to set in ~/.gnus something like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">set-face-foreground</span> <span class="ss">&#39;gnus-group-mail-1-empty</span> <span class="s">&#34;blue&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>One note here. Empty groups mean those with 0 articles AND those lazy ones which do not update the content automatically.</p>
 <h2 id="configuration-of-articles-list">Configuration of articles list</h2>
 <p>List of articles is something you see after choosing the group. And this is the place which we may deeply customize. First of all, let’s format the way how articles are presented. To do that, I suggest to modify gnus-summary-line-format variable:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-summary-line-format</span> <span class="s">&#34;%1{%U%R%z: %}%2{%d%}%5{ %[%4i%] %}%4{%-24,24n%}%6{%-4,4ur%}%5{| %}%(%1{%B%}%s%)n&#34;</span><span class="p">)</span>
-</code></pre></div><p>Again, full description of used characters you may find <a href="http://www.gnu.org/software/emacs/manual/html_node/gnus/Summary-Buffer-Lines.html#Summary-Buffer-Lines">here</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-summary-line-format</span> <span class="s">&#34;%1{%U%R%z: %}%2{%d%}%5{ %[%4i%] %}%4{%-24,24n%}%6{%-4,4ur%}%5{| %}%(%1{%B%}%s%)n&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Again, full description of used characters you may find <a href="http://www.gnu.org/software/emacs/manual/html_node/gnus/Summary-Buffer-Lines.html#Summary-Buffer-Lines">here</a>.</p>
 <p>Now, a few words of explanation. Text between %( and %) will be highlighted using gnus-mouse-face immediately when mouse pointer hovers over given article. In our example <code>%(%1{%B%}%s%)</code> means that we want article subject <code>(%s)</code> and a corresponding part of thread’s tree <code>(%B)</code> highlighted on mouse hover. By default, thread is presented with plain ascii characters, just like this:</p>
 <pre class="plain">
 ->
@@ -376,15 +376,15 @@ Emacs*font: DejaVu Sans Mono-9
 +->
 </pre>
 <p>Obviously, it’s nothing really amazing. Fortunately, Emacs (in contrast to Mutt for example) gives a possibility to adjust every single character of that tree. Using that (and UTF symbols), we may get interesting effect:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nb">when</span> <span class="nv">window-system</span>
-  <span class="p">(</span><span class="k">setq</span>
-    <span class="nv">gnus-sum-thread-tree-root</span> <span class="s">&#34;● &#34;</span>
-    <span class="nv">gnus-sum-thread-tree-false-root</span> <span class="s">&#34;▷ &#34;</span>
-    <span class="nv">gnus-sum-thread-tree-single-indent</span> <span class="s">&#34;&#34;</span>
-    <span class="nv">gnus-sum-thread-tree-leaf-with-other</span> <span class="s">&#34;├─►&#34;</span>
-    <span class="nv">gnus-sum-thread-tree-vertical</span> <span class="s">&#34;│ &#34;</span>
-    <span class="nv">gnus-sum-thread-tree-single-leaf</span> <span class="s">&#34;└─►&#34;</span><span class="p">))</span>
-</code></pre></div><p>What <code>(when window-system …)</code> does is limiting above change to GUI version of Emacs only, this change won’t be applied to Gnus run in console.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">when</span> <span class="nv">window-system</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">setq</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">gnus-sum-thread-tree-root</span> <span class="s">&#34;● &#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">gnus-sum-thread-tree-false-root</span> <span class="s">&#34;▷ &#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">gnus-sum-thread-tree-single-indent</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">gnus-sum-thread-tree-leaf-with-other</span> <span class="s">&#34;├─►&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">gnus-sum-thread-tree-vertical</span> <span class="s">&#34;│ &#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">gnus-sum-thread-tree-single-leaf</span> <span class="s">&#34;└─►&#34;</span><span class="p">))</span>
+</span></span></code></pre></div><p>What <code>(when window-system …)</code> does is limiting above change to GUI version of Emacs only, this change won’t be applied to Gnus run in console.</p>
 <p>Let’s look again at out gnus-summary-line-format. Something strange hides there inside: <code>%6{%-4,4ur%}</code></p>
 <p>What does it mean? As manual says, <code>%u</code> and following letter corresponds to user defined function <code>gnus-user-format-function-X</code> (where X is a symbol which goes right after <code>%u</code>). So, <code>%ur</code> will be used to inject the return value from <code>gnus-user-format-function-r</code> and <code>$-4,4</code> instructs to align this value to length of 4 characters. Prepending <code>%6</code> suggests to apply <code>gnus-face-6</code> to everything inside curly parentheses.</p>
 <p>Ok, I guess it’s clear more or less, but there is still question: what it that combination used for?</p>
@@ -394,45 +394,45 @@ Emacs*font: DejaVu Sans Mono-9
 </figure>
 
 <p>Red 4-letter labels distinguish interesting emails from the overall noise. This is realised exactly by previously mentioned snippet <code>%6{%-4,4ur%}</code> put inside our gnus-summary-line-format. As we remember <code>%-4,4ur</code> injects result of <code>gnus-user-format-function-r</code> function. This is how this function looks like:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">rs-gnus-get-label</span> <span class="p">(</span><span class="nv">header</span><span class="p">)</span>
-  <span class="s">&#34;Returns label from X-Label header&#34;</span>
-  <span class="p">(</span><span class="nb">or</span> <span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nv">assq</span> <span class="ss">&#39;X-Label</span> <span class="p">(</span><span class="nv">mail-header-extra</span> <span class="nv">header</span><span class="p">)))</span> <span class="s">&#34;&#34;</span><span class="p">))</span>
-
-<span class="p">(</span><span class="nv">defalias</span> <span class="ss">&#39;gnus-user-format-function-r</span> <span class="ss">&#39;rs-gnus-get-label</span><span class="p">)</span>
-</code></pre></div><p>Additionally, we need to list this header in nnmail-extra-headers variable:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span> <span class="nv">nnmail-extra-headers</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">To</span> <span class="nv">X-Label</span> <span class="nv">Newsgroups</span> <span class="nv">Content-Type</span><span class="p">))</span>
-</code></pre></div><p>&hellip;and apply red color:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">copy-face</span> <span class="ss">&#39;default</span> <span class="ss">&#39;face-label</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">set-face-foreground</span> <span class="ss">&#39;face-label</span> <span class="s">&#34;red&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-face-6</span> <span class="ss">&#39;face-label</span><span class="p">)</span>
-</code></pre></div><h2 id="how-about-filtering">How about filtering ?</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">rs-gnus-get-label</span> <span class="p">(</span><span class="nv">header</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;Returns label from X-Label header&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">or</span> <span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nv">assq</span> <span class="ss">&#39;X-Label</span> <span class="p">(</span><span class="nv">mail-header-extra</span> <span class="nv">header</span><span class="p">)))</span> <span class="s">&#34;&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">defalias</span> <span class="ss">&#39;gnus-user-format-function-r</span> <span class="ss">&#39;rs-gnus-get-label</span><span class="p">)</span>
+</span></span></code></pre></div><p>Additionally, we need to list this header in nnmail-extra-headers variable:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">nnmail-extra-headers</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">To</span> <span class="nv">X-Label</span> <span class="nv">Newsgroups</span> <span class="nv">Content-Type</span><span class="p">))</span>
+</span></span></code></pre></div><p>&hellip;and apply red color:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">copy-face</span> <span class="ss">&#39;default</span> <span class="ss">&#39;face-label</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">set-face-foreground</span> <span class="ss">&#39;face-label</span> <span class="s">&#34;red&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-face-6</span> <span class="ss">&#39;face-label</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="how-about-filtering">How about filtering ?</h2>
 <p>Nice. Now, let’s try to filter our mails by given label. Here is the function we will use (written by Reiner Steib):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">rs-gnus-summary-limit-to-label</span> <span class="p">(</span><span class="nv">regexp</span> <span class="k">&amp;optional</span> <span class="nv">not-matching</span><span class="p">)</span>
-  <span class="s">&#34;Limit the summary buffer to articles that match a label.&#34;</span>
-  <span class="p">(</span><span class="nv">interactive</span>
-   <span class="p">(</span><span class="nc">list</span> <span class="p">(</span><span class="nv">read-string</span>
-     <span class="p">(</span><span class="nf">format</span> <span class="s">&#34;%s label (regexp): &#34;</span>
-     <span class="p">(</span><span class="k">if</span> <span class="nv">current-prefix-arg</span> <span class="s">&#34;Exclude&#34;</span> <span class="s">&#34;Limit to&#34;</span><span class="p">)))</span> <span class="nv">current-prefix-arg</span><span class="p">))</span>
-  <span class="p">(</span><span class="nv">gnus-summary-limit-to-extra</span> <span class="ss">&#39;X-Label</span> <span class="nv">regexp</span> <span class="nv">not-matching</span><span class="p">))</span>
-</code></pre></div><p>Next, invoke this function <code>M-x rs-gnus-summary-limit-to-label</code> providing the label you want to filter by (use tab to autocomplete!) and enjoy with result:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">rs-gnus-summary-limit-to-label</span> <span class="p">(</span><span class="nv">regexp</span> <span class="k">&amp;optional</span> <span class="nv">not-matching</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;Limit the summary buffer to articles that match a label.&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">interactive</span>
+</span></span><span class="line"><span class="cl">   <span class="p">(</span><span class="nc">list</span> <span class="p">(</span><span class="nv">read-string</span>
+</span></span><span class="line"><span class="cl">     <span class="p">(</span><span class="nf">format</span> <span class="s">&#34;%s label (regexp): &#34;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">(</span><span class="k">if</span> <span class="nv">current-prefix-arg</span> <span class="s">&#34;Exclude&#34;</span> <span class="s">&#34;Limit to&#34;</span><span class="p">)))</span> <span class="nv">current-prefix-arg</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">gnus-summary-limit-to-extra</span> <span class="ss">&#39;X-Label</span> <span class="nv">regexp</span> <span class="nv">not-matching</span><span class="p">))</span>
+</span></span></code></pre></div><p>Next, invoke this function <code>M-x rs-gnus-summary-limit-to-label</code> providing the label you want to filter by (use tab to autocomplete!) and enjoy with result:</p>
 <figure><img src="/images/gnus6.jpeg"/>
 </figure>
 
 <p>Simple and easy, isn’t it?</p>
 <p>Let&rsquo;s get also list of articles sorted from the newest to the oldest ones, and filter out unnecessary headers from detailed view:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span>
-  <span class="nv">gnus-thread-sort-functions</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">t1</span> <span class="nv">t2</span><span class="p">)</span> <span class="p">(</span><span class="nf">not</span> <span class="p">(</span><span class="nv">gnus-thread-sort-by-date</span> <span class="nv">t1</span> <span class="nv">t2</span><span class="p">)))</span>
-  <span class="nv">gnus-visible-headers</span> <span class="s">&#34;^From:|^To:|^Subject:|^Newsgroups:|^Date:|^Organization:|^X-Newsreader:|^User-Agent:&#34;</span>
-  <span class="nv">gnus-extra-headers</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">To</span> <span class="nv">Newsgroups</span> <span class="nv">Content-Type</span><span class="p">))</span>
-</code></pre></div><h2 id="grand-finale">Grand finale</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">gnus-thread-sort-functions</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">t1</span> <span class="nv">t2</span><span class="p">)</span> <span class="p">(</span><span class="nf">not</span> <span class="p">(</span><span class="nv">gnus-thread-sort-by-date</span> <span class="nv">t1</span> <span class="nv">t2</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">gnus-visible-headers</span> <span class="s">&#34;^From:|^To:|^Subject:|^Newsgroups:|^Date:|^Organization:|^X-Newsreader:|^User-Agent:&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">gnus-extra-headers</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">To</span> <span class="nv">Newsgroups</span> <span class="nv">Content-Type</span><span class="p">))</span>
+</span></span></code></pre></div><h2 id="grand-finale">Grand finale</h2>
 <p>Last thing last - nasty HTML emails. This is something we definitely don’t like but there are always people around who love to bomb us with tons of HTML.</p>
 <p>How can we handle this sh^H^H ehm.. this kind of emails with beloved Gnus?</p>
 <p><em>w3m</em> is the answer. It’s an external html viewer which Emacs can nicely integrate with using w3m package. Here is detailed description.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="s">&#34;/usr/share/emacs/site-lisp/w3m&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span>
-  <span class="nv">mm-text-html-renderer</span> <span class="ss">&#39;w3m</span>
-  <span class="nv">w3m-display-inline-image</span> <span class="no">t</span><span class="p">)</span>
-</code></pre></div><p>Using <code>mm-text-html-renderer</code> we point at w3m as preferred web browser which is responsible for converting and formating HTML to something that Emacs is able to digest.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="s">&#34;/usr/share/emacs/site-lisp/w3m&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">mm-text-html-renderer</span> <span class="ss">&#39;w3m</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">w3m-display-inline-image</span> <span class="no">t</span><span class="p">)</span>
+</span></span></code></pre></div><p>Using <code>mm-text-html-renderer</code> we point at w3m as preferred web browser which is responsible for converting and formating HTML to something that Emacs is able to digest.</p>
 <p>This is end of the Gnus story, but as you probably noticed it’s only the humble introduction of that beast. I hope it encouraged you to further researches.</p>
 ]]></content>
         </item>
@@ -456,20 +456,20 @@ Unfortunately, org-mode by default will not warn you about upcoming event.</desc
 </code></pre><p>app/emacs is our application signature used by ToDoChiku, and icon is a path to whatever icon you want. I used this one. Once emacs is installed, you should see it on the list of registered Snarl applications. You may also test if messages appear correctly:</p>
 <pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “notify?app-sig=app/emacs&amp;title=Simple test&amp;text=dupa”
 </code></pre><p>Oki, we have Snarl working, let’s go back to Emacs. To complete our ToDoChiku configuration we need following stuff, a bit of magic to ask org-mode to use ToDoChiku as notification tool:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span>
-  <span class="nv">todochiku-command</span> <span class="s">&#34;C:/Program Files/full phat/Snarl/tools/heysnarl.exe&#34;</span>
-  <span class="nv">org-show-notification-handler</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">notification</span><span class="p">)</span>
-                                   <span class="p">(</span><span class="nv">todochiku-message</span> <span class="s">&#34;org-mode notification&#34;</span> <span class="nv">notification</span> <span class="p">(</span><span class="nv">todochiku-icon</span> <span class="ss">&#39;emacs</span><span class="p">))))</span>
-
-<span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;todochiku</span><span class="p">)</span>
-</code></pre></div><p>Note that requiring ‘todochiku should be placed after setting up the todochiku-command. Otherwise you will get a “respawn process” error while starting up your emacs next time.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">todochiku-command</span> <span class="s">&#34;C:/Program Files/full phat/Snarl/tools/heysnarl.exe&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">org-show-notification-handler</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">notification</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                   <span class="p">(</span><span class="nv">todochiku-message</span> <span class="s">&#34;org-mode notification&#34;</span> <span class="nv">notification</span> <span class="p">(</span><span class="nv">todochiku-icon</span> <span class="ss">&#39;emacs</span><span class="p">))))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;todochiku</span><span class="p">)</span>
+</span></span></code></pre></div><p>Note that requiring ‘todochiku should be placed after setting up the todochiku-command. Otherwise you will get a “respawn process” error while starting up your emacs next time.</p>
 <p>Assuming todochiku is working correctly (you may verify that, eg. by evaluating in your <em>scratch</em> buffer something like <code>(todochiku-message &quot;Simple test&quot; &quot;dupa&quot; nil))</code> we finally need to enable appointments:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="k">setq</span>
-  <span class="nv">appt-activate</span> <span class="mi">1</span>
-  <span class="nv">appt-message-warning-time</span> <span class="mi">15</span>
-  <span class="nv">appt-display-mode-line</span> <span class="no">t</span>
-  <span class="nv">appt-display-format</span> <span class="ss">&#39;window</span><span class="p">)</span>
-</code></pre></div><p>With above settings appointments will be displayed in two modes: in your mode-line and in separate popup. ToDoChiku by default overrides appt-disp-window-function redirecting all messages to Snarl process, so we don’t need to do that by ourselves.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">appt-activate</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">appt-message-warning-time</span> <span class="mi">15</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">appt-display-mode-line</span> <span class="no">t</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">appt-display-format</span> <span class="ss">&#39;window</span><span class="p">)</span>
+</span></span></code></pre></div><p>With above settings appointments will be displayed in two modes: in your mode-line and in separate popup. ToDoChiku by default overrides appt-disp-window-function redirecting all messages to Snarl process, so we don’t need to do that by ourselves.</p>
 <p>Ok, time for final test. Create an appointment in your org-mode and wait…</p>
 <figure><img src="/images/get_notified_2.png"/>
 </figure>
@@ -484,9 +484,9 @@ Unfortunately, org-mode by default will not warn you about upcoming event.</desc
             
             <guid>https://blog.bitside.pl/posts/world-of-bookmarks/</guid>
             <description>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:
- Richer bookmarks. They record more. They are more accurate.
- A few things we get here for free:
- Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting and filtering. Usage ‘statistics’. you may sort and filter your bookmarks basing on how often they were used.</description>
+Richer bookmarks. They record more. They are more accurate.
+A few things we get here for free:
+Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting and filtering. Usage ‘statistics’. you may sort and filter your bookmarks basing on how often they were used.</description>
             <content type="html"><![CDATA[<p>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:</p>
 <blockquote>
 <p>Richer bookmarks. They record more. They are more accurate.</p>
@@ -512,14 +512,14 @@ Unfortunately, org-mode by default will not warn you about upcoming event.</desc
 <p>To make desktops working you have to enable them first (described here: <a href="http://www.emacswiki.org/emacs/DeskTop">http://www.emacswiki.org/emacs/DeskTop</a>).</p>
 <p>Next, enable bookmark+ (link at the top) and, with 4 fingers crossed, type <code>C-x p K</code> and point the file where your desktop will be saved. If you want to restore your desktop, display list of bookmarks: <code>C-x r l</code> and select previously created bookmark.</p>
 <p>To make things a bit more convenient I usually prefix my ‘desktop-bookmarks’ with (desktop) (eg. (desktop) my-secret-project) and sort bookmarks alphabetically. To make things even more convenient I use anything (surprise!):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c b&#34;</span><span class="p">)</span> <span class="ss">&#39;anything-c-pp-bookmarks</span><span class="p">)</span>
-</code></pre></div><p>There is also second feature which makes bookmark+ attractive alternative for vanilla bookmarks. It’s something called Autonamed bookmarks.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c b&#34;</span><span class="p">)</span> <span class="ss">&#39;anything-c-pp-bookmarks</span><span class="p">)</span>
+</span></span></code></pre></div><p>There is also second feature which makes bookmark+ attractive alternative for vanilla bookmarks. It’s something called Autonamed bookmarks.</p>
 <p>What it is used for?</p>
 <p>Quite often I need to create a temporary bookmark to remember the line of code I’m just working on and I immediately jump into different place to modify some other parameter/variable/whatever. I don’t want to keep this bookmark forever so inventing a name is just a waste of time. Instead of creating a plain bookmark, I create a ‘autonamed’ one (<code>C-x p RET</code>) which means that Emacs takes care of inventing the bookmark name for me. Moreover, having the highlighting configured as <code>'(bmkp-auto-light-when-set (quote autonamed-bookmark))</code> I have visually marked all autonamed bookmark created so far.</p>
 <p>As autonamed bookmarks bacame part of my life, I wanted to jump between them in fastest possible way. This is why I reused meta-shift up and down keys:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-down</span><span class="p">)</span><span class="nv">]</span> <span class="ss">&#39;bmkp-next-bookmark-this-file</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-up</span><span class="p">)</span><span class="nv">]</span>   <span class="ss">&#39;bmkp-previous-bookmark-this-file</span><span class="p">)</span>
-</code></pre></div><p>This post covers only the top of bookmark+ iceberg. I highly recommend reading the emacs wiki and going deeper into secret world of bookmarks :)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-down</span><span class="p">)</span><span class="nv">]</span> <span class="ss">&#39;bmkp-next-bookmark-this-file</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-up</span><span class="p">)</span><span class="nv">]</span>   <span class="ss">&#39;bmkp-previous-bookmark-this-file</span><span class="p">)</span>
+</span></span></code></pre></div><p>This post covers only the top of bookmark+ iceberg. I highly recommend reading the emacs wiki and going deeper into secret world of bookmarks :)</p>
 ]]></content>
         </item>
         
@@ -555,8 +555,8 @@ This flow C-s C-w C-w M-s o selects 2 words starting at current cursor position 
 <p>For example, you might want to copy 2 block of text and subsequently paste them somewhere into your buffer. To do this, select first block and copy it (<code>M-w</code>), do the same with second block. Next, go to place where you want to paste it, press <code>C-y</code> (for most recent copied block) or <code>C-y M-y</code> for block(s) copied earlier.</p>
 <p>Sometimes iterating through history might be a bit painful, in particluar when your history grows very dynamically. In this case we would like rather to see what’s in the kill ring and more interactively decide what to paste.</p>
 <p><em>browse-kill-ring.el</em> comes to rescue. put this into your load path, make it required:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;browse-kill-ring</span><span class="p">)</span>
-</code></pre></div><p>and use whenever you want with <code>M-x browse-kill-ring</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;browse-kill-ring</span><span class="p">)</span>
+</span></span></code></pre></div><p>and use whenever you want with <code>M-x browse-kill-ring</code>.</p>
 <p>To move faster between history items, use n (for next) and p (for previous) keyboard shortcuts.</p>
 <p>But that’s not the real fun. The real fun comes when you discover <a href="http://www.emacswiki.org/emacs/Anything">anything</a>. Install it along with <a href="http://www.emacswiki.org/emacs/anything-config.el">anything-config</a> and enjoy awesome <code>anything-show-kill-ring</code>.</p>
 ]]></content>

@@ -6,16 +6,14 @@
     <description>Recent content in gnus on Bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Mar 2012 21:30:00 +0200</lastBuildDate><atom:link href="https://blog.bitside.pl/tags/gnus/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Jun 2022 22:12:57 +0200</lastBuildDate>
+    <atom:link href="https://blog.bitside.pl/tags/gnus/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gnus</title>
       <link>https://blog.bitside.pl/posts/gnus/</link>
       <pubDate>Fri, 30 Mar 2012 21:30:00 +0200</pubDate>
-      
       <guid>https://blog.bitside.pl/posts/gnus/</guid>
-      <description>A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition. If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that’s definitely wrong place.
-On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU’s Not Unix, you’re welcomed to read further.</description>
+      <description>A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition. If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that’s definitely wrong place.&#xA;On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU’s Not Unix, you’re welcomed to read further.</description>
     </item>
-    
   </channel>
 </rss>

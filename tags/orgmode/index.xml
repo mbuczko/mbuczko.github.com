@@ -6,17 +6,14 @@
     <description>Recent content in orgmode on Bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Jan 2012 17:38:00 +0100</lastBuildDate><atom:link href="https://blog.bitside.pl/tags/orgmode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Jun 2022 22:12:57 +0200</lastBuildDate>
+    <atom:link href="https://blog.bitside.pl/tags/orgmode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Get notified</title>
       <link>https://blog.bitside.pl/posts/get-notified/</link>
       <pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
-      
       <guid>https://blog.bitside.pl/posts/get-notified/</guid>
-      <description>org-mode is definitely one of the most versatile notes &amp;amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.
-Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.
-Unfortunately, org-mode by default will not warn you about upcoming event.</description>
+      <description>org-mode is definitely one of the most versatile notes &amp;amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.&#xA;Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.&#xA;Unfortunately, org-mode by default will not warn you about upcoming event.</description>
     </item>
-    
   </channel>
 </rss>

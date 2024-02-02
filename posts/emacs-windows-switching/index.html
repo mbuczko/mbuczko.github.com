@@ -47,8 +47,7 @@ The most obvious way is to use mouse/touchpad of course. It’s easy at the begi
 <meta itemprop="dateModified" content="2022-06-19T16:01:42+02:00" />
 <meta itemprop="wordCount" content="226">
 <meta itemprop="keywords" content="emacs," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Emacs Windows Switching"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Emacs Windows Switching"/>
 <meta name="twitter:description" content="It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?
 The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows."/>
 
@@ -141,9 +140,9 @@ The most obvious way is to use mouse/touchpad of course. It’s easy at the begi
 <p>Enable window-numbering-mode and use M-1 through M-0 to navigate.</p>
 </blockquote>
 <p>Yup, that’s what we really need - simple shortcuts to activate immediately each window in a frame. But there is something more. Having frame split into multiple windows sooner or later makes some of them awfully hard to use beacuse of little space they occupy. Time to introduce a real hero - <a href="https://melpa.org/#/golden-ratio">golden ratio</a> package which resizes seleted windows to the size specified in the <a href="https://en.wikipedia.org/wiki/Golden_ratio">“Golden Ratio”</a>. Sounds cool, works even cooler when bound with shortcuts provided by window-numbering:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">defadvice</span> <span class="nv">select-window-by-number</span> <span class="p">(</span><span class="nv">after</span> <span class="nv">select-window</span> <span class="nv">activate</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">golden-ratio</span><span class="p">))</span>
-</code></pre></div><p>This is how it looks like in action:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">defadvice</span> <span class="nv">select-window-by-number</span> <span class="p">(</span><span class="nv">after</span> <span class="nv">select-window</span> <span class="nv">activate</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">golden-ratio</span><span class="p">))</span>
+</span></span></code></pre></div><p>This is how it looks like in action:</p>
 <img src="/images/emacs-window-switching.gif" width="760">
 
       </div>
@@ -225,7 +224,7 @@ The most obvious way is to use mouse/touchpad of course. It’s easy at the begi
     
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2023</span>
+            <span>&copy; 2024</span>
             <span><a href="https://blog.bitside.pl"></a></span>
             <span></span>
             <span><a href="https://blog.bitside.pl/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
@@ -249,7 +248,7 @@ The most obvious way is to use mouse/touchpad of course. It’s easy at the begi
 
 
 
-<script type="text/javascript" src="/bundle.min.68da98ead9a7043300acc03575c363c98f79b646f714bdeaabf6c7325758e7a43f68d68822f92be240ebe6f1ea7cca6dad99a3b7be329df3c0175beb96d353c8.js" integrity="sha512-aNqY6tmnBDMArMA1dcNjyY95tkb3FL3qq/bHMldY56Q/aNaIIvkr4kDr5vHqfMptrZmjt74ynfPAF1vrltNTyA=="></script>
+<script type="text/javascript" src="/bundle.min.1cc4b1523c891a66b901bf70f02df0381df03cf6e2cb400cac09c3e1e7f97c4249f3a457c7656b725724d811925773583c8ca19c1bbe40cff4f881e2ae42b2a5.js" integrity="sha512-HMSxUjyJGma5Ab9w8C3wOB3wPPbiy0AMrAnD4ef5fEJJ86RXx2Vrclck2BGSV3NYPIyhnBu&#43;QM/0&#43;IHirkKypQ=="></script>
 
 
 

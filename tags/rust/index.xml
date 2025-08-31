@@ -6,14 +6,14 @@
     <description>Recent content in rust on Bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Feb 2024 19:02:59 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 31 Aug 2025 23:15:32 +0200</lastBuildDate>
     <atom:link href="https://blog.bitside.pl/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HugSQLx - SQL queries turned into Rust functions</title>
       <link>https://blog.bitside.pl/posts/hugsqlx/</link>
-      <pubDate>Sun, 30 Oct 2022 14:57:00 +0100</pubDate>
+      <pubDate>Sun, 30 Oct 2022 21:45:00 +0100</pubDate>
       <guid>https://blog.bitside.pl/posts/hugsqlx/</guid>
-      <description>Clojure world is lucky to have HugSQL - brilliant library which makes daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files and transforms (interns into a namespace) queries to plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</description>
+      <description>The Clojure community is fortunate to have HugSQL - a brilliant library that simplifies working with SQL. HugSQL separates queries from the code, preventing them from cluttering .clj files and transforming them into plain Clojure functions within a namespace. These functions are quite intelligent; the underlying magic connects to PostgreSQL, SQLite, or any supported database via JDBC, executing defined queries with the provided function arguments.&#xA;Simple, yet remarkably effective&amp;hellip;&#xA;Can we achieve something similar in Rust?</description>
     </item>
   </channel>
 </rss>

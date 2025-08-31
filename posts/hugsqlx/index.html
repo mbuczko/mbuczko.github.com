@@ -4,8 +4,10 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
-<meta name="description" content="Clojure world is lucky to have HugSQL - brilliant library which makes daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files and transforms (interns into a namespace) queries to plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments." />
+<meta name="author" content="[Michał Buczko]">
+<meta name="description" content="The Clojure community is fortunate to have HugSQL - a brilliant library that simplifies working with SQL. HugSQL separates queries from the code, preventing them from cluttering .clj files and transforming them into plain Clojure functions within a namespace. These functions are quite intelligent; the underlying magic connects to PostgreSQL, SQLite, or any supported database via JDBC, executing defined queries with the provided function arguments.
+Simple, yet remarkably effective&amp;hellip;
+Can we achieve something similar in Rust?" />
 <meta name="keywords" content=", clojure, rust, sql" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -41,12 +43,16 @@
 
 
 <meta itemprop="name" content="HugSQLx - SQL queries turned into Rust functions">
-<meta itemprop="description" content="Clojure world is lucky to have HugSQL - brilliant library which makes daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files and transforms (interns into a namespace) queries to plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments."><meta itemprop="datePublished" content="2022-10-30T14:57:00+01:00" />
-<meta itemprop="dateModified" content="2024-02-02T19:02:59+01:00" />
-<meta itemprop="wordCount" content="324">
+<meta itemprop="description" content="The Clojure community is fortunate to have HugSQL - a brilliant library that simplifies working with SQL. HugSQL separates queries from the code, preventing them from cluttering .clj files and transforming them into plain Clojure functions within a namespace. These functions are quite intelligent; the underlying magic connects to PostgreSQL, SQLite, or any supported database via JDBC, executing defined queries with the provided function arguments.
+Simple, yet remarkably effective&hellip;
+Can we achieve something similar in Rust?"><meta itemprop="datePublished" content="2022-10-30T21:45:00+01:00" />
+<meta itemprop="dateModified" content="2025-08-31T23:15:32+02:00" />
+<meta itemprop="wordCount" content="298">
 <meta itemprop="keywords" content="clojure,rust,sql," />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="HugSQLx - SQL queries turned into Rust functions"/>
-<meta name="twitter:description" content="Clojure world is lucky to have HugSQL - brilliant library which makes daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files and transforms (interns into a namespace) queries to plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments."/>
+<meta name="twitter:description" content="The Clojure community is fortunate to have HugSQL - a brilliant library that simplifies working with SQL. HugSQL separates queries from the code, preventing them from cluttering .clj files and transforming them into plain Clojure functions within a namespace. These functions are quite intelligent; the underlying magic connects to PostgreSQL, SQLite, or any supported database via JDBC, executing defined queries with the provided function arguments.
+Simple, yet remarkably effective&hellip;
+Can we achieve something similar in Rust?"/>
 
 
 
@@ -54,7 +60,7 @@
 
 
 
-    <meta property="article:published_time" content="2022-10-30 14:57:00 &#43;0100 CET" />
+    <meta property="article:published_time" content="2022-10-30 21:45:00 &#43;0100 CET" />
 
 
 
@@ -130,19 +136,19 @@
       
 
       <div class="post-content">
-        <p>Clojure world is lucky to have <a href="https://www.hugsql.org/">HugSQL</a> - brilliant library which makes daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files and transforms (interns into a namespace) queries to plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</p>
-<p>Simple, yet so effective&hellip;</p>
-<p>Can we have something simmilar in Rust?</p>
-<p>Seems like we can.</p>
+        <p>The Clojure community is fortunate to have <a href="https://www.hugsql.org/">HugSQL</a> - a brilliant library that simplifies working with SQL. HugSQL separates queries from the code, preventing them from cluttering .clj files and transforming them into plain Clojure functions within a namespace. These functions are quite intelligent; the underlying magic connects to PostgreSQL, SQLite, or any supported database via JDBC, executing defined queries with the provided function arguments.</p>
+<p>Simple, yet remarkably effective&hellip;</p>
+<p>Can we achieve something similar in Rust?</p>
+<p>It appears we can.</p>
 <img src="/images/hugsqlx.png">
 <h2 id="motivation">Motivation</h2>
-<p>There are 3 main points where <code>hugsqlx</code> really shines when dealing with SQLs:</p>
+<p>HugSqlx truly excels in three key areas when working with SQL:</p>
 <ul>
-<li>queries separated from the code - that brings proper formatting, syntax highlighting and better documentation (readable comments) out of the box. Your IDE is way happier to edit .sql file rather than SQLs inside rust source.</li>
-<li>named queries - query becomes easier to identify. Easier to indentify in a code, easier to deduce in logs when one looks for query that just blown up production.</li>
-<li>queries as documented functions - better way to understand author&rsquo;s intention - what the query does in summary, what to expect in result?</li>
+<li>Separation of queries from code: this feature enhances formatting, syntax highlighting, and documentation, allowing for clear comments. Your IDE is far more suited to editing .sql files than to handling SQL embedded within Rust source code.</li>
+<li>Named queries: queries become easier to identify, both within the code and in logs when tracking down issues that may have impacted production.</li>
+<li>Queries as documented functions: this approach clarifies the author&rsquo;s intention, providing insight into what the query does and what results to expect.</li>
 </ul>
-<p>Last but not least - queries turned into functions enable auto-completion and quick doc view out of the box (if you&rsquo;re lucky enough with your LSP)</p>
+<p>Lastly, turning queries into functions enables out-of-the-box auto-completion and quick documentation views, provided your Language Server Protocol (LSP) is up to the task.</p>
 <h2 id="solution--poc">Solution (PoC)</h2>
 <p><a href="https://github.com/mbuczko/hugsqlx">HugSqlx</a> is still kind of proof-of-concept, doing its best to materialize these ideas. Although crate is at its newborn stage, it should be quite functional. Standing on the shoulders of awesome <a href="https://github.com/launchbadge/sqlx">SQLx</a> it implements query-as-a-function concept for 3 major databases: postgres, sqlite and mysql. From a technical point of view, entire logic comes down to a simple (more or less..) code transformation which generates a static trait functions for your struct.</p>
 <p>First results seem to be promising. I de-cluttered my sources, enjoy LSP happily providing me queries names via auto-completion. And, most importantly, I learned a lot about <a href="https://doc.rust-lang.org/reference/procedural-macros.html">procedural macros</a>.</p>
@@ -173,7 +179,7 @@
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        324 Words
+        298 Words
       </p>
 
       <p>
@@ -184,7 +190,7 @@
           <line x1="3" y1="10" x2="21" y2="10"></line>
         </svg>
         
-          2022-10-30 14:57
+          2022-10-30 21:45
         
       </p>
     </div>

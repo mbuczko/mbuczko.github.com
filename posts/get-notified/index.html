@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
-<meta name="description" content="org-mode is definitely one of the most versatile notes &amp;amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.
-Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.
-Unfortunately, org-mode by default will not warn you about upcoming event." />
+<meta name="author" content="[Michał Buczko]">
+<meta name="description" content="org-mode is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.
+Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.
+However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&amp;hellip;" />
 <meta name="keywords" content=", emacs, orgmode" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -43,16 +43,16 @@ Unfortunately, org-mode by default will not warn you about upcoming event." />
 
 
 <meta itemprop="name" content="Get notified">
-<meta itemprop="description" content="org-mode is definitely one of the most versatile notes &amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.
-Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.
-Unfortunately, org-mode by default will not warn you about upcoming event."><meta itemprop="datePublished" content="2012-01-04T17:38:00+01:00" />
-<meta itemprop="dateModified" content="2022-06-16T22:12:57+02:00" />
-<meta itemprop="wordCount" content="414">
+<meta itemprop="description" content="org-mode is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.
+Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.
+However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&hellip;"><meta itemprop="datePublished" content="2012-01-04T17:38:00+01:00" />
+<meta itemprop="dateModified" content="2025-08-31T23:15:33+02:00" />
+<meta itemprop="wordCount" content="398">
 <meta itemprop="keywords" content="emacs,orgmode," />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Get notified"/>
-<meta name="twitter:description" content="org-mode is definitely one of the most versatile notes &amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.
-Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.
-Unfortunately, org-mode by default will not warn you about upcoming event."/>
+<meta name="twitter:description" content="org-mode is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.
+Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.
+However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&hellip;"/>
 
 
 
@@ -136,31 +136,30 @@ Unfortunately, org-mode by default will not warn you about upcoming event."/>
       
 
       <div class="post-content">
-        <p><a href="http://orgmode.org/">org-mode</a> is definitely one of the most versatile notes &amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.</p>
-<p>Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.</p>
-<p>Unfortunately, org-mode by default will not warn you about upcoming event. It’s very easy to overlook it, especially when you are deep in your matrix trying to decrypt one more perl script…</p>
-<p>But don’t despair. Notifications come to the rescue - few minutes before meeting you will get a growl/growl-like message (possibly with shocking biiing-booong sound) reminding you about your crucial appointment.</p>
-<p>To make it working on windows, I used ToDoChiKu along with Snarl which displays fancy growl-like messages. The dark side of this solution is that ToDoChiKu is no longer compatible with Snarl 2.5. You will see no messages without a simple todochiku.el patch.</p>
-<p>Having ToDoChiKu patched we need to register emacs app to get notifications. Go into <code>C:\Program Files\full phat\Snarl\tools</code> where you should find a heysnarl.exe. Next, type in console:</p>
+        <p><a href="http://orgmode.org/">org-mode</a> is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.</p>
+<p>Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.</p>
+<p>However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&hellip;</p>
+<p>But don’t worry! Notifications come to the rescue - just a few minutes before your meeting, you’ll receive a Growl or Growl-like message (possibly accompanied by an attention-grabbing ringtone) reminding you of your crucial appointment.</p>
+<p>To make this work on Windows, I utilized ToDoChiKu along with Snarl, which displays attractive Growl-like messages. First step is to register the Emacs application for notifications. Navigate to <code>C:\Program Files\full phat\Snarl\tools</code> where you’ll find heysnarl.exe. Then, enter the following command in the console:</p>
 <pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “register?app-sig=app/emacs&amp;title=Emacs Org-Mode&amp;icon=C:\Program Files\full phat\Snarl\etc\icons\emacs.png”
-</code></pre><p>app/emacs is our application signature used by ToDoChiku, and icon is a path to whatever icon you want. I used this one. Once emacs is installed, you should see it on the list of registered Snarl applications. You may also test if messages appear correctly:</p>
-<pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “notify?app-sig=app/emacs&amp;title=Simple test&amp;text=dupa”
-</code></pre><p>Oki, we have Snarl working, let’s go back to Emacs. To complete our ToDoChiku configuration we need following stuff, a bit of magic to ask org-mode to use ToDoChiku as notification tool:</p>
+</code></pre><p>Here, app/emacs is the application signature used by ToDoChiKu, and the icon is the path to any icon you prefer. I chose that particular one. Once Emacs is registered, it should appear on the list of applications within Snarl. You can also test whether messages are displayed correctly:</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “notify?app-sig=app/emacs&amp;title=Simple test&amp;text=Hello World!”
+</code></pre><p>Now that we have Snarl functioning, let’s return to Emacs. To complete the ToDoChiKu configuration, we need to instruct org-mode to use ToDoChiKu as the notification tool with the following code:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">todochiku-command</span> <span class="s">&#34;C:/Program Files/full phat/Snarl/tools/heysnarl.exe&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">org-show-notification-handler</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">notification</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                                   <span class="p">(</span><span class="nv">todochiku-message</span> <span class="s">&#34;org-mode notification&#34;</span> <span class="nv">notification</span> <span class="p">(</span><span class="nv">todochiku-icon</span> <span class="ss">&#39;emacs</span><span class="p">))))</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;todochiku</span><span class="p">)</span>
-</span></span></code></pre></div><p>Note that requiring ‘todochiku should be placed after setting up the todochiku-command. Otherwise you will get a “respawn process” error while starting up your emacs next time.</p>
-<p>Assuming todochiku is working correctly (you may verify that, eg. by evaluating in your <em>scratch</em> buffer something like <code>(todochiku-message &quot;Simple test&quot; &quot;dupa&quot; nil))</code> we finally need to enable appointments:</p>
+</span></span></code></pre></div><p>Please note that you should require ‘todochiku after setting up the todochiku-command. Otherwise, you might encounter a “respawn process” error the next time you start Emacs.</p>
+<p>Assuming ToDoChiKu is functioning correctly (you can verify this in your <em>scratch</em> buffer by evaluating something like <code>(todochiku-message &quot;Simple test&quot; &quot;Hello World&quot; nil)</code>), we now need to enable appointments:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">appt-activate</span> <span class="mi">1</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">appt-message-warning-time</span> <span class="mi">15</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">appt-display-mode-line</span> <span class="no">t</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">appt-display-format</span> <span class="ss">&#39;window</span><span class="p">)</span>
-</span></span></code></pre></div><p>With above settings appointments will be displayed in two modes: in your mode-line and in separate popup. ToDoChiku by default overrides appt-disp-window-function redirecting all messages to Snarl process, so we don’t need to do that by ourselves.</p>
-<p>Ok, time for final test. Create an appointment in your org-mode and wait…</p>
+</span></span></code></pre></div><p>With these settings, appointments will be displayed in two ways: in your mode-line and in a separate popup. By default, ToDoChiKu overrides appt-disp-window-function, redirecting all messages to the Snarl process, so no additional action is needed on your part.</p>
+<p>Now it&rsquo;s time for a final test. Create an appointment in your org-mode and wait&hellip;</p>
 <figure><img src="/images/get_notified_2.png"/>
 </figure>
 
@@ -190,7 +189,7 @@ Unfortunately, org-mode by default will not warn you about upcoming event."/>
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        414 Words
+        398 Words
       </p>
 
       <p>

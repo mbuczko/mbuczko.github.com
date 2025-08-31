@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
+<meta name="author" content="[Michał Buczko]">
 <meta name="description" content="Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark&#43; which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:
 Richer bookmarks. They record more. They are more accurate.
-A few things we get here for free:
-Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting and filtering. Usage ‘statistics’. you may sort and filter your bookmarks basing on how often they were used." />
+Here are some key features available to us for free:
+Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used." />
 <meta name="keywords" content=", emacs" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -46,16 +46,16 @@ Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting
 <meta itemprop="name" content="World of Bookmarks">
 <meta itemprop="description" content="Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark&#43; which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:
 Richer bookmarks. They record more. They are more accurate.
-A few things we get here for free:
-Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting and filtering. Usage ‘statistics’. you may sort and filter your bookmarks basing on how often they were used."><meta itemprop="datePublished" content="2012-01-02T10:20:00+01:00" />
-<meta itemprop="dateModified" content="2022-06-17T00:01:45+02:00" />
-<meta itemprop="wordCount" content="637">
+Here are some key features available to us for free:
+Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used."><meta itemprop="datePublished" content="2012-01-02T10:20:00+01:00" />
+<meta itemprop="dateModified" content="2025-08-31T23:15:33+02:00" />
+<meta itemprop="wordCount" content="625">
 <meta itemprop="keywords" content="emacs," />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="World of Bookmarks"/>
 <meta name="twitter:description" content="Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark&#43; which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:
 Richer bookmarks. They record more. They are more accurate.
-A few things we get here for free:
-Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting and filtering. Usage ‘statistics’. you may sort and filter your bookmarks basing on how often they were used."/>
+Here are some key features available to us for free:
+Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used."/>
 
 
 
@@ -143,27 +143,27 @@ Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting
 <blockquote>
 <p>Richer bookmarks. They record more. They are more accurate.</p>
 </blockquote>
-<p>A few things we get here for free:</p>
+<p>Here are some key features available to us for free:</p>
 <ul>
-<li>Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting and filtering.</li>
-<li>Usage ‘statistics’. you may sort and filter your bookmarks basing on how often they were used.</li>
-<li>Function / sequence / variable-list bookmarking. Sounds odd, but you may bookmark (and invoke later) a simple function or save/restore value of particular variable. If you feel it’s too primitive for your needs, you may also combine all kind of bookmarks into sequence restored (evaluated) simply by selecting such a sequence-bookmark.</li>
-<li>A bit more useful thing is bookmarking a region. Region gets activated each time you select corresponding bookmark.</li>
-<li>According to the documentation bookmarks+ are better relocated, which means they track the point they are assigned to in a smarter way.</li>
+<li>Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks.</li>
+<li>Usage statistics: sort and filter your bookmarks based on how frequently they are used.</li>
+<li>Function, sequence, and variable-list bookmarking: While it may sound unusual, you can bookmark (and later invoke) a simple function or save/restore the value of a specific variable. If you find this too basic, you can combine various bookmarks into a sequence, which can be restored (or evaluated) by simply selecting the corresponding sequence bookmark.</li>
+<li>Region bookmarking: You can bookmark a region that becomes active whenever you select the associated bookmark.</li>
+<li>Improved relocation: According to the documentation, bookmarks+ are better at tracking their assigned locations in a more intelligent manner.</li>
 </ul>
-<p>Coming back to bookmark types. Beside the function, sequence and variable-list bookmarks mentioned before, bookmark+ is happy to introduce a few more types:</p>
+<p>Now, turning to bookmark types. In addition to the function, sequence, and variable-list bookmarks mentioned earlier, bookmark+ introduces several additional types:</p>
 <ol>
-<li>Dired bookmarks - dired buffers get restored immedately as they were bookmarked. That’s especially useful when used with tramp-mode.</li>
-<li>Bookmark-list bookmarks - saves and restores the state of bookmarks list :) Once again, sounds weird but it’s might be helpful when you carefully adjust your bookmarks list by setting up filters or the way it’s sorted and you want to restore exactly the same list later.</li>
-<li>Desktop bookmarks - these ones I find really useful. They allow me switching between projects in a second.</li>
-<li>Gnus bookmarks - if you use Gnus, it’s something for you. And who doesn’t use Gnus after all?</li>
+<li>Dired bookmarks: Dired buffers are restored immediately as they were bookmarked, which is especially useful when used with Tramp mode.</li>
+<li>Bookmark-list bookmarks: These save and restore the state of your bookmarks list. It may sound strange, but this can be quite handy when you meticulously adjust your bookmarks list using filters or sorting and want to restore it to the exact same state later.</li>
+<li>Desktop bookmarks: These are incredibly useful, allowing you to switch between projects in an instant.</li>
+<li>Gnus bookmarks: If you use Gnus, these bookmarks are perfect for you, as who doesn’t use Gnus these days?</li>
 </ol>
-<p>Now, let’s leave the marketing buzz and focus on everyday usage.</p>
-<p>There are at least 2 things which I think make it worth switching to bookmark+.</p>
-<p>The first one is, as mentioned, ability to bookmark the current session of your emacs, so called desktop. Having more than one active project it’s crucial to switch between them in rational way. By switching I mean restoring the last remembered desktop of project I want to ‘visit’.</p>
-<p>To make desktops working you have to enable them first (described here: <a href="http://www.emacswiki.org/emacs/DeskTop">http://www.emacswiki.org/emacs/DeskTop</a>).</p>
-<p>Next, enable bookmark+ (link at the top) and, with 4 fingers crossed, type <code>C-x p K</code> and point the file where your desktop will be saved. If you want to restore your desktop, display list of bookmarks: <code>C-x r l</code> and select previously created bookmark.</p>
-<p>To make things a bit more convenient I usually prefix my ‘desktop-bookmarks’ with (desktop) (eg. (desktop) my-secret-project) and sort bookmarks alphabetically. To make things even more convenient I use anything (surprise!):</p>
+<p>Now, let’s set aside the marketing hype and focus on practical usage.</p>
+<p>There are at least two reasons why I believe switching to bookmark+ is worthwhile.</p>
+<p>Firstly, as mentioned, bookmark+ allows you to bookmark your current Emacs session, known as the desktop. When handling multiple active projects, being able to switch between them efficiently is essential. By &ldquo;switching,&rdquo; I mean restoring the last remembered desktop of the project you want to &ldquo;visit.&rdquo;</p>
+<p>To enable desktops, you must activate them first (instructions can be found here: <a href="http://www.emacswiki.org/emacs/DeskTop">http://www.emacswiki.org/emacs/DeskTop</a>).</p>
+<p>Next, activate bookmark+ (link provided at the top) and, with crossed fingers, type `C-x p K` and specify the file where your desktop will be saved. To restore your desktop, display the list of bookmarks using `C-x r l` and select the bookmark you previously created.</p>
+<p>To enhance convenience, I typically prefix my &lsquo;desktop bookmarks&rsquo; with (desktop) (e.g., (desktop) my-secret-project) and sort bookmarks alphabetically. To further streamline the process, I also use Anything (surprise!).</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c b&#34;</span><span class="p">)</span> <span class="ss">&#39;anything-c-pp-bookmarks</span><span class="p">)</span>
 </span></span></code></pre></div><p>There is also second feature which makes bookmark+ attractive alternative for vanilla bookmarks. It’s something called Autonamed bookmarks.</p>
 <p>What it is used for?</p>
@@ -197,7 +197,7 @@ Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        637 Words
+        625 Words
       </p>
 
       <p>

@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="">
-<meta name="description" content="Sounds scary, but it’s not about killing (this time). Kill ring is a term used in Emacs to describe a list of cut (killed) blocks of text. Yes, that’s right. It’s about mutliple blocks of text that you can cut and paste. Emacs as an extraoridinary editor gives you ability to keep the history of what you have just killed. Be sure to close it before you start doing nasty things :)" />
+<meta name="author" content="[Michał Buczko]">
+<meta name="description" content="It may sound intimidating, but don’t worry - it’s not about killing this time. The term &amp;ldquo;kill ring&amp;rdquo; in Emacs refers to a list of text blocks that have been cut (or &amp;ldquo;killed&amp;rdquo;). That&amp;rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)" />
 <meta name="keywords" content=", emacs" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -41,12 +41,12 @@
 
 
 <meta itemprop="name" content="The Kill Ring">
-<meta itemprop="description" content="Sounds scary, but it’s not about killing (this time). Kill ring is a term used in Emacs to describe a list of cut (killed) blocks of text. Yes, that’s right. It’s about mutliple blocks of text that you can cut and paste. Emacs as an extraoridinary editor gives you ability to keep the history of what you have just killed. Be sure to close it before you start doing nasty things :)"><meta itemprop="datePublished" content="2011-12-16T17:20:00+01:00" />
-<meta itemprop="dateModified" content="2022-06-16T22:12:57+02:00" />
-<meta itemprop="wordCount" content="275">
+<meta itemprop="description" content="It may sound intimidating, but don’t worry - it’s not about killing this time. The term &ldquo;kill ring&rdquo; in Emacs refers to a list of text blocks that have been cut (or &ldquo;killed&rdquo;). That&rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)"><meta itemprop="datePublished" content="2011-12-16T17:20:00+01:00" />
+<meta itemprop="dateModified" content="2025-08-31T23:15:33+02:00" />
+<meta itemprop="wordCount" content="293">
 <meta itemprop="keywords" content="emacs," />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="The Kill Ring"/>
-<meta name="twitter:description" content="Sounds scary, but it’s not about killing (this time). Kill ring is a term used in Emacs to describe a list of cut (killed) blocks of text. Yes, that’s right. It’s about mutliple blocks of text that you can cut and paste. Emacs as an extraoridinary editor gives you ability to keep the history of what you have just killed. Be sure to close it before you start doing nasty things :)"/>
+<meta name="twitter:description" content="It may sound intimidating, but don’t worry - it’s not about killing this time. The term &ldquo;kill ring&rdquo; in Emacs refers to a list of text blocks that have been cut (or &ldquo;killed&rdquo;). That&rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)"/>
 
 
 
@@ -130,19 +130,19 @@
       
 
       <div class="post-content">
-        <p>Sounds scary, but it’s not about killing (this time). Kill ring is a term used in Emacs to describe a list of cut (killed) blocks of text. Yes, that’s right. It’s about mutliple blocks of text that you can cut and paste. Emacs as an extraoridinary editor gives you ability to keep the history of what you have just killed. Be sure to close it before you start doing nasty things :)</p>
-<p>Ok, so how to use our all-remembe-ring? Easy, as usual you need to tranform to octopus and put your 8 hands on a keyboard:</p>
+        <p>It may sound intimidating, but don’t worry - it’s not about killing this time. The term &ldquo;kill ring&rdquo; in Emacs refers to a list of text blocks that have been cut (or &ldquo;killed&rdquo;). That&rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)</p>
+<p>Now, how do you use handy kill ring? It&rsquo;s quite simple; just imagine transforming into an octopus and placing your eight hands on the keyboard:</p>
 <ul>
-<li>the <code>C-y</code> (yank) reinserts the text of the most recent copy/cut action</li>
-<li>use <code>M-y</code> to iterate through the copy/cut history</li>
+<li>Use <code>C-y</code> (yank) to reinsert the text from your most recent cut or copy action.</li>
+<li>Press <code>M-y</code> to cycle through your cut and copy history.</li>
 </ul>
-<p>For example, you might want to copy 2 block of text and subsequently paste them somewhere into your buffer. To do this, select first block and copy it (<code>M-w</code>), do the same with second block. Next, go to place where you want to paste it, press <code>C-y</code> (for most recent copied block) or <code>C-y M-y</code> for block(s) copied earlier.</p>
-<p>Sometimes iterating through history might be a bit painful, in particluar when your history grows very dynamically. In this case we would like rather to see what’s in the kill ring and more interactively decide what to paste.</p>
-<p><em>browse-kill-ring.el</em> comes to rescue. put this into your load path, make it required:</p>
+<p>For example, if you want to copy two blocks of text and paste them somewhere in your buffer, first select the initial block and copy it using <code>M-w</code>. Repeat this for the second block. Then, navigate to where you’d like to paste the text, and press <code>C-y</code> to paste the most recent block, or use <code>C-y M-y</code> to access previously copied blocks.</p>
+<p>Sometimes, navigating through your history can become tedious, especially when it grows rapidly. In those cases, you&rsquo;d prefer to see the contents of the kill ring and make a more informed decision about what to paste.</p>
+<p>This is where <em>browse-kill-ring.el</em> comes to the rescue. Include it in your load path and require it like this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;browse-kill-ring</span><span class="p">)</span>
-</span></span></code></pre></div><p>and use whenever you want with <code>M-x browse-kill-ring</code>.</p>
-<p>To move faster between history items, use n (for next) and p (for previous) keyboard shortcuts.</p>
-<p>But that’s not the real fun. The real fun comes when you discover <a href="http://www.emacswiki.org/emacs/Anything">anything</a>. Install it along with <a href="http://www.emacswiki.org/emacs/anything-config.el">anything-config</a> and enjoy awesome <code>anything-show-kill-ring</code>.</p>
+</span></span></code></pre></div><p>You can then use it anytime by invoking <code>M-x browse-kill-ring</code>.</p>
+<p>To quickly move between items in your history, utilize the keyboard shortcuts &rsquo;n&rsquo; for next and &lsquo;p&rsquo; for previous.</p>
+<p>But the true excitement begins when you discover <a href="http://www.emacswiki.org/emacs/Anything">Anything</a>. Install it alongside <a href="http://www.emacswiki.org/emacs/anything-config.el">anything-config</a> and enjoy the fantastic <code>anything-show-kill-ring</code>.</p>
 
       </div>
     </article>
@@ -168,7 +168,7 @@
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        275 Words
+        293 Words
       </p>
 
       <p>

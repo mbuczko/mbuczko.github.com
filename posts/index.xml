@@ -5,29 +5,31 @@
         <description>Recent content in Posts on Bit side of life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 30 Oct 2022 14:57:00 +0100</lastBuildDate>
+        <lastBuildDate>Sun, 30 Oct 2022 21:45:00 +0100</lastBuildDate>
         <atom:link href="https://blog.bitside.pl/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>HugSQLx - SQL queries turned into Rust functions</title>
             <link>https://blog.bitside.pl/posts/hugsqlx/</link>
-            <pubDate>Sun, 30 Oct 2022 14:57:00 +0100</pubDate>
+            <pubDate>Sun, 30 Oct 2022 21:45:00 +0100</pubDate>
             
             <guid>https://blog.bitside.pl/posts/hugsqlx/</guid>
-            <description>Clojure world is lucky to have HugSQL - brilliant library which makes daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files and transforms (interns into a namespace) queries to plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</description>
-            <content type="html"><![CDATA[<p>Clojure world is lucky to have <a href="https://www.hugsql.org/">HugSQL</a> - brilliant library which makes daily work with SQLs a real pleasure. HugSql decouples queries from the code, so they do not interfere with content of .clj files and transforms (interns into a namespace) queries to plain clojure functions. Functions created this way are quite smart - underlaying magic connects to postgres, sqlite or whatever DB keeps your data (and is supported by JDBC) and runs defined query with provided function arguments.</p>
-<p>Simple, yet so effective&hellip;</p>
-<p>Can we have something simmilar in Rust?</p>
-<p>Seems like we can.</p>
+            <description>The Clojure community is fortunate to have HugSQL - a brilliant library that simplifies working with SQL. HugSQL separates queries from the code, preventing them from cluttering .clj files and transforming them into plain Clojure functions within a namespace. These functions are quite intelligent; the underlying magic connects to PostgreSQL, SQLite, or any supported database via JDBC, executing defined queries with the provided function arguments.
+Simple, yet remarkably effective&amp;hellip;
+Can we achieve something similar in Rust?</description>
+            <content type="html"><![CDATA[<p>The Clojure community is fortunate to have <a href="https://www.hugsql.org/">HugSQL</a> - a brilliant library that simplifies working with SQL. HugSQL separates queries from the code, preventing them from cluttering .clj files and transforming them into plain Clojure functions within a namespace. These functions are quite intelligent; the underlying magic connects to PostgreSQL, SQLite, or any supported database via JDBC, executing defined queries with the provided function arguments.</p>
+<p>Simple, yet remarkably effective&hellip;</p>
+<p>Can we achieve something similar in Rust?</p>
+<p>It appears we can.</p>
 <img src="/images/hugsqlx.png">
 <h2 id="motivation">Motivation</h2>
-<p>There are 3 main points where <code>hugsqlx</code> really shines when dealing with SQLs:</p>
+<p>HugSqlx truly excels in three key areas when working with SQL:</p>
 <ul>
-<li>queries separated from the code - that brings proper formatting, syntax highlighting and better documentation (readable comments) out of the box. Your IDE is way happier to edit .sql file rather than SQLs inside rust source.</li>
-<li>named queries - query becomes easier to identify. Easier to indentify in a code, easier to deduce in logs when one looks for query that just blown up production.</li>
-<li>queries as documented functions - better way to understand author&rsquo;s intention - what the query does in summary, what to expect in result?</li>
+<li>Separation of queries from code: this feature enhances formatting, syntax highlighting, and documentation, allowing for clear comments. Your IDE is far more suited to editing .sql files than to handling SQL embedded within Rust source code.</li>
+<li>Named queries: queries become easier to identify, both within the code and in logs when tracking down issues that may have impacted production.</li>
+<li>Queries as documented functions: this approach clarifies the author&rsquo;s intention, providing insight into what the query does and what results to expect.</li>
 </ul>
-<p>Last but not least - queries turned into functions enable auto-completion and quick doc view out of the box (if you&rsquo;re lucky enough with your LSP)</p>
+<p>Lastly, turning queries into functions enables out-of-the-box auto-completion and quick documentation views, provided your Language Server Protocol (LSP) is up to the task.</p>
 <h2 id="solution--poc">Solution (PoC)</h2>
 <p><a href="https://github.com/mbuczko/hugsqlx">HugSqlx</a> is still kind of proof-of-concept, doing its best to materialize these ideas. Although crate is at its newborn stage, it should be quite functional. Standing on the shoulders of awesome <a href="https://github.com/launchbadge/sqlx">SQLx</a> it implements query-as-a-function concept for 3 major databases: postgres, sqlite and mysql. From a technical point of view, entire logic comes down to a simple (more or less..) code transformation which generates a static trait functions for your struct.</p>
 <p>First results seem to be promising. I de-cluttered my sources, enjoy LSP happily providing me queries names via auto-completion. And, most importantly, I learned a lot about <a href="https://doc.rust-lang.org/reference/procedural-macros.html">procedural macros</a>.</p>
@@ -443,34 +445,33 @@ Emacs*font: DejaVu Sans Mono-9
             <pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
             
             <guid>https://blog.bitside.pl/posts/get-notified/</guid>
-            <description>org-mode is definitely one of the most versatile notes &amp;amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.
-Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.
-Unfortunately, org-mode by default will not warn you about upcoming event.</description>
-            <content type="html"><![CDATA[<p><a href="http://orgmode.org/">org-mode</a> is definitely one of the most versatile notes &amp; planning tools I have ever seen. It’s also number one in my daily GTD practices.</p>
-<p>Recently, I discovered one tiny feature which makes my work with org-mode even sweeter - notifications. Suppose you have just planned a super-duper important meeting with your girlfriend. As natural born programmer, you have already created entry in you org-mode planner.</p>
-<p>Unfortunately, org-mode by default will not warn you about upcoming event. It’s very easy to overlook it, especially when you are deep in your matrix trying to decrypt one more perl script…</p>
-<p>But don’t despair. Notifications come to the rescue - few minutes before meeting you will get a growl/growl-like message (possibly with shocking biiing-booong sound) reminding you about your crucial appointment.</p>
-<p>To make it working on windows, I used ToDoChiKu along with Snarl which displays fancy growl-like messages. The dark side of this solution is that ToDoChiKu is no longer compatible with Snarl 2.5. You will see no messages without a simple todochiku.el patch.</p>
-<p>Having ToDoChiKu patched we need to register emacs app to get notifications. Go into <code>C:\Program Files\full phat\Snarl\tools</code> where you should find a heysnarl.exe. Next, type in console:</p>
+            <description>org-mode is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.
+Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.
+However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&amp;hellip;</description>
+            <content type="html"><![CDATA[<p><a href="http://orgmode.org/">org-mode</a> is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.</p>
+<p>Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.</p>
+<p>However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&hellip;</p>
+<p>But don’t worry! Notifications come to the rescue - just a few minutes before your meeting, you’ll receive a Growl or Growl-like message (possibly accompanied by an attention-grabbing ringtone) reminding you of your crucial appointment.</p>
+<p>To make this work on Windows, I utilized ToDoChiKu along with Snarl, which displays attractive Growl-like messages. First step is to register the Emacs application for notifications. Navigate to <code>C:\Program Files\full phat\Snarl\tools</code> where you’ll find heysnarl.exe. Then, enter the following command in the console:</p>
 <pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “register?app-sig=app/emacs&amp;title=Emacs Org-Mode&amp;icon=C:\Program Files\full phat\Snarl\etc\icons\emacs.png”
-</code></pre><p>app/emacs is our application signature used by ToDoChiku, and icon is a path to whatever icon you want. I used this one. Once emacs is installed, you should see it on the list of registered Snarl applications. You may also test if messages appear correctly:</p>
-<pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “notify?app-sig=app/emacs&amp;title=Simple test&amp;text=dupa”
-</code></pre><p>Oki, we have Snarl working, let’s go back to Emacs. To complete our ToDoChiku configuration we need following stuff, a bit of magic to ask org-mode to use ToDoChiku as notification tool:</p>
+</code></pre><p>Here, app/emacs is the application signature used by ToDoChiKu, and the icon is the path to any icon you prefer. I chose that particular one. Once Emacs is registered, it should appear on the list of applications within Snarl. You can also test whether messages are displayed correctly:</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “notify?app-sig=app/emacs&amp;title=Simple test&amp;text=Hello World!”
+</code></pre><p>Now that we have Snarl functioning, let’s return to Emacs. To complete the ToDoChiKu configuration, we need to instruct org-mode to use ToDoChiKu as the notification tool with the following code:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">todochiku-command</span> <span class="s">&#34;C:/Program Files/full phat/Snarl/tools/heysnarl.exe&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">org-show-notification-handler</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">notification</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                                   <span class="p">(</span><span class="nv">todochiku-message</span> <span class="s">&#34;org-mode notification&#34;</span> <span class="nv">notification</span> <span class="p">(</span><span class="nv">todochiku-icon</span> <span class="ss">&#39;emacs</span><span class="p">))))</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;todochiku</span><span class="p">)</span>
-</span></span></code></pre></div><p>Note that requiring ‘todochiku should be placed after setting up the todochiku-command. Otherwise you will get a “respawn process” error while starting up your emacs next time.</p>
-<p>Assuming todochiku is working correctly (you may verify that, eg. by evaluating in your <em>scratch</em> buffer something like <code>(todochiku-message &quot;Simple test&quot; &quot;dupa&quot; nil))</code> we finally need to enable appointments:</p>
+</span></span></code></pre></div><p>Please note that you should require ‘todochiku after setting up the todochiku-command. Otherwise, you might encounter a “respawn process” error the next time you start Emacs.</p>
+<p>Assuming ToDoChiKu is functioning correctly (you can verify this in your <em>scratch</em> buffer by evaluating something like <code>(todochiku-message &quot;Simple test&quot; &quot;Hello World&quot; nil)</code>), we now need to enable appointments:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">appt-activate</span> <span class="mi">1</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">appt-message-warning-time</span> <span class="mi">15</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">appt-display-mode-line</span> <span class="no">t</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">appt-display-format</span> <span class="ss">&#39;window</span><span class="p">)</span>
-</span></span></code></pre></div><p>With above settings appointments will be displayed in two modes: in your mode-line and in separate popup. ToDoChiku by default overrides appt-disp-window-function redirecting all messages to Snarl process, so we don’t need to do that by ourselves.</p>
-<p>Ok, time for final test. Create an appointment in your org-mode and wait…</p>
+</span></span></code></pre></div><p>With these settings, appointments will be displayed in two ways: in your mode-line and in a separate popup. By default, ToDoChiKu overrides appt-disp-window-function, redirecting all messages to the Snarl process, so no additional action is needed on your part.</p>
+<p>Now it&rsquo;s time for a final test. Create an appointment in your org-mode and wait&hellip;</p>
 <figure><img src="/images/get_notified_2.png"/>
 </figure>
 
@@ -485,33 +486,33 @@ Unfortunately, org-mode by default will not warn you about upcoming event.</desc
             <guid>https://blog.bitside.pl/posts/world-of-bookmarks/</guid>
             <description>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:
 Richer bookmarks. They record more. They are more accurate.
-A few things we get here for free:
-Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting and filtering. Usage ‘statistics’. you may sort and filter your bookmarks basing on how often they were used.</description>
+Here are some key features available to us for free:
+Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used.</description>
             <content type="html"><![CDATA[<p>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:</p>
 <blockquote>
 <p>Richer bookmarks. They record more. They are more accurate.</p>
 </blockquote>
-<p>A few things we get here for free:</p>
+<p>Here are some key features available to us for free:</p>
 <ul>
-<li>Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting and filtering.</li>
-<li>Usage ‘statistics’. you may sort and filter your bookmarks basing on how often they were used.</li>
-<li>Function / sequence / variable-list bookmarking. Sounds odd, but you may bookmark (and invoke later) a simple function or save/restore value of particular variable. If you feel it’s too primitive for your needs, you may also combine all kind of bookmarks into sequence restored (evaluated) simply by selecting such a sequence-bookmark.</li>
-<li>A bit more useful thing is bookmarking a region. Region gets activated each time you select corresponding bookmark.</li>
-<li>According to the documentation bookmarks+ are better relocated, which means they track the point they are assigned to in a smarter way.</li>
+<li>Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks.</li>
+<li>Usage statistics: sort and filter your bookmarks based on how frequently they are used.</li>
+<li>Function, sequence, and variable-list bookmarking: While it may sound unusual, you can bookmark (and later invoke) a simple function or save/restore the value of a specific variable. If you find this too basic, you can combine various bookmarks into a sequence, which can be restored (or evaluated) by simply selecting the corresponding sequence bookmark.</li>
+<li>Region bookmarking: You can bookmark a region that becomes active whenever you select the associated bookmark.</li>
+<li>Improved relocation: According to the documentation, bookmarks+ are better at tracking their assigned locations in a more intelligent manner.</li>
 </ul>
-<p>Coming back to bookmark types. Beside the function, sequence and variable-list bookmarks mentioned before, bookmark+ is happy to introduce a few more types:</p>
+<p>Now, turning to bookmark types. In addition to the function, sequence, and variable-list bookmarks mentioned earlier, bookmark+ introduces several additional types:</p>
 <ol>
-<li>Dired bookmarks - dired buffers get restored immedately as they were bookmarked. That’s especially useful when used with tramp-mode.</li>
-<li>Bookmark-list bookmarks - saves and restores the state of bookmarks list :) Once again, sounds weird but it’s might be helpful when you carefully adjust your bookmarks list by setting up filters or the way it’s sorted and you want to restore exactly the same list later.</li>
-<li>Desktop bookmarks - these ones I find really useful. They allow me switching between projects in a second.</li>
-<li>Gnus bookmarks - if you use Gnus, it’s something for you. And who doesn’t use Gnus after all?</li>
+<li>Dired bookmarks: Dired buffers are restored immediately as they were bookmarked, which is especially useful when used with Tramp mode.</li>
+<li>Bookmark-list bookmarks: These save and restore the state of your bookmarks list. It may sound strange, but this can be quite handy when you meticulously adjust your bookmarks list using filters or sorting and want to restore it to the exact same state later.</li>
+<li>Desktop bookmarks: These are incredibly useful, allowing you to switch between projects in an instant.</li>
+<li>Gnus bookmarks: If you use Gnus, these bookmarks are perfect for you, as who doesn’t use Gnus these days?</li>
 </ol>
-<p>Now, let’s leave the marketing buzz and focus on everyday usage.</p>
-<p>There are at least 2 things which I think make it worth switching to bookmark+.</p>
-<p>The first one is, as mentioned, ability to bookmark the current session of your emacs, so called desktop. Having more than one active project it’s crucial to switch between them in rational way. By switching I mean restoring the last remembered desktop of project I want to ‘visit’.</p>
-<p>To make desktops working you have to enable them first (described here: <a href="http://www.emacswiki.org/emacs/DeskTop">http://www.emacswiki.org/emacs/DeskTop</a>).</p>
-<p>Next, enable bookmark+ (link at the top) and, with 4 fingers crossed, type <code>C-x p K</code> and point the file where your desktop will be saved. If you want to restore your desktop, display list of bookmarks: <code>C-x r l</code> and select previously created bookmark.</p>
-<p>To make things a bit more convenient I usually prefix my ‘desktop-bookmarks’ with (desktop) (eg. (desktop) my-secret-project) and sort bookmarks alphabetically. To make things even more convenient I use anything (surprise!):</p>
+<p>Now, let’s set aside the marketing hype and focus on practical usage.</p>
+<p>There are at least two reasons why I believe switching to bookmark+ is worthwhile.</p>
+<p>Firstly, as mentioned, bookmark+ allows you to bookmark your current Emacs session, known as the desktop. When handling multiple active projects, being able to switch between them efficiently is essential. By &ldquo;switching,&rdquo; I mean restoring the last remembered desktop of the project you want to &ldquo;visit.&rdquo;</p>
+<p>To enable desktops, you must activate them first (instructions can be found here: <a href="http://www.emacswiki.org/emacs/DeskTop">http://www.emacswiki.org/emacs/DeskTop</a>).</p>
+<p>Next, activate bookmark+ (link provided at the top) and, with crossed fingers, type `C-x p K` and specify the file where your desktop will be saved. To restore your desktop, display the list of bookmarks using `C-x r l` and select the bookmark you previously created.</p>
+<p>To enhance convenience, I typically prefix my &lsquo;desktop bookmarks&rsquo; with (desktop) (e.g., (desktop) my-secret-project) and sort bookmarks alphabetically. To further streamline the process, I also use Anything (surprise!).</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c b&#34;</span><span class="p">)</span> <span class="ss">&#39;anything-c-pp-bookmarks</span><span class="p">)</span>
 </span></span></code></pre></div><p>There is also second feature which makes bookmark+ attractive alternative for vanilla bookmarks. It’s something called Autonamed bookmarks.</p>
 <p>What it is used for?</p>
@@ -529,13 +530,13 @@ Bookmarks tagging. Yup! just like in delicious. you may use tags eg. for sorting
             <pubDate>Fri, 16 Dec 2011 22:10:00 +0100</pubDate>
             
             <guid>https://blog.bitside.pl/posts/interactive-search-rediscovered/</guid>
-            <description>Nice tip I found while searching interactively (C-s).
-If you want to see all the occurences of what you’re just searching for, press M-s o and you will see new buffer listing all the desired occurences. Moreover, you may extend searching convieniently by selecting next words with C-w.
-This flow C-s C-w C-w M-s o selects 2 words starting at current cursor position and lists all their occurences in current buffer.</description>
-            <content type="html"><![CDATA[<p>Nice tip I found while searching interactively (<code>C-s</code>).</p>
-<p>If you want to see all the occurences of what you’re just searching for, press <code>M-s o</code> and you will see new buffer listing all the desired occurences. Moreover, you may extend searching convieniently by selecting next words with <code>C-w</code>.</p>
-<p>This flow <code>C-s C-w C-w M-s o</code> selects 2 words starting at current cursor position and lists all their occurences in current buffer.</p>
-<p>Obviously, the greatest way to simplify all above is hidden under the ‘anything’ hood. Try anything-occur and hear your jaw dropping :)</p>
+            <description>Here&amp;rsquo;s a helpful tip I discovered while searching interactively (using C-s).
+If you want to see all occurrences of your current search term, press M-s o. This will open a new buffer listing all the relevant instances. You can also conveniently extend your search by selecting additional words with C-w.
+By using the sequence C-s C-w C-w M-s o, you can select two words starting from the current cursor position and view all their occurrences in the current buffer.</description>
+            <content type="html"><![CDATA[<p>Here&rsquo;s a helpful tip I discovered while searching interactively (using <code>C-s</code>).</p>
+<p>If you want to see all occurrences of your current search term, press <code>M-s o</code>. This will open a new buffer listing all the relevant instances. You can also conveniently extend your search by selecting additional words with <code>C-w</code>.</p>
+<p>By using the sequence <code>C-s C-w C-w M-s o</code>, you can select two words starting from the current cursor position and view all their occurrences in the current buffer.</p>
+<p>A fantastic way to streamline this process is by utilizing the &lsquo;anything&rsquo; functionality. Try using anything-occur, and you might be amazed by the results!</p>
 ]]></content>
         </item>
         
@@ -545,20 +546,20 @@ This flow C-s C-w C-w M-s o selects 2 words starting at current cursor position 
             <pubDate>Fri, 16 Dec 2011 17:20:00 +0100</pubDate>
             
             <guid>https://blog.bitside.pl/posts/the-kill-ring/</guid>
-            <description>Sounds scary, but it’s not about killing (this time). Kill ring is a term used in Emacs to describe a list of cut (killed) blocks of text. Yes, that’s right. It’s about mutliple blocks of text that you can cut and paste. Emacs as an extraoridinary editor gives you ability to keep the history of what you have just killed. Be sure to close it before you start doing nasty things :)</description>
-            <content type="html"><![CDATA[<p>Sounds scary, but it’s not about killing (this time). Kill ring is a term used in Emacs to describe a list of cut (killed) blocks of text. Yes, that’s right. It’s about mutliple blocks of text that you can cut and paste. Emacs as an extraoridinary editor gives you ability to keep the history of what you have just killed. Be sure to close it before you start doing nasty things :)</p>
-<p>Ok, so how to use our all-remembe-ring? Easy, as usual you need to tranform to octopus and put your 8 hands on a keyboard:</p>
+            <description>It may sound intimidating, but don’t worry - it’s not about killing this time. The term &amp;ldquo;kill ring&amp;rdquo; in Emacs refers to a list of text blocks that have been cut (or &amp;ldquo;killed&amp;rdquo;). That&amp;rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)</description>
+            <content type="html"><![CDATA[<p>It may sound intimidating, but don’t worry - it’s not about killing this time. The term &ldquo;kill ring&rdquo; in Emacs refers to a list of text blocks that have been cut (or &ldquo;killed&rdquo;). That&rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)</p>
+<p>Now, how do you use handy kill ring? It&rsquo;s quite simple; just imagine transforming into an octopus and placing your eight hands on the keyboard:</p>
 <ul>
-<li>the <code>C-y</code> (yank) reinserts the text of the most recent copy/cut action</li>
-<li>use <code>M-y</code> to iterate through the copy/cut history</li>
+<li>Use <code>C-y</code> (yank) to reinsert the text from your most recent cut or copy action.</li>
+<li>Press <code>M-y</code> to cycle through your cut and copy history.</li>
 </ul>
-<p>For example, you might want to copy 2 block of text and subsequently paste them somewhere into your buffer. To do this, select first block and copy it (<code>M-w</code>), do the same with second block. Next, go to place where you want to paste it, press <code>C-y</code> (for most recent copied block) or <code>C-y M-y</code> for block(s) copied earlier.</p>
-<p>Sometimes iterating through history might be a bit painful, in particluar when your history grows very dynamically. In this case we would like rather to see what’s in the kill ring and more interactively decide what to paste.</p>
-<p><em>browse-kill-ring.el</em> comes to rescue. put this into your load path, make it required:</p>
+<p>For example, if you want to copy two blocks of text and paste them somewhere in your buffer, first select the initial block and copy it using <code>M-w</code>. Repeat this for the second block. Then, navigate to where you’d like to paste the text, and press <code>C-y</code> to paste the most recent block, or use <code>C-y M-y</code> to access previously copied blocks.</p>
+<p>Sometimes, navigating through your history can become tedious, especially when it grows rapidly. In those cases, you&rsquo;d prefer to see the contents of the kill ring and make a more informed decision about what to paste.</p>
+<p>This is where <em>browse-kill-ring.el</em> comes to the rescue. Include it in your load path and require it like this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;browse-kill-ring</span><span class="p">)</span>
-</span></span></code></pre></div><p>and use whenever you want with <code>M-x browse-kill-ring</code>.</p>
-<p>To move faster between history items, use n (for next) and p (for previous) keyboard shortcuts.</p>
-<p>But that’s not the real fun. The real fun comes when you discover <a href="http://www.emacswiki.org/emacs/Anything">anything</a>. Install it along with <a href="http://www.emacswiki.org/emacs/anything-config.el">anything-config</a> and enjoy awesome <code>anything-show-kill-ring</code>.</p>
+</span></span></code></pre></div><p>You can then use it anytime by invoking <code>M-x browse-kill-ring</code>.</p>
+<p>To quickly move between items in your history, utilize the keyboard shortcuts &rsquo;n&rsquo; for next and &lsquo;p&rsquo; for previous.</p>
+<p>But the true excitement begins when you discover <a href="http://www.emacswiki.org/emacs/Anything">Anything</a>. Install it alongside <a href="http://www.emacswiki.org/emacs/anything-config.el">anything-config</a> and enjoy the fantastic <code>anything-show-kill-ring</code>.</p>
 ]]></content>
         </item>
         

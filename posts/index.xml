@@ -5,8 +5,37 @@
         <description>Recent content in Posts on Bit side of life</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 30 Oct 2022 21:45:00 +0100</lastBuildDate>
+        <lastBuildDate>Wed, 15 Jul 2026 00:32:00 +0200</lastBuildDate>
         <atom:link href="https://blog.bitside.pl/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Love letter to future me</title>
+            <link>https://blog.bitside.pl/posts/interview/</link>
+            <pubDate>Wed, 15 Jul 2026 00:32:00 +0200</pubDate>
+            
+            <guid>https://blog.bitside.pl/posts/interview/</guid>
+            <description>&lt;p&gt;For a while now, I&amp;rsquo;ve had the unique chance to interview candidates for senior engineering roles at a company I work for. After speaking with dozens of people, I started noticing the same patterns coming up again and again - the ones that make interviews go sideways. And knowing that I&amp;rsquo;ll be on the other side of the table one day, I decided to write these down for future me. Some of them are obvious. Which is exactly why people keep forgetting them. And odds are, I will too.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>For a while now, I&rsquo;ve had the unique chance to interview candidates for senior engineering roles at a company I work for. After speaking with dozens of people, I started noticing the same patterns coming up again and again - the ones that make interviews go sideways. And knowing that I&rsquo;ll be on the other side of the table one day, I decided to write these down for future me. Some of them are obvious. Which is exactly why people keep forgetting them. And odds are, I will too.</p>
+<p>And so there a few:</p>
+<h2 id="don-t-be-late">don&rsquo;t be late</h2>
+<p>Sounds obvious, but I&rsquo;m still shocked how often people break this rule. Life happens, and most interviewers will understand - they&rsquo;re human after all (at least most of them). But whatever kept you, please reach out to the interviewer or whoever scheduled the meeting and let them know. It&rsquo;s basic professional courtesy. The worst thing you can do is join 10 minutes late without a word, acting as if nothing happened.</p>
+<h2 id="know-your-weapon">know your weapon</h2>
+<p>As a full-stack developer, you&rsquo;re likely switching languages several times a week - implementing a backend in Clojure, a frontend in TypeScript, throwing in some Python scripts here and there or implementing Tetris in Brainf*ck at lunch time. It usually takes a few hours to fully context-switch to the point where you&rsquo;re not stopping to think about how a for-loop works (Clojure, I&rsquo;m looking at you) or how to define an Enum in Java. The problem is, you don&rsquo;t have those few hours in a coding interview. Switch the context at least a day before - open your Emacs, dive deep into the language of your choice, do some katas. And let your muscle memory do the work next day.</p>
+<h2 id="choose-your-weapon-wisely">choose your weapon wisely</h2>
+<p>If you have a choice, lean toward dynamically typed languages (unless the role specifically calls for a statically typed one). Getting something up and running in Java requires significantly more effort and boilerplate than in Python. Ideally, have a REPL at your hand - you can quickly validate syntax, inspect the output of a function, or check a docstring. Stress makes people forget basic constructs. Assume you will blank on how to write a loop or how a switch statement works, and be ready for it.</p>
+<h2 id="it-s-not-about-coding">it&rsquo;s not about coding</h2>
+<p>With all the LLMs available today, you&rsquo;ve probably already realized that this kind of exercise isn&rsquo;t really about coding. Machines write code better than most of us - though they still don&rsquo;t think (or so I keep telling myself). That&rsquo;s exactly why we meet. We need a thinking human being, not just another coding machine. And this is your chance to show your human side - not superpowers, we&rsquo;re not ClosedAI. Chances are, we&rsquo;ll end up working together, and that&rsquo;s why I care how you approach a problem: do you break it down into smaller pieces? How do you ask questions, even the ones that feel obvious? How do you talk through your thinking out loud? Imagine you&rsquo;re already talking to a future teammate - because that&rsquo;s precisely what the interviewer is imagining too. Radio silence, incoherent mumbling, chaotic jumping between ideas - all of that is far worse than code that doesn&rsquo;t compile. The most brilliant people I&rsquo;ve interviewed weren&rsquo;t the best coders. They were thinkers who could clearly articulate what they were going to do next.</p>
+<h2 id="read-and-listen">read and listen</h2>
+<p>One of the biggest red flags: diving straight into implementation without reading all the instructions. Or without fully understanding them. Or worse - not listening to the interviewer and ignoring what they&rsquo;re trying to tell you. Make sure you have the full picture, just like an LLM building its context window. If anything is unclear or missing - for God&rsquo;s sake, ask. Some instructions intentionally leave gaps to test your understanding. And more often than not, your assumption will be wrong.</p>
+<h2 id="timebox-yourself">timebox yourself</h2>
+<p>It&rsquo;s interviewer&rsquo;s part to keep the schedule but it&rsquo;s your responsibility to split the work so, that you won&rsquo;t surprisingly discover 5 minutes before the end that you still need to handle some edge cases or add a couple of tests. This is the turning point where the panic mode switches on. We all went through this at least once.</p>
+<h2 id="for-f-ck-s-sake-don-t-cheat">for f*ck&rsquo;s sake, don&rsquo;t cheat</h2>
+<p>Do you really think the senior engineer on the other side can&rsquo;t tell? There are far more subtle signals that betrey you than you might think. Sure, you might suppress a few of them - but you&rsquo;d need to be a KGB-trained spy with nerves of steel to control your entire body language. Your voice shifts in tone and pace, you stop blinking for a solid minute while your eyes dart compulsively side to side - and then you deliver a perfect answer, only to go completely silent the moment they dig deeper. It&rsquo;s not a fun.</p>
+<h2 id="interview-the-interviewer">interview the interviewer</h2>
+<p>An interview isn&rsquo;t a one-way street - or at least it shouldn&rsquo;t be. This is your chance to ask about things that matter to you. Prepare those questions in advance. Seriously, prepare them. Showing up and asking &ldquo;what do you like about working here?&rdquo; or &ldquo;so what does the company actually do?&rdquo; leaves a bad taste, even if everything else went reasonably well.</p>
+<h2 id="practice-interviewing">practice interviewing</h2>
+<p>Like everything else in life, the more you practice the better you get and interviews are no different. Seek out companies you&rsquo;re not desperate to join, and use them to get to the coding interview stage. The key is to learn from your mistakes. Ask for feedback, write down your own reflections. Treat it like a post-mortem: what went wrong? What could I do better? How could I have avoided this and that? Be grateful for every critical point you receive. That&rsquo;s what helps you grow and boost your chances in the next round.</p>]]></content>
+        </item>
         
         <item>
             <title>HugSQLx - SQL queries turned into Rust functions</title>
@@ -214,25 +243,6 @@ So what is swank-js? As its GitHub description says, it provides a JavaScript RE
         </item>
         
         <item>
-            <title>Moving to Octopress</title>
-            <link>https://blog.bitside.pl/posts/moving-to-octopress/</link>
-            <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
-            
-            <guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
-            <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:
-I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&amp;rsquo;s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
-            <content type="html"><![CDATA[<p>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:</p>
-<ul>
-<li>I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&rsquo;s really awesome for programmer like me.</li>
-<li>Hosting on github. There are not enough words to express how github revolutionized my daily workflow. I use this brilliant application in my everyday work, so why shouldn&rsquo;t I use it for blogging too.</li>
-<li>Ruby. I love ruby. Octopress is based on ruby, thus I love octopress too :)</li>
-<li>Emacs. I&rsquo;m org-mode addicted. Having a possibility to blog using org-mode is priceless.</li>
-</ul>
-<p>If you consider simmilar transition and you need more reasons, look at <a href="http://octopress.org/">Octopress main page</a>. It says why and how you may start your journey with Octopress.</p>
-]]></content>
-        </item>
-        
-        <item>
             <title>Be social</title>
             <link>https://blog.bitside.pl/posts/be-social/</link>
             <pubDate>Wed, 04 Jul 2012 21:10:00 +0200</pubDate>
@@ -302,6 +312,25 @@ GTalk Gtalk bases on open protocol (jabber), so the only thing we need is a jabb
 <p>Once it’s all installed, you are ready to start twittering mode <code>M-x twitter</code>. If it’s run first time, twittering mode will ask for authorizing PIN number which you can gather from twitter page. This page shows up immediately in your browser if you only allow emacs running web browser for you.</p>
 <p>Last thing is setting a password to <code>.twittering-mode.gpg</code> and exactly this password you have to provide each time you will run twittering-mode in the future.</p>
 <p>Good luck!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Moving to Octopress</title>
+            <link>https://blog.bitside.pl/posts/moving-to-octopress/</link>
+            <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
+            
+            <guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
+            <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:
+I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&amp;rsquo;s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
+            <content type="html"><![CDATA[<p>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:</p>
+<ul>
+<li>I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&rsquo;s really awesome for programmer like me.</li>
+<li>Hosting on github. There are not enough words to express how github revolutionized my daily workflow. I use this brilliant application in my everyday work, so why shouldn&rsquo;t I use it for blogging too.</li>
+<li>Ruby. I love ruby. Octopress is based on ruby, thus I love octopress too :)</li>
+<li>Emacs. I&rsquo;m org-mode addicted. Having a possibility to blog using org-mode is priceless.</li>
+</ul>
+<p>If you consider simmilar transition and you need more reasons, look at <a href="http://octopress.org/">Octopress main page</a>. It says why and how you may start your journey with Octopress.</p>
 ]]></content>
         </item>
         
@@ -440,6 +469,45 @@ Emacs*font: DejaVu Sans Mono-9
         </item>
         
         <item>
+            <title>Get notified</title>
+            <link>https://blog.bitside.pl/posts/get-notified/</link>
+            <pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
+            
+            <guid>https://blog.bitside.pl/posts/get-notified/</guid>
+            <description>org-mode is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.
+Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.
+However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&amp;hellip;</description>
+            <content type="html"><![CDATA[<p><a href="http://orgmode.org/">org-mode</a> is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.</p>
+<p>Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.</p>
+<p>However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&hellip;</p>
+<p>But don’t worry! Notifications come to the rescue - just a few minutes before your meeting, you’ll receive a Growl or Growl-like message (possibly accompanied by an attention-grabbing ringtone) reminding you of your crucial appointment.</p>
+<p>To make this work on Windows, I utilized ToDoChiKu along with Snarl, which displays attractive Growl-like messages. First step is to register the Emacs application for notifications. Navigate to <code>C:\Program Files\full phat\Snarl\tools</code> where you’ll find heysnarl.exe. Then, enter the following command in the console:</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “register?app-sig=app/emacs&amp;title=Emacs Org-Mode&amp;icon=C:\Program Files\full phat\Snarl\etc\icons\emacs.png”
+</code></pre><p>Here, app/emacs is the application signature used by ToDoChiKu, and the icon is the path to any icon you prefer. I chose that particular one. Once Emacs is registered, it should appear on the list of applications within Snarl. You can also test whether messages are displayed correctly:</p>
+<pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “notify?app-sig=app/emacs&amp;title=Simple test&amp;text=Hello World!”
+</code></pre><p>Now that we have Snarl functioning, let’s return to Emacs. To complete the ToDoChiKu configuration, we need to instruct org-mode to use ToDoChiKu as the notification tool with the following code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">todochiku-command</span> <span class="s">&#34;C:/Program Files/full phat/Snarl/tools/heysnarl.exe&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">org-show-notification-handler</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">notification</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                   <span class="p">(</span><span class="nv">todochiku-message</span> <span class="s">&#34;org-mode notification&#34;</span> <span class="nv">notification</span> <span class="p">(</span><span class="nv">todochiku-icon</span> <span class="ss">&#39;emacs</span><span class="p">))))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;todochiku</span><span class="p">)</span>
+</span></span></code></pre></div><p>Please note that you should require ‘todochiku after setting up the todochiku-command. Otherwise, you might encounter a “respawn process” error the next time you start Emacs.</p>
+<p>Assuming ToDoChiKu is functioning correctly (you can verify this in your <em>scratch</em> buffer by evaluating something like <code>(todochiku-message &quot;Simple test&quot; &quot;Hello World&quot; nil)</code>), we now need to enable appointments:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">appt-activate</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">appt-message-warning-time</span> <span class="mi">15</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">appt-display-mode-line</span> <span class="no">t</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">appt-display-format</span> <span class="ss">&#39;window</span><span class="p">)</span>
+</span></span></code></pre></div><p>With these settings, appointments will be displayed in two ways: in your mode-line and in a separate popup. By default, ToDoChiKu overrides appt-disp-window-function, redirecting all messages to the Snarl process, so no additional action is needed on your part.</p>
+<p>Now it&rsquo;s time for a final test. Create an appointment in your org-mode and wait&hellip;</p>
+<figure><img src="/images/get_notified_2.png"/>
+</figure>
+
+]]></content>
+        </item>
+        
+        <item>
             <title>World of Bookmarks</title>
             <link>https://blog.bitside.pl/posts/world-of-bookmarks/</link>
             <pubDate>Mon, 02 Jan 2012 10:20:00 +0100</pubDate>
@@ -482,45 +550,6 @@ Bookmark tagging: similar to Delicious, you can use tags for sorting and filteri
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-down</span><span class="p">)</span><span class="nv">]</span> <span class="ss">&#39;bmkp-next-bookmark-this-file</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-up</span><span class="p">)</span><span class="nv">]</span>   <span class="ss">&#39;bmkp-previous-bookmark-this-file</span><span class="p">)</span>
 </span></span></code></pre></div><p>This post covers only the top of bookmark+ iceberg. I highly recommend reading the emacs wiki and going deeper into secret world of bookmarks :)</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Get notified</title>
-            <link>https://blog.bitside.pl/posts/get-notified/</link>
-            <pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
-            
-            <guid>https://blog.bitside.pl/posts/get-notified/</guid>
-            <description>org-mode is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.
-Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.
-However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&amp;hellip;</description>
-            <content type="html"><![CDATA[<p><a href="http://orgmode.org/">org-mode</a> is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.</p>
-<p>Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.</p>
-<p>However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&hellip;</p>
-<p>But don’t worry! Notifications come to the rescue - just a few minutes before your meeting, you’ll receive a Growl or Growl-like message (possibly accompanied by an attention-grabbing ringtone) reminding you of your crucial appointment.</p>
-<p>To make this work on Windows, I utilized ToDoChiKu along with Snarl, which displays attractive Growl-like messages. First step is to register the Emacs application for notifications. Navigate to <code>C:\Program Files\full phat\Snarl\tools</code> where you’ll find heysnarl.exe. Then, enter the following command in the console:</p>
-<pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “register?app-sig=app/emacs&amp;title=Emacs Org-Mode&amp;icon=C:\Program Files\full phat\Snarl\etc\icons\emacs.png”
-</code></pre><p>Here, app/emacs is the application signature used by ToDoChiKu, and the icon is the path to any icon you prefer. I chose that particular one. Once Emacs is registered, it should appear on the list of applications within Snarl. You can also test whether messages are displayed correctly:</p>
-<pre tabindex="0"><code class="language-nil" data-lang="nil">heysnarl.exe “notify?app-sig=app/emacs&amp;title=Simple test&amp;text=Hello World!”
-</code></pre><p>Now that we have Snarl functioning, let’s return to Emacs. To complete the ToDoChiKu configuration, we need to instruct org-mode to use ToDoChiKu as the notification tool with the following code:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">todochiku-command</span> <span class="s">&#34;C:/Program Files/full phat/Snarl/tools/heysnarl.exe&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">org-show-notification-handler</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">notification</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">                                   <span class="p">(</span><span class="nv">todochiku-message</span> <span class="s">&#34;org-mode notification&#34;</span> <span class="nv">notification</span> <span class="p">(</span><span class="nv">todochiku-icon</span> <span class="ss">&#39;emacs</span><span class="p">))))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;todochiku</span><span class="p">)</span>
-</span></span></code></pre></div><p>Please note that you should require ‘todochiku after setting up the todochiku-command. Otherwise, you might encounter a “respawn process” error the next time you start Emacs.</p>
-<p>Assuming ToDoChiKu is functioning correctly (you can verify this in your <em>scratch</em> buffer by evaluating something like <code>(todochiku-message &quot;Simple test&quot; &quot;Hello World&quot; nil)</code>), we now need to enable appointments:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">appt-activate</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">appt-message-warning-time</span> <span class="mi">15</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">appt-display-mode-line</span> <span class="no">t</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">appt-display-format</span> <span class="ss">&#39;window</span><span class="p">)</span>
-</span></span></code></pre></div><p>With these settings, appointments will be displayed in two ways: in your mode-line and in a separate popup. By default, ToDoChiKu overrides appt-disp-window-function, redirecting all messages to the Snarl process, so no additional action is needed on your part.</p>
-<p>Now it&rsquo;s time for a final test. Create an appointment in your org-mode and wait&hellip;</p>
-<figure><img src="/images/get_notified_2.png"/>
-</figure>
-
 ]]></content>
         </item>
         

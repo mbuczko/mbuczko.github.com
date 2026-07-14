@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>career on Bit side of life</title>
+    <link>https://blog.bitside.pl/tags/career/</link>
+    <description>Recent content in career on Bit side of life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Jul 2026 00:43:14 +0200</lastBuildDate>
+    <atom:link href="https://blog.bitside.pl/tags/career/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Love letter to future me</title>
+      <link>https://blog.bitside.pl/posts/interview/</link>
+      <pubDate>Wed, 15 Jul 2026 00:32:00 +0200</pubDate>
+      <guid>https://blog.bitside.pl/posts/interview/</guid>
+      <description>&lt;p&gt;For a while now, I&amp;rsquo;ve had the unique chance to interview candidates for senior engineering roles at a company I work for. After speaking with dozens of people, I started noticing the same patterns coming up again and again - the ones that make interviews go sideways. And knowing that I&amp;rsquo;ll be on the other side of the table one day, I decided to write these down for future me. Some of them are obvious. Which is exactly why people keep forgetting them. And odds are, I will too.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

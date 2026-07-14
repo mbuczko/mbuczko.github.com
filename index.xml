@@ -6,8 +6,15 @@
     <description>Recent content on Bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 00:40:15 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 00:43:14 +0200</lastBuildDate>
     <atom:link href="https://blog.bitside.pl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Love letter to future me</title>
+      <link>https://blog.bitside.pl/posts/interview/</link>
+      <pubDate>Wed, 15 Jul 2026 00:32:00 +0200</pubDate>
+      <guid>https://blog.bitside.pl/posts/interview/</guid>
+      <description>&lt;p&gt;For a while now, I&amp;rsquo;ve had the unique chance to interview candidates for senior engineering roles at a company I work for. After speaking with dozens of people, I started noticing the same patterns coming up again and again - the ones that make interviews go sideways. And knowing that I&amp;rsquo;ll be on the other side of the table one day, I decided to write these down for future me. Some of them are obvious. Which is exactly why people keep forgetting them. And odds are, I will too.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HugSQLx - SQL queries turned into Rust functions</title>
       <link>https://blog.bitside.pl/posts/hugsqlx/</link>
@@ -65,18 +72,18 @@
       <description>Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention node.js) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn&amp;rsquo;t support it at all.</description>
     </item>
     <item>
-      <title>Moving to Octopress</title>
-      <link>https://blog.bitside.pl/posts/moving-to-octopress/</link>
-      <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
-      <guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
-      <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:&#xA;I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&amp;rsquo;s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
-    </item>
-    <item>
       <title>Be social</title>
       <link>https://blog.bitside.pl/posts/be-social/</link>
       <pubDate>Wed, 04 Jul 2012 21:10:00 +0200</pubDate>
       <guid>https://blog.bitside.pl/posts/be-social/</guid>
       <description>Emacs isn’t only a best-class editor which offers you productivity boost for free. It’s also all-in-one environment which embeds most frequently used tools like console (eshell), irc (erc), news reader (gnus) and… well known “social” gadgets like gtalk and twitter. Yes, that means, you may communicate with friends and check your tweets not even leaving editor window.&#xA;Let me show how to configure both.&#xA;GTalk Gtalk bases on open protocol (jabber), so the only thing we need is a jabber client.</description>
+    </item>
+    <item>
+      <title>Moving to Octopress</title>
+      <link>https://blog.bitside.pl/posts/moving-to-octopress/</link>
+      <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
+      <guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
+      <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:&#xA;I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&amp;rsquo;s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
     </item>
     <item>
       <title>Gnus</title>
@@ -86,18 +93,18 @@
       <description>A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition. If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that&amp;rsquo;s definitely wrong place.&#xA;On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU&amp;rsquo;s Not Unix, you&amp;rsquo;re welcomed to read further.</description>
     </item>
     <item>
-      <title>World of Bookmarks</title>
-      <link>https://blog.bitside.pl/posts/world-of-bookmarks/</link>
-      <pubDate>Mon, 02 Jan 2012 10:20:00 +0100</pubDate>
-      <guid>https://blog.bitside.pl/posts/world-of-bookmarks/</guid>
-      <description>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn&amp;rsquo;t even imagine. As the wiki page states:&#xA;Richer bookmarks. They record more. They are more accurate.&#xA;Here are some key features available to us for free:&#xA;Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used.</description>
-    </item>
-    <item>
       <title>Get notified</title>
       <link>https://blog.bitside.pl/posts/get-notified/</link>
       <pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
       <guid>https://blog.bitside.pl/posts/get-notified/</guid>
       <description>org-mode is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.&#xA;Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.&#xA;However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&amp;hellip;</description>
+    </item>
+    <item>
+      <title>World of Bookmarks</title>
+      <link>https://blog.bitside.pl/posts/world-of-bookmarks/</link>
+      <pubDate>Mon, 02 Jan 2012 10:20:00 +0100</pubDate>
+      <guid>https://blog.bitside.pl/posts/world-of-bookmarks/</guid>
+      <description>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn&amp;rsquo;t even imagine. As the wiki page states:&#xA;Richer bookmarks. They record more. They are more accurate.&#xA;Here are some key features available to us for free:&#xA;Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used.</description>
     </item>
     <item>
       <title>Interactive search rediscovered</title>

@@ -42,11 +42,11 @@ Can we achieve something similar in Rust?</description>
             <pubDate>Sun, 16 Oct 2016 17:16:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/focus-mode/</guid>
-            <description>Focus is one of those additions which turns Emacs usage into real joy and makes programmer’s life happier.
-Having to look at tons of code 8 hrs per day might become a bit painful. Readable font is often first choice to improve this situation but it doesn’t help much when one needs to focus on concrete block of code. This is where Focus comes to the rescue - it dims text outside the function pointed by cursor and visually brings that code block at user’s attention.</description>
-            <content type="html"><![CDATA[<p><a href="https://github.com/larstvei/Focus">Focus</a> is one of those additions which turns Emacs usage into real joy and makes programmer’s life happier.</p>
-<p>Having to look at tons of code 8 hrs per day might become a bit painful. <a href="https://github.com/tonsky/FiraCode">Readable font</a> is often first choice to improve this situation but it doesn’t help much when one needs to focus on concrete block of code. This is where Focus comes to the rescue - it dims text outside the function pointed by cursor and visually brings that code block at user’s attention.</p>
-<p>Try it out and keep calm while watching your code.</p>
+            <description>Focus is a remarkable addition that enhances the Emacs experience, bringing joy to programmers.
+Staring at numerous lines of code for eight hours a day can be quite tedious. While a readable font like Fira Code is often the go-to solution for improving readability, it doesn&amp;rsquo;t address the need for focus on a specific block of code. That&amp;rsquo;s where Focus shines—it dims the text outside the function currently highlighted by the cursor, effectively drawing the user&amp;rsquo;s attention to that particular code block.</description>
+            <content type="html"><![CDATA[<p><a href="https://github.com/larstvei/Focus">Focus</a> is a remarkable addition that enhances the Emacs experience, bringing joy to programmers.</p>
+<p>Staring at numerous lines of code for eight hours a day can be quite tedious. While a readable font like Fira Code is often the go-to solution for improving readability, it doesn&rsquo;t address the need for focus on a specific block of code. That&rsquo;s where Focus shines—it dims the text outside the function currently highlighted by the cursor, effectively drawing the user&rsquo;s attention to that particular code block.
+Try it out and keep calm while watching your code.</p>
 ]]></content>
         </item>
         
@@ -57,13 +57,13 @@ Having to look at tons of code 8 hrs per day might become a bit painful. Readabl
             
             <guid>https://blog.bitside.pl/posts/bootize-your-project/</guid>
             <description>Maven or gradle? Grunt or gulp? Leiningen or boot…?
-It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision.</description>
+It doesn&amp;rsquo;t matter whether you&amp;rsquo;re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you&amp;rsquo;re barely able to check all of them out, understand the philosophy behind and take a reasonable decision.</description>
             <content type="html"><![CDATA[<p>Maven or gradle? Grunt or gulp? Leiningen or boot…?</p>
-<p>It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision. In particular it’s noticeable in javascript world where new ideas emerge with the speed of light. Do you know what’s the usual lifetime of shiny new javascript library, one of 4 hundreds coming out daily? Well, I don’t know too but I guess you wouldn’t be able to complete a todo app before the library of your choice became deprecated :)</p>
+<p>It doesn&rsquo;t matter whether you&rsquo;re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you&rsquo;re barely able to check all of them out, understand the philosophy behind and take a reasonable decision. In particular it&rsquo;s noticeable in javascript world where new ideas emerge with the speed of light. Do you know what&rsquo;s the usual lifetime of shiny new javascript library, one of 4 hundreds coming out daily? Well, I don&rsquo;t know too but I guess you wouldn&rsquo;t be able to complete a todo app before the library of your choice became deprecated :)</p>
 <p>Speaking of project building tools, as a Clojurists we happily sit in a comfort zone. Up until recently, there was only one way to keep your clojure project organized - <a href="http://http//leiningen.org/">Leiningen</a>. Elegant declarative way which leiningen used to describe entire project with all its dependencies and profiles immediately reminded me of maven tons of hand-crafted pom.xmls. Easy when you finally get it, extremally hard when you try to customize.</p>
-<p>Right on the other corner stands Boot. Instead of declarative DSL it gives a full power of Clojure - each task is just a Clojure function. It’s even more fun when you realize that boot tasks can be called (just as regular functions) straight from REPL. Having seen that first time crazy idea sparkled in my mind…</p>
-<p>I guess every Clojurist already read <a href="http://thinkrelevance.com/blog/2013/06/04/clojure-workflow-reloaded">Clojure Workflow Reloaded</a>. General idea behind is dead simple. To have a reloadable “system” one needs to implement start/stop/reset functions and call them to start the system, to stop it and reload when needed. Now, let’s assume we have it already written, it works as expected and the only pain is to switch to repl and call our reset function each time something substantial has changed in our app.</p>
-<p>Wouldn’t it be nicer to have resetting under the Emacs shortcut so every Clojure project following Stuart’s reloadable flow (ie. having system start/stop/reset implemented) could be restarted just by a simple key stroke?</p>
+<p>Right on the other corner stands Boot. Instead of declarative DSL it gives a full power of Clojure - each task is just a Clojure function. It&rsquo;s even more fun when you realize that boot tasks can be called (just as regular functions) straight from REPL. Having seen that first time crazy idea sparkled in my mind…</p>
+<p>I guess every Clojurist already read <a href="http://thinkrelevance.com/blog/2013/06/04/clojure-workflow-reloaded">Clojure Workflow Reloaded</a>. General idea behind is dead simple. To have a reloadable “system” one needs to implement start/stop/reset functions and call them to start the system, to stop it and reload when needed. Now, let&rsquo;s assume we have it already written, it works as expected and the only pain is to switch to repl and call our reset function each time something substantial has changed in our app.</p>
+<p>Wouldn&rsquo;t it be nicer to have resetting under the Emacs shortcut so every Clojure project following Stuart&rsquo;s reloadable flow (ie. having system start/stop/reset implemented) could be restarted just by a simple key stroke?</p>
 <p>This is where Boot really shines. To have system reloadable by Boot we need to implement reset task:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="o">&#39;</span><span class="p">[</span><span class="nv">foo.system</span><span class="p">])</span>
 </span></span><span class="line"><span class="cl">
@@ -89,15 +89,15 @@ It doesn’t matter whether you’re a front- or back-end dev, sooner or later y
             <pubDate>Sun, 09 Oct 2016 16:52:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/emacs-windows-switching/</guid>
-            <description>It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?
-The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows.</description>
-            <content type="html"><![CDATA[<p>It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?</p>
-<p>The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows. Well, good luck with selecting windows this way longer than a day.</p>
+            <description>It takes a few days for beginner Emacs user to learn what&amp;rsquo;s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?
+The most obvious way is to use mouse/touchpad of course. It&amp;rsquo;s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn&amp;rsquo;t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows.</description>
+            <content type="html"><![CDATA[<p>It takes a few days for beginner Emacs user to learn what&rsquo;s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?</p>
+<p>The most obvious way is to use mouse/touchpad of course. It&rsquo;s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn&rsquo;t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows. Well, good luck with selecting windows this way longer than a day.</p>
 <p>But hey, there is a hope. Default windows switching is so insane that lot of people tried to address this problem with additional packages. One of the most popular is <a href="https://melpa.org/#/window-numbering">window numbering</a>:</p>
 <blockquote>
 <p>Enable window-numbering-mode and use M-1 through M-0 to navigate.</p>
 </blockquote>
-<p>Yup, that’s what we really need - simple shortcuts to activate immediately each window in a frame. But there is something more. Having frame split into multiple windows sooner or later makes some of them awfully hard to use beacuse of little space they occupy. Time to introduce a real hero - <a href="https://melpa.org/#/golden-ratio">golden ratio</a> package which resizes seleted windows to the size specified in the <a href="https://en.wikipedia.org/wiki/Golden_ratio">“Golden Ratio”</a>. Sounds cool, works even cooler when bound with shortcuts provided by window-numbering:</p>
+<p>Yup, that&rsquo;s what we really need - simple shortcuts to activate immediately each window in a frame. But there is something more. Having frame split into multiple windows sooner or later makes some of them awfully hard to use beacuse of little space they occupy. Time to introduce a real hero - <a href="https://melpa.org/#/golden-ratio">golden ratio</a> package which resizes seleted windows to the size specified in the <a href="https://en.wikipedia.org/wiki/Golden_ratio">“Golden Ratio”</a>. Sounds cool, works even cooler when bound with shortcuts provided by window-numbering:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">defadvice</span> <span class="nv">select-window-by-number</span> <span class="p">(</span><span class="nv">after</span> <span class="nv">select-window</span> <span class="nv">activate</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">golden-ratio</span><span class="p">))</span>
 </span></span></code></pre></div><p>This is how it looks like in action:</p>
@@ -111,26 +111,26 @@ The most obvious way is to use mouse/touchpad of course. It’s easy at the begi
             <pubDate>Sun, 02 Aug 2015 11:29:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/clojure-for-fun-and-profit/</guid>
-            <description>This is my initial blog note - first from series I’m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.
-Lot of arcticles have been already written about Clojure and why it’s so attractive. Not to repeat all of these oh’s and ah’s I would like to sum up things most important for me as a long-time professional java programmer:</description>
-            <content type="html"><![CDATA[<p>This is my initial blog note - first from series I’m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.</p>
-<p>Lot of arcticles have been already written about Clojure and why it’s so attractive. Not to repeat all of these oh’s and ah’s I would like to sum up things most important for me as a long-time professional java programmer:</p>
+            <description>This is my initial blog note - first from series I&amp;rsquo;m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.
+Lot of arcticles have been already written about Clojure and why it&amp;rsquo;s so attractive. Not to repeat all of these oh&amp;rsquo;s and ah&amp;rsquo;s I would like to sum up things most important for me as a long-time professional java programmer:</description>
+            <content type="html"><![CDATA[<p>This is my initial blog note - first from series I&rsquo;m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.</p>
+<p>Lot of arcticles have been already written about Clojure and why it&rsquo;s so attractive. Not to repeat all of these oh&rsquo;s and ah&rsquo;s I would like to sum up things most important for me as a long-time professional java programmer:</p>
 <ul>
 <li>
-<p>Clojure is concise. This is the very first impression you’ll get coming from Java world. And this is also the first pain and mind-bender for someone grown from object-oriented world - Clojure is more about ‘what’ you want to implement rather than ‘how’. Simple example: loops. It’s quite unusual to see for-loop in Clojure sources. Why? In a Java world loops are usually introduced (or were introduced before streams came along with Java 8) to iterate on collection of objects either to produce a new collection or to generate result based on all iterated objects. Well, in Clojure world you have a map &amp; reduce functions doing exactly the same thing, so why bother with iterating by hand?</p>
+<p>Clojure is concise. This is the very first impression you&rsquo;ll get coming from Java world. And this is also the first pain and mind-bender for someone grown from object-oriented world - Clojure is more about ‘what&rsquo; you want to implement rather than ‘how&rsquo;. Simple example: loops. It&rsquo;s quite unusual to see for-loop in Clojure sources. Why? In a Java world loops are usually introduced (or were introduced before streams came along with Java 8) to iterate on collection of objects either to produce a new collection or to generate result based on all iterated objects. Well, in Clojure world you have a map &amp; reduce functions doing exactly the same thing, so why bother with iterating by hand?</p>
 </li>
 <li>
-<p>Clojure is dynamically typed. That sounds a bit scary for Java programmer. No types? Isn’t it a smell of Javascript with all its fancy type coercion? Not really. First of all you may always enforce type checking, eg. by using Prismatic Schema or core.typed. Secondly as Clojure website says:</p>
+<p>Clojure is dynamically typed. That sounds a bit scary for Java programmer. No types? Isn&rsquo;t it a smell of Javascript with all its fancy type coercion? Not really. First of all you may always enforce type checking, eg. by using Prismatic Schema or core.typed. Secondly as Clojure website says:</p>
 <blockquote>
 <p>First and foremost, Clojure is dynamic. That means that a Clojure program is not just something you compile and run, but something with which you can interact.</p>
 </blockquote>
-<p>which leads to the most favourite thing that Clojure puts into programmer’s hand: REPL</p>
+<p>which leads to the most favourite thing that Clojure puts into programmer&rsquo;s hand: REPL</p>
 </li>
 <li>
-<p>Read-Eval-Print-Loop (REPL). Since I used it first time, I knew I’ve just became REPL Driven Developer. Honestly, this is first time I could bring my weird ideas immediately into live just by pasting code into REPL and see the result. No recompilation, no restarts, just me and my idea without any technical obstacles. This is how I imagine instant prototyping and the productivity boost I experienced was tremendous.</p>
+<p>Read-Eval-Print-Loop (REPL). Since I used it first time, I knew I&rsquo;ve just became REPL Driven Developer. Honestly, this is first time I could bring my weird ideas immediately into live just by pasting code into REPL and see the result. No recompilation, no restarts, just me and my idea without any technical obstacles. This is how I imagine instant prototyping and the productivity boost I experienced was tremendous.</p>
 </li>
 <li>
-<p>Functions as an API. It isn’t something raised up very often but having the code split into namespaces and structured well enough (+ some macro sugar added) you quickly discover that recently popular fluent API DSLs so horrible to write in Java are apparently pleasure to design in Clojure. With a few functions you may get something like this for free (sample from my branch of flux - clojure client for Solr):</p>
+<p>Functions as an API. It isn&rsquo;t something raised up very often but having the code split into namespaces and structured well enough (+ some macro sugar added) you quickly discover that recently popular fluent API DSLs so horrible to write in Java are apparently pleasure to design in Clojure. With a few functions you may get something like this for free (sample from my branch of flux - clojure client for Solr):</p>
 </li>
 </ul>
 <!--listend-->
@@ -143,9 +143,9 @@ Lot of arcticles have been already written about Clojure and why it’s so attra
 </span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nf">is</span> <span class="ss">:currency</span> <span class="s">&#34;PLN&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="nf">between</span> <span class="ss">:price</span> <span class="p">[</span><span class="mi">5000</span> <span class="mi">15000</span><span class="p">]))))</span>
 </span></span></code></pre></div><ul>
-<li>No frameworks. That’s the least impressive but very important point. Coming into Clojure world you immediately discover there are no fully blown web frameworks, dependency injection frameworks, whatsoever frameworks. Seems sad at the beginning but while your experience grow you realise it’s much easier to grab few popular libraries and tie them together by yourself rather than spend next few months on debugging framework code and wonder how to implement a thing that wasn’t planned by framework creators before.</li>
+<li>No frameworks. That&rsquo;s the least impressive but very important point. Coming into Clojure world you immediately discover there are no fully blown web frameworks, dependency injection frameworks, whatsoever frameworks. Seems sad at the beginning but while your experience grow you realise it&rsquo;s much easier to grab few popular libraries and tie them together by yourself rather than spend next few months on debugging framework code and wonder how to implement a thing that wasn&rsquo;t planned by framework creators before.</li>
 </ul>
-<p>Still interested in Clojure? Good to hear. In a next few posts I’ll try to describe in detail few libraries/tools that impressed me the most while I was experimenting with Clojure functional programming. To have a track of all articles and repositories that occured to be really useful I’ve created a github repo containing all the links: <a href="https://github.com/mbuczko/awesome-clojure">awesome-clojure</a>.</p>
+<p>Still interested in Clojure? Good to hear. In a next few posts I&rsquo;ll try to describe in detail few libraries/tools that impressed me the most while I was experimenting with Clojure functional programming. To have a track of all articles and repositories that occured to be really useful I&rsquo;ve created a github repo containing all the links: <a href="https://github.com/mbuczko/awesome-clojure">awesome-clojure</a>.</p>
 <p>Enjoy!</p>
 ]]></content>
         </item>
@@ -156,27 +156,27 @@ Lot of arcticles have been already written about Clojure and why it’s so attra
             <pubDate>Mon, 16 Jul 2012 21:20:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/swank-js/</guid>
-            <description>Have you ever dreamed about changing the content displayed by your web browser straight from text editor?
-Latest Episode 11 at Emacs Rocks discovers how you may speed up your web development with awesome swank-js. Btw. if you still don’t have Emacs Rocks in your RSS reader, I highly recommend adding this source right now. It’s excellent place of tips &amp;amp; tricks especially helpful during daily work with emacs.
-What is swank-js?</description>
-            <content type="html"><![CDATA[<p>Have you ever dreamed about changing the content displayed by your web browser straight from text editor?</p>
-<p>Latest <a href="http://emacsrocks.com/e11.html">Episode 11</a> at Emacs Rocks discovers how you may speed up your web development with awesome swank-js. Btw. if you still don’t have Emacs Rocks in your RSS reader, I highly recommend adding this source right now. It’s excellent place of tips &amp; tricks especially helpful during daily work with emacs.</p>
-<p>What is swank-js? As description on github says, it provides javascript REPL (read-eval-print loop) attached magically (well, actually through Socket.IO to browser. It simply means, all javascript expressions typed in REPL shell affect immediately page we’re connected to. Moreover, there is no need to use shell, we may send code and CSSes to browser directly from working buffer!</p>
-<p>Sounds familiar? No? Take a look at Bret Victor’s presentation <a href="http://vimeo.com/36579366">Inventing on Principle</a>, one of these tech talks which stays in mind for a long time.</p>
-<p>swank-js was a missing part in my web developer’s toolbox which I tried to replace with <a href="https://github.com/bard/mozrepl/wiki/">moz-repl</a>. Unfortunately, moz-repl has some limitations, eg. as name suggests it works only with mozilla-based browsers (like firefox). Yup, no Chrome, no Safari.</p>
-<p>Now, I’m extremally happy to have Chrome opened on one screen, Emacs on the other and immediately visualize changes on my web page just with one <code>C-c C-c</code>.</p>
+            <description>Have you ever wanted to modify your browser&amp;rsquo;s content directly from a text editor?
+Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&amp;rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&amp;rsquo;s a great source of tips and tricks for daily Emacs use.
+So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket.</description>
+            <content type="html"><![CDATA[<p>Have you ever wanted to modify your browser&rsquo;s content directly from a text editor?</p>
+<p><a href="http://emacsrocks.com/e11.html">Episode 11</a> of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&rsquo;s a great source of tips and tricks for daily Emacs use.</p>
+<p>So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket.IO. In practice, this means any JavaScript expression you type in the REPL immediately affects the page you&rsquo;re connected to. Better yet, you don&rsquo;t even need the shell - you can send code and CSS to the browser directly from your working buffer.</p>
+<p>Sounds familiar? If not, check out Bret Victor&rsquo;s <a href="http://vimeo.com/36579366">Inventing on Principle</a> - one of those tech talks that sticks with you long after you&rsquo;ve watched it.</p>
+<p>swank-js filled a gap in my web development toolbox that I had previously tried to fill with <a href="https://github.com/bard/mozrepl/wiki/">moz-repl</a>. Unfortunately, moz-repl only works with Mozilla-based browsers - no Chrome, no Safari.</p>
+<p>Now I&rsquo;m extremely happy with Chrome on one screen, Emacs on the other, and instant visual feedback just one <code>C-c C-c</code> away.</p>
 ]]></content>
         </item>
         
         <item>
-            <title>How fast do you type?</title>
+            <title>TypeRacer: Find out how fast you really type</title>
             <link>https://blog.bitside.pl/posts/how-fast-you-type/</link>
             <pubDate>Mon, 09 Jul 2012 18:50:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/how-fast-you-type/</guid>
-            <description>&lt;p&gt;I found a brilliant page, I’d like to share with you - &lt;a href=&#34;http://play.typeracer.com/&#34;&gt;TypeRacer&lt;/a&gt; - a place where you can measure your typing speed and compare it with other participants. One word of warning - it’s horribly addicting.&lt;/p&gt;</description>
-            <content type="html"><![CDATA[<p>I found a brilliant page, I’d like to share with you - <a href="http://play.typeracer.com/">TypeRacer</a> - a place where you can measure your typing speed and compare it with other participants. One word of warning - it’s horribly addicting.</p>
-<p>If you thought you’re a decent typist, this page will get you out of your comfort zone. You may end up with slightly lowered self-esteem - just like me, with my sh&amp;#ty 54 words per minute. Funny enough, I was pretty sure I could easily beat <a href="http://www.youtube.com/watch?v=4GDusA21cEA">this guy</a>. Unfortunately, 227 words per minute is still a bit too high for me. I&rsquo;d need few more fingers, like 10 or so :)</p>]]></content>
+            <description>&lt;p&gt;I&amp;rsquo;d like to share with a little gem: &lt;a href=&#34;http://play.typeracer.com/&#34;&gt;TypeRacer&lt;/a&gt; - a place where you can measure your typing speed and compete against other participants. Fair warning: it&amp;rsquo;s dangerously addicting.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>I&rsquo;d like to share with a little gem: <a href="http://play.typeracer.com/">TypeRacer</a> - a place where you can measure your typing speed and compete against other participants. Fair warning: it&rsquo;s dangerously addicting.</p>
+<p>If you thought you were a decent typist, this site will quickly humble you. Your self-esteem may take a hit - mine certainly did, clocking in at a shameful 54 words per minute. I was convinced I could easily beat <a href="http://www.youtube.com/watch?v=4GDusA21cEA">this guy</a>, but 227 words per minute turned out to be just a little out of my reach. I&rsquo;d need a few more fingers - ten or so ought to do it :)</p>]]></content>
         </item>
         
         <item>
@@ -185,10 +185,10 @@ What is swank-js?</description>
             <pubDate>Thu, 05 Jul 2012 20:30:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/javascript-programming/</guid>
-            <description>Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention node.js) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn’t support it at all.</description>
-            <content type="html"><![CDATA[<p>Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention <a href="http://nodejs.org/">node.js</a>) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn’t support it at all.</p>
+            <description>Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention node.js) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn&amp;rsquo;t support it at all.</description>
+            <content type="html"><![CDATA[<p>Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention <a href="http://nodejs.org/">node.js</a>) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn&rsquo;t support it at all.</p>
 <p>Today, looks like we have quite different situation. We have <a href="http://www.sublimetext.com/">Sublime Text</a>, <a href="http://www.eclipse.org/">Eclipse</a> with tons of plugins, and (surprise) Emacs with <a href="https://github.com/mooz/js2-mode">js2-mode</a>. If you are considering Emacs as your primary IDE for javascript - js2-mode is a must.</p>
-<p>Recently, its co-author - Dmitry Gutov implemented one thing that convinced me to drop other editors (yes, including Sublime). Let’s start with a few words of explanation what the ‘imenu’ is.</p>
+<p>Recently, its co-author - Dmitry Gutov implemented one thing that convinced me to drop other editors (yes, including Sublime). Let&rsquo;s start with a few words of explanation what the ‘imenu&rsquo; is.</p>
 <p><a href="http://emacswiki.org/emacs/ImenuMode">Imenu mode</a> is a list of functions and definitions gathered from current buffer. It allows you switching immediately between them just with few keys stokes. The list is presented either in system menu or as mini-buffer completion (which may be boosted by ido) or by awesome anything-imenu.</p>
 <p>js2-mode supported imenu for a long time but it was not able to recognize few javascript constructions, thus the list of functions was horribly limited. I opened a <a href="https://github.com/mooz/js2-mode/issues/27">ticket</a> on github kindly trying to ask Dmitry for a few enhancements.</p>
 <p>And voila! Since June we may admire js2-mode with imenu in action having code like this (<a href="http://backbonejs.org/">backbone based</a>):</p>
@@ -202,7 +202,7 @@ What is swank-js?</description>
 </span></span><span class="line"><span class="cl">    <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
-</span></span></code></pre></div><p>or ‘module’ patterns like this:</p>
+</span></span></code></pre></div><p>or ‘module&rsquo; patterns like this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">bar</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
@@ -210,6 +210,25 @@ What is swank-js?</description>
 </span></span><span class="line"><span class="cl"><span class="p">})(</span><span class="nx">jQuery</span><span class="p">);</span>
 </span></span></code></pre></div><p>The pleasure of using Emacs with javascript has just raised by 100% :)</p>
 <p>Thanks Dmitry!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Moving to Octopress</title>
+            <link>https://blog.bitside.pl/posts/moving-to-octopress/</link>
+            <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
+            
+            <guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
+            <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:
+I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&amp;rsquo;s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
+            <content type="html"><![CDATA[<p>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:</p>
+<ul>
+<li>I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&rsquo;s really awesome for programmer like me.</li>
+<li>Hosting on github. There are not enough words to express how github revolutionized my daily workflow. I use this brilliant application in my everyday work, so why shouldn&rsquo;t I use it for blogging too.</li>
+<li>Ruby. I love ruby. Octopress is based on ruby, thus I love octopress too :)</li>
+<li>Emacs. I&rsquo;m org-mode addicted. Having a possibility to blog using org-mode is priceless.</li>
+</ul>
+<p>If you consider simmilar transition and you need more reasons, look at <a href="http://octopress.org/">Octopress main page</a>. It says why and how you may start your journey with Octopress.</p>
 ]]></content>
         </item>
         
@@ -287,37 +306,18 @@ GTalk Gtalk bases on open protocol (jabber), so the only thing we need is a jabb
         </item>
         
         <item>
-            <title>Moving to Octopress</title>
-            <link>https://blog.bitside.pl/posts/moving-to-octopress/</link>
-            <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
-            
-            <guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
-            <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:
-I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That’s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
-            <content type="html"><![CDATA[<p>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:</p>
-<ul>
-<li>I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That’s really awesome for programmer like me.</li>
-<li>Hosting on github. There are not enough words to express how github revolutionized my daily workflow. I use this brilliant application in my everyday work, so why shouldn’t I use it for blogging too.</li>
-<li>Ruby. I love ruby. Octopress is based on ruby, thus I love octopress too :)</li>
-<li>Emacs. I’m org-mode addicted. Having a possibility to blog using org-mode is priceless.</li>
-</ul>
-<p>If you consider simmilar transition and you need more reasons, look at <a href="http://octopress.org/">Octopress main page</a>. It says why and how you may start your journey with Octopress.</p>
-]]></content>
-        </item>
-        
-        <item>
             <title>Gnus</title>
             <link>https://blog.bitside.pl/posts/gnus/</link>
             <pubDate>Fri, 30 Mar 2012 21:30:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/gnus/</guid>
-            <description>A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition. If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that’s definitely wrong place.
-On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU’s Not Unix, you’re welcomed to read further.</description>
+            <description>A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition. If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that&amp;rsquo;s definitely wrong place.
+On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU&amp;rsquo;s Not Unix, you&amp;rsquo;re welcomed to read further.</description>
             <content type="html"><![CDATA[<aside>A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition.</aside>
-<p>If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that’s definitely wrong place.</p>
-<p>On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU’s Not Unix, you’re welcomed to read further. You will find out how set up awesome email/news reader (Gnus) on great operating system with faulty editor (Emacs).</p>
+<p>If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that&rsquo;s definitely wrong place.</p>
+<p>On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU&rsquo;s Not Unix, you&rsquo;re welcomed to read further. You will find out how set up awesome email/news reader (Gnus) on great operating system with faulty editor (Emacs).</p>
 <h2 id="introduction">Introduction</h2>
-<p>A few words about Gnus. Its look and feel, configuration and number of available options causes random ventricular fibrillation at first attempt. Yes, it’s not easy, but Gnus configured once lives for ever.</p>
+<p>A few words about Gnus. Its look and feel, configuration and number of available options causes random ventricular fibrillation at first attempt. Yes, it&rsquo;s not easy, but Gnus configured once lives for ever.</p>
 <p>What you get in return (after half a year of digging in configuration files) is following:</p>
 <ul>
 <li>email/news handling (imap supported!)</li>
@@ -343,14 +343,14 @@ Emacs*font: DejaVu Sans Mono-9
 <h2 id="groups-configuration">Groups configuration</h2>
 <p>Groups are exactly what you see on first screenshot above. These are “folders” containing articles from different sources. As you can see, they can be additionally grouped under common topics. I have splitted sources of my articles to make them visually separated. Polish NNTP servers are grouped under usenet topic, articles coming from Gmane are under gmane and results of recent searches go into searches topic.</p>
 <p>Creating, modification of topics and moving groups between them is pretty simple and is described <a href="http://www.gnu.org/software/emacs//manual/html_node/gnus/Group-Topics.html#Group-Topics">here</a>.</p>
-<p>However, the most interesting is the look of our groups. It’s configurable (as everything else in Gnus) through appropriate variable set in ~/.gnus file:</p>
+<p>However, the most interesting is the look of our groups. It&rsquo;s configurable (as everything else in Gnus) through appropriate variable set in ~/.gnus file:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-group-line-format</span> <span class="s">&#34;%P%M%St%(%g%) (%y)n&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><p>Description of formatting characters you may find <a href="http://www.gnu.org/software/emacs/manual/html_node/gnus/Group-Line-Specification.html#Group-Line-Specification">here</a>.</p>
-<p>Ok, Gnus looks much better now. But there is one little caveat. Everytime when Gnus starts, it tries to actualize our groups connecting to servers that groups are based on. It’s nothing wrong when you have one or two groups, but having them more may cause a long, irritating delay. Thanks God, there is something called levels, which modifies a bit this behaviour.</p>
+<p>Ok, Gnus looks much better now. But there is one little caveat. Everytime when Gnus starts, it tries to actualize our groups connecting to servers that groups are based on. It&rsquo;s nothing wrong when you have one or two groups, but having them more may cause a long, irritating delay. Thanks God, there is something called levels, which modifies a bit this behaviour.</p>
 <p>How do levels work? They are assigned to each group and instruct Gnus, among others, when to update the content. If given level is equal or below the value assigned to gnus-activate-level variable, the group it is assigned to updates itself automatically at startup. Higher value says “leave me alone, I will update myself right after I get selected”.</p>
-<p>Let’s set the default activation level to 3:</p>
+<p>Let&rsquo;s set the default activation level to 3:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-activate-level</span> <span class="mi">3</span><span class="p">)</span>
-</span></span></code></pre></div><p>Now, each group which doesn’t need to be updated automatically should have level &gt; 3 assigned. To do that, it’s enough to highlight the group, press <code>S l</code> shortcut, and adjust level. You will soon notice visual difference between “automatically updated” and “lazy” groups. First ones show number of collected articles, second ones show only meaningless “*”.</p>
+</span></span></code></pre></div><p>Now, each group which doesn&rsquo;t need to be updated automatically should have level &gt; 3 assigned. To do that, it&rsquo;s enough to highlight the group, press <code>S l</code> shortcut, and adjust level. You will soon notice visual difference between “automatically updated” and “lazy” groups. First ones show number of collected articles, second ones show only meaningless “*”.</p>
 <p>Additionally, each group has variable associated with styling (faces).</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="c1">;; Mailing groups</span>
 </span></span><span class="line"><span class="cl"><span class="nv">gnus-group-mail-1</span>    <span class="nv">gnus-group-mail-1-empty</span>
@@ -367,17 +367,17 @@ Emacs*font: DejaVu Sans Mono-9
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">set-face-foreground</span> <span class="ss">&#39;gnus-group-mail-1-empty</span> <span class="s">&#34;blue&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><p>One note here. Empty groups mean those with 0 articles AND those lazy ones which do not update the content automatically.</p>
 <h2 id="configuration-of-articles-list">Configuration of articles list</h2>
-<p>List of articles is something you see after choosing the group. And this is the place which we may deeply customize. First of all, let’s format the way how articles are presented. To do that, I suggest to modify gnus-summary-line-format variable:</p>
+<p>List of articles is something you see after choosing the group. And this is the place which we may deeply customize. First of all, let&rsquo;s format the way how articles are presented. To do that, I suggest to modify gnus-summary-line-format variable:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-summary-line-format</span> <span class="s">&#34;%1{%U%R%z: %}%2{%d%}%5{ %[%4i%] %}%4{%-24,24n%}%6{%-4,4ur%}%5{| %}%(%1{%B%}%s%)n&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><p>Again, full description of used characters you may find <a href="http://www.gnu.org/software/emacs/manual/html_node/gnus/Summary-Buffer-Lines.html#Summary-Buffer-Lines">here</a>.</p>
-<p>Now, a few words of explanation. Text between %( and %) will be highlighted using gnus-mouse-face immediately when mouse pointer hovers over given article. In our example <code>%(%1{%B%}%s%)</code> means that we want article subject <code>(%s)</code> and a corresponding part of thread’s tree <code>(%B)</code> highlighted on mouse hover. By default, thread is presented with plain ascii characters, just like this:</p>
+<p>Now, a few words of explanation. Text between %( and %) will be highlighted using gnus-mouse-face immediately when mouse pointer hovers over given article. In our example <code>%(%1{%B%}%s%)</code> means that we want article subject <code>(%s)</code> and a corresponding part of thread&rsquo;s tree <code>(%B)</code> highlighted on mouse hover. By default, thread is presented with plain ascii characters, just like this:</p>
 <pre class="plain">
 ->
 | +->
 |->
 +->
 </pre>
-<p>Obviously, it’s nothing really amazing. Fortunately, Emacs (in contrast to Mutt for example) gives a possibility to adjust every single character of that tree. Using that (and UTF symbols), we may get interesting effect:</p>
+<p>Obviously, it&rsquo;s nothing really amazing. Fortunately, Emacs (in contrast to Mutt for example) gives a possibility to adjust every single character of that tree. Using that (and UTF symbols), we may get interesting effect:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">when</span> <span class="nv">window-system</span>
 </span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">setq</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">gnus-sum-thread-tree-root</span> <span class="s">&#34;● &#34;</span>
@@ -386,11 +386,11 @@ Emacs*font: DejaVu Sans Mono-9
 </span></span><span class="line"><span class="cl">    <span class="nv">gnus-sum-thread-tree-leaf-with-other</span> <span class="s">&#34;├─►&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">gnus-sum-thread-tree-vertical</span> <span class="s">&#34;│ &#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">gnus-sum-thread-tree-single-leaf</span> <span class="s">&#34;└─►&#34;</span><span class="p">))</span>
-</span></span></code></pre></div><p>What <code>(when window-system …)</code> does is limiting above change to GUI version of Emacs only, this change won’t be applied to Gnus run in console.</p>
-<p>Let’s look again at out gnus-summary-line-format. Something strange hides there inside: <code>%6{%-4,4ur%}</code></p>
+</span></span></code></pre></div><p>What <code>(when window-system …)</code> does is limiting above change to GUI version of Emacs only, this change won&rsquo;t be applied to Gnus run in console.</p>
+<p>Let&rsquo;s look again at out gnus-summary-line-format. Something strange hides there inside: <code>%6{%-4,4ur%}</code></p>
 <p>What does it mean? As manual says, <code>%u</code> and following letter corresponds to user defined function <code>gnus-user-format-function-X</code> (where X is a symbol which goes right after <code>%u</code>). So, <code>%ur</code> will be used to inject the return value from <code>gnus-user-format-function-r</code> and <code>$-4,4</code> instructs to align this value to length of 4 characters. Prepending <code>%6</code> suggests to apply <code>gnus-face-6</code> to everything inside curly parentheses.</p>
-<p>Ok, I guess it’s clear more or less, but there is still question: what it that combination used for?</p>
-<p>I bet you have already seen labels in GMail. Yes, it’s one of these addicting little things that you can’t live without. Moreover, such a label makes your searches and filtering much easier! So why not to try it out with Gnus?</p>
+<p>Ok, I guess it&rsquo;s clear more or less, but there is still question: what it that combination used for?</p>
+<p>I bet you have already seen labels in GMail. Yes, it&rsquo;s one of these addicting little things that you can&rsquo;t live without. Moreover, such a label makes your searches and filtering much easier! So why not to try it out with Gnus?</p>
 <p>Here is the result:</p>
 <figure><img src="/images/gnus4.jpeg"/>
 </figure>
@@ -408,7 +408,7 @@ Emacs*font: DejaVu Sans Mono-9
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">set-face-foreground</span> <span class="ss">&#39;face-label</span> <span class="s">&#34;red&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">gnus-face-6</span> <span class="ss">&#39;face-label</span><span class="p">)</span>
 </span></span></code></pre></div><h2 id="how-about-filtering">How about filtering ?</h2>
-<p>Nice. Now, let’s try to filter our mails by given label. Here is the function we will use (written by Reiner Steib):</p>
+<p>Nice. Now, let&rsquo;s try to filter our mails by given label. Here is the function we will use (written by Reiner Steib):</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">rs-gnus-summary-limit-to-label</span> <span class="p">(</span><span class="nv">regexp</span> <span class="k">&amp;optional</span> <span class="nv">not-matching</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="s">&#34;Limit the summary buffer to articles that match a label.&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">interactive</span>
@@ -420,22 +420,68 @@ Emacs*font: DejaVu Sans Mono-9
 <figure><img src="/images/gnus6.jpeg"/>
 </figure>
 
-<p>Simple and easy, isn’t it?</p>
+<p>Simple and easy, isn&rsquo;t it?</p>
 <p>Let&rsquo;s get also list of articles sorted from the newest to the oldest ones, and filter out unnecessary headers from detailed view:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">gnus-thread-sort-functions</span> <span class="o">&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">t1</span> <span class="nv">t2</span><span class="p">)</span> <span class="p">(</span><span class="nf">not</span> <span class="p">(</span><span class="nv">gnus-thread-sort-by-date</span> <span class="nv">t1</span> <span class="nv">t2</span><span class="p">)))</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">gnus-visible-headers</span> <span class="s">&#34;^From:|^To:|^Subject:|^Newsgroups:|^Date:|^Organization:|^X-Newsreader:|^User-Agent:&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">gnus-extra-headers</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">To</span> <span class="nv">Newsgroups</span> <span class="nv">Content-Type</span><span class="p">))</span>
 </span></span></code></pre></div><h2 id="grand-finale">Grand finale</h2>
-<p>Last thing last - nasty HTML emails. This is something we definitely don’t like but there are always people around who love to bomb us with tons of HTML.</p>
+<p>Last thing last - nasty HTML emails. This is something we definitely don&rsquo;t like but there are always people around who love to bomb us with tons of HTML.</p>
 <p>How can we handle this sh^H^H ehm.. this kind of emails with beloved Gnus?</p>
-<p><em>w3m</em> is the answer. It’s an external html viewer which Emacs can nicely integrate with using w3m package. Here is detailed description.</p>
+<p><em>w3m</em> is the answer. It&rsquo;s an external html viewer which Emacs can nicely integrate with using w3m package. Here is detailed description.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;load-path</span> <span class="s">&#34;/usr/share/emacs/site-lisp/w3m&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">mm-text-html-renderer</span> <span class="ss">&#39;w3m</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">w3m-display-inline-image</span> <span class="no">t</span><span class="p">)</span>
 </span></span></code></pre></div><p>Using <code>mm-text-html-renderer</code> we point at w3m as preferred web browser which is responsible for converting and formating HTML to something that Emacs is able to digest.</p>
-<p>This is end of the Gnus story, but as you probably noticed it’s only the humble introduction of that beast. I hope it encouraged you to further researches.</p>
+<p>This is end of the Gnus story, but as you probably noticed it&rsquo;s only the humble introduction of that beast. I hope it encouraged you to further researches.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>World of Bookmarks</title>
+            <link>https://blog.bitside.pl/posts/world-of-bookmarks/</link>
+            <pubDate>Mon, 02 Jan 2012 10:20:00 +0100</pubDate>
+            
+            <guid>https://blog.bitside.pl/posts/world-of-bookmarks/</guid>
+            <description>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn&amp;rsquo;t even imagine. As the wiki page states:
+Richer bookmarks. They record more. They are more accurate.
+Here are some key features available to us for free:
+Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used.</description>
+            <content type="html"><![CDATA[<p>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn&rsquo;t even imagine. As the wiki page states:</p>
+<blockquote>
+<p>Richer bookmarks. They record more. They are more accurate.</p>
+</blockquote>
+<p>Here are some key features available to us for free:</p>
+<ul>
+<li>Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks.</li>
+<li>Usage statistics: sort and filter your bookmarks based on how frequently they are used.</li>
+<li>Function, sequence, and variable-list bookmarking: While it may sound unusual, you can bookmark (and later invoke) a simple function or save/restore the value of a specific variable. If you find this too basic, you can combine various bookmarks into a sequence, which can be restored (or evaluated) by simply selecting the corresponding sequence bookmark.</li>
+<li>Region bookmarking: You can bookmark a region that becomes active whenever you select the associated bookmark.</li>
+<li>Improved relocation: According to the documentation, bookmarks+ are better at tracking their assigned locations in a more intelligent manner.</li>
+</ul>
+<p>Now, turning to bookmark types. In addition to the function, sequence, and variable-list bookmarks mentioned earlier, bookmark+ introduces several additional types:</p>
+<ol>
+<li>Dired bookmarks: Dired buffers are restored immediately as they were bookmarked, which is especially useful when used with Tramp mode.</li>
+<li>Bookmark-list bookmarks: These save and restore the state of your bookmarks list. It may sound strange, but this can be quite handy when you meticulously adjust your bookmarks list using filters or sorting and want to restore it to the exact same state later.</li>
+<li>Desktop bookmarks: These are incredibly useful, allowing you to switch between projects in an instant.</li>
+<li>Gnus bookmarks: If you use Gnus, these bookmarks are perfect for you, as who doesn&rsquo;t use Gnus these days?</li>
+</ol>
+<p>Now, let&rsquo;s set aside the marketing hype and focus on practical usage.</p>
+<p>There are at least two reasons why I believe switching to bookmark+ is worthwhile.</p>
+<p>Firstly, as mentioned, bookmark+ allows you to bookmark your current Emacs session, known as the desktop. When handling multiple active projects, being able to switch between them efficiently is essential. By &ldquo;switching,&rdquo; I mean restoring the last remembered desktop of the project you want to &ldquo;visit.&rdquo;</p>
+<p>To enable desktops, you must activate them first (instructions can be found here: <a href="http://www.emacswiki.org/emacs/DeskTop">http://www.emacswiki.org/emacs/DeskTop</a>).</p>
+<p>Next, activate bookmark+ (link provided at the top) and, with crossed fingers, type `C-x p K` and specify the file where your desktop will be saved. To restore your desktop, display the list of bookmarks using `C-x r l` and select the bookmark you previously created.</p>
+<p>To enhance convenience, I typically prefix my &lsquo;desktop bookmarks&rsquo; with (desktop) (e.g., (desktop) my-secret-project) and sort bookmarks alphabetically. To further streamline the process, I also use Anything (surprise!).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c b&#34;</span><span class="p">)</span> <span class="ss">&#39;anything-c-pp-bookmarks</span><span class="p">)</span>
+</span></span></code></pre></div><p>There is also second feature which makes bookmark+ attractive alternative for vanilla bookmarks. It&rsquo;s something called Autonamed bookmarks.</p>
+<p>What it is used for?</p>
+<p>Quite often I need to create a temporary bookmark to remember the line of code I&rsquo;m just working on and I immediately jump into different place to modify some other parameter/variable/whatever. I don&rsquo;t want to keep this bookmark forever so inventing a name is just a waste of time. Instead of creating a plain bookmark, I create a ‘autonamed&rsquo; one (<code>C-x p RET</code>) which means that Emacs takes care of inventing the bookmark name for me. Moreover, having the highlighting configured as <code>'(bmkp-auto-light-when-set (quote autonamed-bookmark))</code> I have visually marked all autonamed bookmark created so far.</p>
+<p>As autonamed bookmarks bacame part of my life, I wanted to jump between them in fastest possible way. This is why I reused meta-shift up and down keys:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-down</span><span class="p">)</span><span class="nv">]</span> <span class="ss">&#39;bmkp-next-bookmark-this-file</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-up</span><span class="p">)</span><span class="nv">]</span>   <span class="ss">&#39;bmkp-previous-bookmark-this-file</span><span class="p">)</span>
+</span></span></code></pre></div><p>This post covers only the top of bookmark+ iceberg. I highly recommend reading the emacs wiki and going deeper into secret world of bookmarks :)</p>
 ]]></content>
         </item>
         
@@ -479,52 +525,6 @@ However, org-mode does not automatically alert you to upcoming events, making it
         </item>
         
         <item>
-            <title>World of Bookmarks</title>
-            <link>https://blog.bitside.pl/posts/world-of-bookmarks/</link>
-            <pubDate>Mon, 02 Jan 2012 10:20:00 +0100</pubDate>
-            
-            <guid>https://blog.bitside.pl/posts/world-of-bookmarks/</guid>
-            <description>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:
-Richer bookmarks. They record more. They are more accurate.
-Here are some key features available to us for free:
-Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used.</description>
-            <content type="html"><![CDATA[<p>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:</p>
-<blockquote>
-<p>Richer bookmarks. They record more. They are more accurate.</p>
-</blockquote>
-<p>Here are some key features available to us for free:</p>
-<ul>
-<li>Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks.</li>
-<li>Usage statistics: sort and filter your bookmarks based on how frequently they are used.</li>
-<li>Function, sequence, and variable-list bookmarking: While it may sound unusual, you can bookmark (and later invoke) a simple function or save/restore the value of a specific variable. If you find this too basic, you can combine various bookmarks into a sequence, which can be restored (or evaluated) by simply selecting the corresponding sequence bookmark.</li>
-<li>Region bookmarking: You can bookmark a region that becomes active whenever you select the associated bookmark.</li>
-<li>Improved relocation: According to the documentation, bookmarks+ are better at tracking their assigned locations in a more intelligent manner.</li>
-</ul>
-<p>Now, turning to bookmark types. In addition to the function, sequence, and variable-list bookmarks mentioned earlier, bookmark+ introduces several additional types:</p>
-<ol>
-<li>Dired bookmarks: Dired buffers are restored immediately as they were bookmarked, which is especially useful when used with Tramp mode.</li>
-<li>Bookmark-list bookmarks: These save and restore the state of your bookmarks list. It may sound strange, but this can be quite handy when you meticulously adjust your bookmarks list using filters or sorting and want to restore it to the exact same state later.</li>
-<li>Desktop bookmarks: These are incredibly useful, allowing you to switch between projects in an instant.</li>
-<li>Gnus bookmarks: If you use Gnus, these bookmarks are perfect for you, as who doesn’t use Gnus these days?</li>
-</ol>
-<p>Now, let’s set aside the marketing hype and focus on practical usage.</p>
-<p>There are at least two reasons why I believe switching to bookmark+ is worthwhile.</p>
-<p>Firstly, as mentioned, bookmark+ allows you to bookmark your current Emacs session, known as the desktop. When handling multiple active projects, being able to switch between them efficiently is essential. By &ldquo;switching,&rdquo; I mean restoring the last remembered desktop of the project you want to &ldquo;visit.&rdquo;</p>
-<p>To enable desktops, you must activate them first (instructions can be found here: <a href="http://www.emacswiki.org/emacs/DeskTop">http://www.emacswiki.org/emacs/DeskTop</a>).</p>
-<p>Next, activate bookmark+ (link provided at the top) and, with crossed fingers, type `C-x p K` and specify the file where your desktop will be saved. To restore your desktop, display the list of bookmarks using `C-x r l` and select the bookmark you previously created.</p>
-<p>To enhance convenience, I typically prefix my &lsquo;desktop bookmarks&rsquo; with (desktop) (e.g., (desktop) my-secret-project) and sort bookmarks alphabetically. To further streamline the process, I also use Anything (surprise!).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c b&#34;</span><span class="p">)</span> <span class="ss">&#39;anything-c-pp-bookmarks</span><span class="p">)</span>
-</span></span></code></pre></div><p>There is also second feature which makes bookmark+ attractive alternative for vanilla bookmarks. It’s something called Autonamed bookmarks.</p>
-<p>What it is used for?</p>
-<p>Quite often I need to create a temporary bookmark to remember the line of code I’m just working on and I immediately jump into different place to modify some other parameter/variable/whatever. I don’t want to keep this bookmark forever so inventing a name is just a waste of time. Instead of creating a plain bookmark, I create a ‘autonamed’ one (<code>C-x p RET</code>) which means that Emacs takes care of inventing the bookmark name for me. Moreover, having the highlighting configured as <code>'(bmkp-auto-light-when-set (quote autonamed-bookmark))</code> I have visually marked all autonamed bookmark created so far.</p>
-<p>As autonamed bookmarks bacame part of my life, I wanted to jump between them in fastest possible way. This is why I reused meta-shift up and down keys:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-down</span><span class="p">)</span><span class="nv">]</span> <span class="ss">&#39;bmkp-next-bookmark-this-file</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-up</span><span class="p">)</span><span class="nv">]</span>   <span class="ss">&#39;bmkp-previous-bookmark-this-file</span><span class="p">)</span>
-</span></span></code></pre></div><p>This post covers only the top of bookmark+ iceberg. I highly recommend reading the emacs wiki and going deeper into secret world of bookmarks :)</p>
-]]></content>
-        </item>
-        
-        <item>
             <title>Interactive search rediscovered</title>
             <link>https://blog.bitside.pl/posts/interactive-search-rediscovered/</link>
             <pubDate>Fri, 16 Dec 2011 22:10:00 +0100</pubDate>
@@ -546,14 +546,14 @@ By using the sequence C-s C-w C-w M-s o, you can select two words starting from 
             <pubDate>Fri, 16 Dec 2011 17:20:00 +0100</pubDate>
             
             <guid>https://blog.bitside.pl/posts/the-kill-ring/</guid>
-            <description>It may sound intimidating, but don’t worry - it’s not about killing this time. The term &amp;ldquo;kill ring&amp;rdquo; in Emacs refers to a list of text blocks that have been cut (or &amp;ldquo;killed&amp;rdquo;). That&amp;rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)</description>
-            <content type="html"><![CDATA[<p>It may sound intimidating, but don’t worry - it’s not about killing this time. The term &ldquo;kill ring&rdquo; in Emacs refers to a list of text blocks that have been cut (or &ldquo;killed&rdquo;). That&rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)</p>
+            <description>It may sound intimidating, but don&amp;rsquo;t worry - it&amp;rsquo;s not about killing this time. The term &amp;ldquo;kill ring&amp;rdquo; in Emacs refers to a list of text blocks that have been cut (or &amp;ldquo;killed&amp;rdquo;). That&amp;rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)</description>
+            <content type="html"><![CDATA[<p>It may sound intimidating, but don&rsquo;t worry - it&rsquo;s not about killing this time. The term &ldquo;kill ring&rdquo; in Emacs refers to a list of text blocks that have been cut (or &ldquo;killed&rdquo;). That&rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)</p>
 <p>Now, how do you use handy kill ring? It&rsquo;s quite simple; just imagine transforming into an octopus and placing your eight hands on the keyboard:</p>
 <ul>
 <li>Use <code>C-y</code> (yank) to reinsert the text from your most recent cut or copy action.</li>
 <li>Press <code>M-y</code> to cycle through your cut and copy history.</li>
 </ul>
-<p>For example, if you want to copy two blocks of text and paste them somewhere in your buffer, first select the initial block and copy it using <code>M-w</code>. Repeat this for the second block. Then, navigate to where you’d like to paste the text, and press <code>C-y</code> to paste the most recent block, or use <code>C-y M-y</code> to access previously copied blocks.</p>
+<p>For example, if you want to copy two blocks of text and paste them somewhere in your buffer, first select the initial block and copy it using <code>M-w</code>. Repeat this for the second block. Then, navigate to where you&rsquo;d like to paste the text, and press <code>C-y</code> to paste the most recent block, or use <code>C-y M-y</code> to access previously copied blocks.</p>
 <p>Sometimes, navigating through your history can become tedious, especially when it grows rapidly. In those cases, you&rsquo;d prefer to see the contents of the kill ring and make a more informed decision about what to paste.</p>
 <p>This is where <em>browse-kill-ring.el</em> comes to the rescue. Include it in your load path and require it like this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;browse-kill-ring</span><span class="p">)</span>

@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="[Michał Buczko]">
-<meta name="description" content="Have you ever dreamed about changing the content displayed by your web browser straight from text editor?
-Latest Episode 11 at Emacs Rocks discovers how you may speed up your web development with awesome swank-js. Btw. if you still don’t have Emacs Rocks in your RSS reader, I highly recommend adding this source right now. It’s excellent place of tips &amp;amp; tricks especially helpful during daily work with emacs.
-What is swank-js?" />
+<meta name="description" content="Have you ever wanted to modify your browser&amp;rsquo;s content directly from a text editor?
+Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&amp;rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&amp;rsquo;s a great source of tips and tricks for daily Emacs use.
+So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket." />
 <meta name="keywords" content=", javascript, emacs" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -43,16 +43,16 @@ What is swank-js?" />
 
 
 <meta itemprop="name" content="Swank JS">
-<meta itemprop="description" content="Have you ever dreamed about changing the content displayed by your web browser straight from text editor?
-Latest Episode 11 at Emacs Rocks discovers how you may speed up your web development with awesome swank-js. Btw. if you still don’t have Emacs Rocks in your RSS reader, I highly recommend adding this source right now. It’s excellent place of tips &amp; tricks especially helpful during daily work with emacs.
-What is swank-js?"><meta itemprop="datePublished" content="2012-07-16T21:20:00+02:00" />
-<meta itemprop="dateModified" content="2025-08-31T23:15:33+02:00" />
-<meta itemprop="wordCount" content="220">
+<meta itemprop="description" content="Have you ever wanted to modify your browser&rsquo;s content directly from a text editor?
+Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&rsquo;s a great source of tips and tricks for daily Emacs use.
+So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket."><meta itemprop="datePublished" content="2012-07-16T21:20:00+02:00" />
+<meta itemprop="dateModified" content="2026-07-15T00:40:14+02:00" />
+<meta itemprop="wordCount" content="200">
 <meta itemprop="keywords" content="javascript,emacs," />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Swank JS"/>
-<meta name="twitter:description" content="Have you ever dreamed about changing the content displayed by your web browser straight from text editor?
-Latest Episode 11 at Emacs Rocks discovers how you may speed up your web development with awesome swank-js. Btw. if you still don’t have Emacs Rocks in your RSS reader, I highly recommend adding this source right now. It’s excellent place of tips &amp; tricks especially helpful during daily work with emacs.
-What is swank-js?"/>
+<meta name="twitter:description" content="Have you ever wanted to modify your browser&rsquo;s content directly from a text editor?
+Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&rsquo;s a great source of tips and tricks for daily Emacs use.
+So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket."/>
 
 
 
@@ -118,7 +118,7 @@ What is swank-js?"/>
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        2 minutes
+        One minute
 
         
       </p>
@@ -136,12 +136,12 @@ What is swank-js?"/>
       
 
       <div class="post-content">
-        <p>Have you ever dreamed about changing the content displayed by your web browser straight from text editor?</p>
-<p>Latest <a href="http://emacsrocks.com/e11.html">Episode 11</a> at Emacs Rocks discovers how you may speed up your web development with awesome swank-js. Btw. if you still don’t have Emacs Rocks in your RSS reader, I highly recommend adding this source right now. It’s excellent place of tips &amp; tricks especially helpful during daily work with emacs.</p>
-<p>What is swank-js? As description on github says, it provides javascript REPL (read-eval-print loop) attached magically (well, actually through Socket.IO to browser. It simply means, all javascript expressions typed in REPL shell affect immediately page we’re connected to. Moreover, there is no need to use shell, we may send code and CSSes to browser directly from working buffer!</p>
-<p>Sounds familiar? No? Take a look at Bret Victor’s presentation <a href="http://vimeo.com/36579366">Inventing on Principle</a>, one of these tech talks which stays in mind for a long time.</p>
-<p>swank-js was a missing part in my web developer’s toolbox which I tried to replace with <a href="https://github.com/bard/mozrepl/wiki/">moz-repl</a>. Unfortunately, moz-repl has some limitations, eg. as name suggests it works only with mozilla-based browsers (like firefox). Yup, no Chrome, no Safari.</p>
-<p>Now, I’m extremally happy to have Chrome opened on one screen, Emacs on the other and immediately visualize changes on my web page just with one <code>C-c C-c</code>.</p>
+        <p>Have you ever wanted to modify your browser&rsquo;s content directly from a text editor?</p>
+<p><a href="http://emacsrocks.com/e11.html">Episode 11</a> of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&rsquo;s a great source of tips and tricks for daily Emacs use.</p>
+<p>So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket.IO. In practice, this means any JavaScript expression you type in the REPL immediately affects the page you&rsquo;re connected to. Better yet, you don&rsquo;t even need the shell - you can send code and CSS to the browser directly from your working buffer.</p>
+<p>Sounds familiar? If not, check out Bret Victor&rsquo;s <a href="http://vimeo.com/36579366">Inventing on Principle</a> - one of those tech talks that sticks with you long after you&rsquo;ve watched it.</p>
+<p>swank-js filled a gap in my web development toolbox that I had previously tried to fill with <a href="https://github.com/bard/mozrepl/wiki/">moz-repl</a>. Unfortunately, moz-repl only works with Mozilla-based browsers - no Chrome, no Safari.</p>
+<p>Now I&rsquo;m extremely happy with Chrome on one screen, Emacs on the other, and instant visual feedback just one <code>C-c C-c</code> away.</p>
 
       </div>
     </article>
@@ -168,7 +168,7 @@ What is swank-js?"/>
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        220 Words
+        200 Words
       </p>
 
       <p>
@@ -201,7 +201,7 @@ What is swank-js?"/>
             
             <span class="button next">
                 <a href="https://blog.bitside.pl/posts/how-fast-you-type/">
-                    <span class="button__text">How fast do you type?</span>
+                    <span class="button__text">TypeRacer: Find out how fast you really type</span>
                     <span class="button__icon">→</span>
                 </a>
             </span>

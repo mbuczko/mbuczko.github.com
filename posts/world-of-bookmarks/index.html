@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="[Michał Buczko]">
-<meta name="description" content="Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark&#43; which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:
+<meta name="description" content="Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark&#43; which enhances well known bookmarking in the way you didn&amp;rsquo;t even imagine. As the wiki page states:
 Richer bookmarks. They record more. They are more accurate.
 Here are some key features available to us for free:
 Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used." />
@@ -44,15 +44,15 @@ Bookmark tagging: similar to Delicious, you can use tags for sorting and filteri
 
 
 <meta itemprop="name" content="World of Bookmarks">
-<meta itemprop="description" content="Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark&#43; which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:
+<meta itemprop="description" content="Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark&#43; which enhances well known bookmarking in the way you didn&rsquo;t even imagine. As the wiki page states:
 Richer bookmarks. They record more. They are more accurate.
 Here are some key features available to us for free:
 Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used."><meta itemprop="datePublished" content="2012-01-02T10:20:00+01:00" />
-<meta itemprop="dateModified" content="2025-08-31T23:15:33+02:00" />
+<meta itemprop="dateModified" content="2026-07-15T00:40:15+02:00" />
 <meta itemprop="wordCount" content="625">
 <meta itemprop="keywords" content="emacs," />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="World of Bookmarks"/>
-<meta name="twitter:description" content="Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark&#43; which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:
+<meta name="twitter:description" content="Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark&#43; which enhances well known bookmarking in the way you didn&rsquo;t even imagine. As the wiki page states:
 Richer bookmarks. They record more. They are more accurate.
 Here are some key features available to us for free:
 Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used."/>
@@ -139,7 +139,7 @@ Bookmark tagging: similar to Delicious, you can use tags for sorting and filteri
       
 
       <div class="post-content">
-        <p>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:</p>
+        <p>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn&rsquo;t even imagine. As the wiki page states:</p>
 <blockquote>
 <p>Richer bookmarks. They record more. They are more accurate.</p>
 </blockquote>
@@ -156,18 +156,18 @@ Bookmark tagging: similar to Delicious, you can use tags for sorting and filteri
 <li>Dired bookmarks: Dired buffers are restored immediately as they were bookmarked, which is especially useful when used with Tramp mode.</li>
 <li>Bookmark-list bookmarks: These save and restore the state of your bookmarks list. It may sound strange, but this can be quite handy when you meticulously adjust your bookmarks list using filters or sorting and want to restore it to the exact same state later.</li>
 <li>Desktop bookmarks: These are incredibly useful, allowing you to switch between projects in an instant.</li>
-<li>Gnus bookmarks: If you use Gnus, these bookmarks are perfect for you, as who doesn’t use Gnus these days?</li>
+<li>Gnus bookmarks: If you use Gnus, these bookmarks are perfect for you, as who doesn&rsquo;t use Gnus these days?</li>
 </ol>
-<p>Now, let’s set aside the marketing hype and focus on practical usage.</p>
+<p>Now, let&rsquo;s set aside the marketing hype and focus on practical usage.</p>
 <p>There are at least two reasons why I believe switching to bookmark+ is worthwhile.</p>
 <p>Firstly, as mentioned, bookmark+ allows you to bookmark your current Emacs session, known as the desktop. When handling multiple active projects, being able to switch between them efficiently is essential. By &ldquo;switching,&rdquo; I mean restoring the last remembered desktop of the project you want to &ldquo;visit.&rdquo;</p>
 <p>To enable desktops, you must activate them first (instructions can be found here: <a href="http://www.emacswiki.org/emacs/DeskTop">http://www.emacswiki.org/emacs/DeskTop</a>).</p>
 <p>Next, activate bookmark+ (link provided at the top) and, with crossed fingers, type `C-x p K` and specify the file where your desktop will be saved. To restore your desktop, display the list of bookmarks using `C-x r l` and select the bookmark you previously created.</p>
 <p>To enhance convenience, I typically prefix my &lsquo;desktop bookmarks&rsquo; with (desktop) (e.g., (desktop) my-secret-project) and sort bookmarks alphabetically. To further streamline the process, I also use Anything (surprise!).</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-c b&#34;</span><span class="p">)</span> <span class="ss">&#39;anything-c-pp-bookmarks</span><span class="p">)</span>
-</span></span></code></pre></div><p>There is also second feature which makes bookmark+ attractive alternative for vanilla bookmarks. It’s something called Autonamed bookmarks.</p>
+</span></span></code></pre></div><p>There is also second feature which makes bookmark+ attractive alternative for vanilla bookmarks. It&rsquo;s something called Autonamed bookmarks.</p>
 <p>What it is used for?</p>
-<p>Quite often I need to create a temporary bookmark to remember the line of code I’m just working on and I immediately jump into different place to modify some other parameter/variable/whatever. I don’t want to keep this bookmark forever so inventing a name is just a waste of time. Instead of creating a plain bookmark, I create a ‘autonamed’ one (<code>C-x p RET</code>) which means that Emacs takes care of inventing the bookmark name for me. Moreover, having the highlighting configured as <code>'(bmkp-auto-light-when-set (quote autonamed-bookmark))</code> I have visually marked all autonamed bookmark created so far.</p>
+<p>Quite often I need to create a temporary bookmark to remember the line of code I&rsquo;m just working on and I immediately jump into different place to modify some other parameter/variable/whatever. I don&rsquo;t want to keep this bookmark forever so inventing a name is just a waste of time. Instead of creating a plain bookmark, I create a ‘autonamed&rsquo; one (<code>C-x p RET</code>) which means that Emacs takes care of inventing the bookmark name for me. Moreover, having the highlighting configured as <code>'(bmkp-auto-light-when-set (quote autonamed-bookmark))</code> I have visually marked all autonamed bookmark created so far.</p>
 <p>As autonamed bookmarks bacame part of my life, I wanted to jump between them in fastest possible way. This is why I reused meta-shift up and down keys:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-down</span><span class="p">)</span><span class="nv">]</span> <span class="ss">&#39;bmkp-next-bookmark-this-file</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">M-S-up</span><span class="p">)</span><span class="nv">]</span>   <span class="ss">&#39;bmkp-previous-bookmark-this-file</span><span class="p">)</span>
@@ -220,17 +220,17 @@ Bookmark tagging: similar to Delicious, you can use tags for sorting and filteri
         <div class="pagination__buttons">
             
             <span class="button previous">
-                <a href="https://blog.bitside.pl/posts/get-notified/">
+                <a href="https://blog.bitside.pl/posts/gnus/">
                     <span class="button__icon">←</span>
-                    <span class="button__text">Get notified</span>
+                    <span class="button__text">Gnus</span>
                 </a>
             </span>
             
 
             
             <span class="button next">
-                <a href="https://blog.bitside.pl/posts/interactive-search-rediscovered/">
-                    <span class="button__text">Interactive search rediscovered</span>
+                <a href="https://blog.bitside.pl/posts/get-notified/">
+                    <span class="button__text">Get notified</span>
                     <span class="button__icon">→</span>
                 </a>
             </span>

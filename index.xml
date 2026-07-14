@@ -6,7 +6,7 @@
     <description>Recent content on Bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Aug 2025 23:15:33 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 00:40:15 +0200</lastBuildDate>
     <atom:link href="https://blog.bitside.pl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HugSQLx - SQL queries turned into Rust functions</title>
@@ -20,49 +20,56 @@
       <link>https://blog.bitside.pl/posts/focus-mode/</link>
       <pubDate>Sun, 16 Oct 2016 17:16:00 +0200</pubDate>
       <guid>https://blog.bitside.pl/posts/focus-mode/</guid>
-      <description>Focus is one of those additions which turns Emacs usage into real joy and makes programmer’s life happier.&#xA;Having to look at tons of code 8 hrs per day might become a bit painful. Readable font is often first choice to improve this situation but it doesn’t help much when one needs to focus on concrete block of code. This is where Focus comes to the rescue - it dims text outside the function pointed by cursor and visually brings that code block at user’s attention.</description>
+      <description>Focus is a remarkable addition that enhances the Emacs experience, bringing joy to programmers.&#xA;Staring at numerous lines of code for eight hours a day can be quite tedious. While a readable font like Fira Code is often the go-to solution for improving readability, it doesn&amp;rsquo;t address the need for focus on a specific block of code. That&amp;rsquo;s where Focus shines—it dims the text outside the function currently highlighted by the cursor, effectively drawing the user&amp;rsquo;s attention to that particular code block.</description>
     </item>
     <item>
       <title>Boot-ize your project</title>
       <link>https://blog.bitside.pl/posts/bootize-your-project/</link>
       <pubDate>Sun, 09 Oct 2016 13:40:00 +0200</pubDate>
       <guid>https://blog.bitside.pl/posts/bootize-your-project/</guid>
-      <description>Maven or gradle? Grunt or gulp? Leiningen or boot…?&#xA;It doesn’t matter whether you’re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you’re barely able to check all of them out, understand the philosophy behind and take a reasonable decision.</description>
+      <description>Maven or gradle? Grunt or gulp? Leiningen or boot…?&#xA;It doesn&amp;rsquo;t matter whether you&amp;rsquo;re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you&amp;rsquo;re barely able to check all of them out, understand the philosophy behind and take a reasonable decision.</description>
     </item>
     <item>
       <title>Emacs Windows Switching</title>
       <link>https://blog.bitside.pl/posts/emacs-windows-switching/</link>
       <pubDate>Sun, 09 Oct 2016 16:52:00 +0200</pubDate>
       <guid>https://blog.bitside.pl/posts/emacs-windows-switching/</guid>
-      <description>It takes a few days for beginner Emacs user to learn what’s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?&#xA;The most obvious way is to use mouse/touchpad of course. It’s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn’t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows.</description>
+      <description>It takes a few days for beginner Emacs user to learn what&amp;rsquo;s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?&#xA;The most obvious way is to use mouse/touchpad of course. It&amp;rsquo;s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn&amp;rsquo;t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows.</description>
     </item>
     <item>
       <title>Clojure for fun &amp; profit</title>
       <link>https://blog.bitside.pl/posts/clojure-for-fun-and-profit/</link>
       <pubDate>Sun, 02 Aug 2015 11:29:00 +0200</pubDate>
       <guid>https://blog.bitside.pl/posts/clojure-for-fun-and-profit/</guid>
-      <description>This is my initial blog note - first from series I’m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.&#xA;Lot of arcticles have been already written about Clojure and why it’s so attractive. Not to repeat all of these oh’s and ah’s I would like to sum up things most important for me as a long-time professional java programmer:</description>
+      <description>This is my initial blog note - first from series I&amp;rsquo;m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.&#xA;Lot of arcticles have been already written about Clojure and why it&amp;rsquo;s so attractive. Not to repeat all of these oh&amp;rsquo;s and ah&amp;rsquo;s I would like to sum up things most important for me as a long-time professional java programmer:</description>
     </item>
     <item>
       <title>Swank JS</title>
       <link>https://blog.bitside.pl/posts/swank-js/</link>
       <pubDate>Mon, 16 Jul 2012 21:20:00 +0200</pubDate>
       <guid>https://blog.bitside.pl/posts/swank-js/</guid>
-      <description>Have you ever dreamed about changing the content displayed by your web browser straight from text editor?&#xA;Latest Episode 11 at Emacs Rocks discovers how you may speed up your web development with awesome swank-js. Btw. if you still don’t have Emacs Rocks in your RSS reader, I highly recommend adding this source right now. It’s excellent place of tips &amp;amp; tricks especially helpful during daily work with emacs.&#xA;What is swank-js?</description>
+      <description>Have you ever wanted to modify your browser&amp;rsquo;s content directly from a text editor?&#xA;Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&amp;rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&amp;rsquo;s a great source of tips and tricks for daily Emacs use.&#xA;So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket.</description>
     </item>
     <item>
-      <title>How fast do you type?</title>
+      <title>TypeRacer: Find out how fast you really type</title>
       <link>https://blog.bitside.pl/posts/how-fast-you-type/</link>
       <pubDate>Mon, 09 Jul 2012 18:50:00 +0200</pubDate>
       <guid>https://blog.bitside.pl/posts/how-fast-you-type/</guid>
-      <description>&lt;p&gt;I found a brilliant page, I’d like to share with you - &lt;a href=&#34;http://play.typeracer.com/&#34;&gt;TypeRacer&lt;/a&gt; - a place where you can measure your typing speed and compare it with other participants. One word of warning - it’s horribly addicting.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;d like to share with a little gem: &lt;a href=&#34;http://play.typeracer.com/&#34;&gt;TypeRacer&lt;/a&gt; - a place where you can measure your typing speed and compete against other participants. Fair warning: it&amp;rsquo;s dangerously addicting.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Javascript programming</title>
       <link>https://blog.bitside.pl/posts/javascript-programming/</link>
       <pubDate>Thu, 05 Jul 2012 20:30:00 +0200</pubDate>
       <guid>https://blog.bitside.pl/posts/javascript-programming/</guid>
-      <description>Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention node.js) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn’t support it at all.</description>
+      <description>Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention node.js) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn&amp;rsquo;t support it at all.</description>
+    </item>
+    <item>
+      <title>Moving to Octopress</title>
+      <link>https://blog.bitside.pl/posts/moving-to-octopress/</link>
+      <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
+      <guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
+      <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:&#xA;I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&amp;rsquo;s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
     </item>
     <item>
       <title>Be social</title>
@@ -72,18 +79,18 @@
       <description>Emacs isn’t only a best-class editor which offers you productivity boost for free. It’s also all-in-one environment which embeds most frequently used tools like console (eshell), irc (erc), news reader (gnus) and… well known “social” gadgets like gtalk and twitter. Yes, that means, you may communicate with friends and check your tweets not even leaving editor window.&#xA;Let me show how to configure both.&#xA;GTalk Gtalk bases on open protocol (jabber), so the only thing we need is a jabber client.</description>
     </item>
     <item>
-      <title>Moving to Octopress</title>
-      <link>https://blog.bitside.pl/posts/moving-to-octopress/</link>
-      <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
-      <guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
-      <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:&#xA;I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That’s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
-    </item>
-    <item>
       <title>Gnus</title>
       <link>https://blog.bitside.pl/posts/gnus/</link>
       <pubDate>Fri, 30 Mar 2012 21:30:00 +0200</pubDate>
       <guid>https://blog.bitside.pl/posts/gnus/</guid>
-      <description>A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition. If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that’s definitely wrong place.&#xA;On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU’s Not Unix, you’re welcomed to read further.</description>
+      <description>A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition. If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that&amp;rsquo;s definitely wrong place.&#xA;On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU&amp;rsquo;s Not Unix, you&amp;rsquo;re welcomed to read further.</description>
+    </item>
+    <item>
+      <title>World of Bookmarks</title>
+      <link>https://blog.bitside.pl/posts/world-of-bookmarks/</link>
+      <pubDate>Mon, 02 Jan 2012 10:20:00 +0100</pubDate>
+      <guid>https://blog.bitside.pl/posts/world-of-bookmarks/</guid>
+      <description>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn&amp;rsquo;t even imagine. As the wiki page states:&#xA;Richer bookmarks. They record more. They are more accurate.&#xA;Here are some key features available to us for free:&#xA;Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used.</description>
     </item>
     <item>
       <title>Get notified</title>
@@ -91,13 +98,6 @@
       <pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
       <guid>https://blog.bitside.pl/posts/get-notified/</guid>
       <description>org-mode is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.&#xA;Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.&#xA;However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&amp;hellip;</description>
-    </item>
-    <item>
-      <title>World of Bookmarks</title>
-      <link>https://blog.bitside.pl/posts/world-of-bookmarks/</link>
-      <pubDate>Mon, 02 Jan 2012 10:20:00 +0100</pubDate>
-      <guid>https://blog.bitside.pl/posts/world-of-bookmarks/</guid>
-      <description>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn’t even imagine. As the wiki page states:&#xA;Richer bookmarks. They record more. They are more accurate.&#xA;Here are some key features available to us for free:&#xA;Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used.</description>
     </item>
     <item>
       <title>Interactive search rediscovered</title>
@@ -111,7 +111,7 @@
       <link>https://blog.bitside.pl/posts/the-kill-ring/</link>
       <pubDate>Fri, 16 Dec 2011 17:20:00 +0100</pubDate>
       <guid>https://blog.bitside.pl/posts/the-kill-ring/</guid>
-      <description>It may sound intimidating, but don’t worry - it’s not about killing this time. The term &amp;ldquo;kill ring&amp;rdquo; in Emacs refers to a list of text blocks that have been cut (or &amp;ldquo;killed&amp;rdquo;). That&amp;rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)</description>
+      <description>It may sound intimidating, but don&amp;rsquo;t worry - it&amp;rsquo;s not about killing this time. The term &amp;ldquo;kill ring&amp;rdquo; in Emacs refers to a list of text blocks that have been cut (or &amp;ldquo;killed&amp;rdquo;). That&amp;rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)</description>
     </item>
     <item>
       <title>about me</title>

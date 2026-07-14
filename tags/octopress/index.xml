@@ -6,14 +6,14 @@
     <description>Recent content in octopress on Bit side of life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Aug 2025 23:15:33 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 00:40:14 +0200</lastBuildDate>
     <atom:link href="https://blog.bitside.pl/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Moving to Octopress</title>
       <link>https://blog.bitside.pl/posts/moving-to-octopress/</link>
       <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
       <guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
-      <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:&#xA;I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That’s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
+      <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:&#xA;I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&amp;rsquo;s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
     </item>
   </channel>
 </rss>

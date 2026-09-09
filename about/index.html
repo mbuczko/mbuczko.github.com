@@ -154,8 +154,10 @@ Contributions Experience Loading contribution activity… Show all ▾">
         height: 18px;
     }
 
-    .about-tabs-nav .about-tab:hover {
-        opacity: .85;
+    @media (hover: hover) {
+        .about-tabs-nav .about-tab:hover {
+            opacity: .85;
+        }
     }
 
     .about-tabs-nav .about-tab.active {
@@ -215,8 +217,10 @@ Contributions Experience Loading contribution activity… Show all ▾">
         text-decoration: none;
     }
 
-    .commitments-widget .cw-meta a:hover {
-        text-decoration: underline;
+    @media (hover: hover) {
+        .commitments-widget .cw-meta a:hover {
+            text-decoration: underline;
+        }
     }
 
     .commitments-widget text {
@@ -268,8 +272,10 @@ Contributions Experience Loading contribution activity… Show all ▾">
         text-decoration: none;
     }
 
-    .commitments-widget .cw-repo a:hover {
-        text-decoration: underline;
+    @media (hover: hover) {
+        .commitments-widget .cw-repo a:hover {
+            text-decoration: underline;
+        }
     }
 
     .commitments-widget .cw-repo .cw-stars {
@@ -634,7 +640,7 @@ Contributions Experience Loading contribution activity… Show all ▾">
         font-weight: 600;
         font-size: 13px;
         cursor: pointer;
-        transition: background .2s ease, border-color .2s ease;
+        transition: background .2s ease, border-color .2s ease, margin-top .3s ease;
     }
 
     @media (max-width: 684px) {
@@ -643,9 +649,11 @@ Contributions Experience Loading contribution activity… Show all ▾">
         }
     }
 
-    .experience-widget .ew-toggle:hover {
-        background: var(--ew-pill-bg);
-        border-color: var(--ew-dot);
+    @media (hover: hover) {
+        .experience-widget .ew-toggle:hover {
+            background: var(--ew-pill-bg);
+            border-color: var(--ew-dot);
+        }
     }
 
     .experience-widget .ew-toggle .ew-chevron {
@@ -655,6 +663,10 @@ Contributions Experience Loading contribution activity… Show all ▾">
 
     .experience-widget .ew-toggle.ew-expanded .ew-chevron {
         transform: rotate(180deg);
+    }
+
+    .experience-widget .ew-toggle.ew-expanded {
+        margin-top: 1.75rem;
     }
 </style>
 

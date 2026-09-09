@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>javascript on Bit side of life</title>
-    <link>https://blog.bitside.pl/tags/javascript/</link>
-    <description>Recent content in javascript on Bit side of life</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 00:43:14 +0200</lastBuildDate>
-    <atom:link href="https://blog.bitside.pl/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Swank JS</title>
-      <link>https://blog.bitside.pl/posts/swank-js/</link>
-      <pubDate>Mon, 16 Jul 2012 21:20:00 +0200</pubDate>
-      <guid>https://blog.bitside.pl/posts/swank-js/</guid>
-      <description>Have you ever wanted to modify your browser&amp;rsquo;s content directly from a text editor?&#xA;Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&amp;rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&amp;rsquo;s a great source of tips and tricks for daily Emacs use.&#xA;So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket.</description>
-    </item>
-    <item>
-      <title>Javascript programming</title>
-      <link>https://blog.bitside.pl/posts/javascript-programming/</link>
-      <pubDate>Thu, 05 Jul 2012 20:30:00 +0200</pubDate>
-      <guid>https://blog.bitside.pl/posts/javascript-programming/</guid>
-      <description>Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention node.js) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn&amp;rsquo;t support it at all.</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Javascript on Bit side of life</title>
+		<link>https://blog.bitside.pl/tags/javascript/</link>
+		<description>Recent content in Javascript on Bit side of life</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 15 Jul 2026 00:43:14 +0200</lastBuildDate>
+		
+			<atom:link href="https://blog.bitside.pl/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Swank JS</title>
+				<link>https://blog.bitside.pl/posts/swank-js/</link>
+				<pubDate>Mon, 16 Jul 2012 21:20:00 +0200</pubDate>
+				<guid>https://blog.bitside.pl/posts/swank-js/</guid>
+				<description>&lt;p&gt;Have you ever wanted to modify your browser&amp;rsquo;s content directly from a text editor?&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://emacsrocks.com/e11.html&#34;&gt;Episode 11&lt;/a&gt; of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&amp;rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&amp;rsquo;s a great source of tips and tricks for daily Emacs use.&lt;/p&gt;&#xA;&lt;p&gt;So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket.IO. In practice, this means any JavaScript expression you type in the REPL immediately affects the page you&amp;rsquo;re connected to. Better yet, you don&amp;rsquo;t even need the shell - you can send code and CSS to the browser directly from your working buffer.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Javascript programming</title>
+				<link>https://blog.bitside.pl/posts/javascript-programming/</link>
+				<pubDate>Thu, 05 Jul 2012 20:30:00 +0200</pubDate>
+				<guid>https://blog.bitside.pl/posts/javascript-programming/</guid>
+				<description>&lt;p&gt;Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt;) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn&amp;rsquo;t support it at all.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

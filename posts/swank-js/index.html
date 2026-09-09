@@ -5,9 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="[Michał Buczko]">
-<meta name="description" content="Have you ever wanted to modify your browser&amp;rsquo;s content directly from a text editor?
-Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&amp;rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&amp;rsquo;s a great source of tips and tricks for daily Emacs use.
-So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket." />
+<meta name="description" content="Have you ever wanted to modify your browser&rsquo;s content directly from a text editor?
+Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&rsquo;s a great source of tips and tricks for daily Emacs use.
+So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket.IO. In practice, this means any JavaScript expression you type in the REPL immediately affects the page you&rsquo;re connected to. Better yet, you don&rsquo;t even need the shell - you can send code and CSS to the browser directly from your working buffer.
+" />
 <meta name="keywords" content=", javascript, emacs" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -33,6 +34,7 @@ So what is swank-js? As its GitHub description says, it provides a JavaScript RE
 
 
 
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,17 +44,21 @@ So what is swank-js? As its GitHub description says, it provides a JavaScript RE
     <meta name="msapplication-TileColor" content="">
 
 
-<meta itemprop="name" content="Swank JS">
-<meta itemprop="description" content="Have you ever wanted to modify your browser&rsquo;s content directly from a text editor?
-Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&rsquo;s a great source of tips and tricks for daily Emacs use.
-So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket."><meta itemprop="datePublished" content="2012-07-16T21:20:00+02:00" />
-<meta itemprop="dateModified" content="2026-07-15T00:43:14+02:00" />
-<meta itemprop="wordCount" content="200">
-<meta itemprop="keywords" content="javascript,emacs," />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Swank JS"/>
-<meta name="twitter:description" content="Have you ever wanted to modify your browser&rsquo;s content directly from a text editor?
-Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&rsquo;s a great source of tips and tricks for daily Emacs use.
-So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket."/>
+
+	<meta itemprop="name" content="Swank JS">
+	<meta itemprop="description" content="Have you ever wanted to modify your browser’s content directly from a text editor?
+Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven’t added Emacs Rocks to your RSS reader yet, I highly recommend it - it’s a great source of tips and tricks for daily Emacs use.
+So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket.IO. In practice, this means any JavaScript expression you type in the REPL immediately affects the page you’re connected to. Better yet, you don’t even need the shell - you can send code and CSS to the browser directly from your working buffer.">
+	<meta itemprop="datePublished" content="2012-07-16T21:20:00+02:00">
+	<meta itemprop="dateModified" content="2026-07-15T00:43:14+02:00">
+	<meta itemprop="wordCount" content="200">
+	<meta itemprop="keywords" content="Javascript,Emacs">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Swank JS">
+	<meta name="twitter:description" content="Have you ever wanted to modify your browser’s content directly from a text editor?
+Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven’t added Emacs Rocks to your RSS reader yet, I highly recommend it - it’s a great source of tips and tricks for daily Emacs use.
+So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket.IO. In practice, this means any JavaScript expression you type in the REPL immediately affects the page you’re connected to. Better yet, you don’t even need the shell - you can send code and CSS to the browser directly from your working buffer.">
 
 
 
@@ -224,7 +230,7 @@ So what is swank-js? As its GitHub description says, it provides a JavaScript RE
     <div class="footer__inner">
         <div class="footer__content">
             <span>&copy; 2026</span>
-            <span><a href="https://blog.bitside.pl"></a></span>
+            <span><a href="https://blog.bitside.pl/"></a></span>
             <span></span>
             <span><a href="https://blog.bitside.pl/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
             
@@ -247,7 +253,7 @@ So what is swank-js? As its GitHub description says, it provides a JavaScript RE
 
 
 
-<script type="text/javascript" src="/bundle.min.1cc4b1523c891a66b901bf70f02df0381df03cf6e2cb400cac09c3e1e7f97c4249f3a457c7656b725724d811925773583c8ca19c1bbe40cff4f881e2ae42b2a5.js" integrity="sha512-HMSxUjyJGma5Ab9w8C3wOB3wPPbiy0AMrAnD4ef5fEJJ86RXx2Vrclck2BGSV3NYPIyhnBu&#43;QM/0&#43;IHirkKypQ=="></script>
+<script type="text/javascript" src="/bundle.min.37fc15704e8f23728179b102240f95cb3bbacffd005483e172e57832c238c0073728466f9ee0be00ff14f3ee0c81ce2601a8ef063a1ea4b40a6791459b249152.js" integrity="sha512-N/wVcE6PI3KBebECJA&#43;Vyzu6z/0AVIPhcuV4MsI4wAc3KEZvnuC&#43;AP8U8&#43;4Mgc4mAajvBjoepLQKZ5FFmySRUg=="></script>
 
 
 

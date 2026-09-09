@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>orgmode on Bit side of life</title>
-    <link>https://blog.bitside.pl/tags/orgmode/</link>
-    <description>Recent content in orgmode on Bit side of life</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 31 Aug 2025 23:15:33 +0200</lastBuildDate>
-    <atom:link href="https://blog.bitside.pl/tags/orgmode/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Get notified</title>
-      <link>https://blog.bitside.pl/posts/get-notified/</link>
-      <pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
-      <guid>https://blog.bitside.pl/posts/get-notified/</guid>
-      <description>org-mode is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.&#xA;Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.&#xA;However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&amp;hellip;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Orgmode on Bit side of life</title>
+		<link>https://blog.bitside.pl/tags/orgmode/</link>
+		<description>Recent content in Orgmode on Bit side of life</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 31 Aug 2025 23:15:33 +0200</lastBuildDate>
+		
+			<atom:link href="https://blog.bitside.pl/tags/orgmode/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Get notified</title>
+				<link>https://blog.bitside.pl/posts/get-notified/</link>
+				<pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
+				<guid>https://blog.bitside.pl/posts/get-notified/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;http://orgmode.org/&#34;&gt;org-mode&lt;/a&gt; is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.&lt;/p&gt;&#xA;&lt;p&gt;Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.&lt;/p&gt;&#xA;&lt;p&gt;However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&amp;hellip;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

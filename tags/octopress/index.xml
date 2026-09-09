@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>octopress on Bit side of life</title>
-    <link>https://blog.bitside.pl/tags/octopress/</link>
-    <description>Recent content in octopress on Bit side of life</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 00:43:14 +0200</lastBuildDate>
-    <atom:link href="https://blog.bitside.pl/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Moving to Octopress</title>
-      <link>https://blog.bitside.pl/posts/moving-to-octopress/</link>
-      <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
-      <guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
-      <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:&#xA;I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&amp;rsquo;s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Octopress on Bit side of life</title>
+		<link>https://blog.bitside.pl/tags/octopress/</link>
+		<description>Recent content in Octopress on Bit side of life</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 15 Jul 2026 00:43:14 +0200</lastBuildDate>
+		
+			<atom:link href="https://blog.bitside.pl/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Moving to Octopress</title>
+				<link>https://blog.bitside.pl/posts/moving-to-octopress/</link>
+				<pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
+				<guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
+				<description>&lt;p&gt;Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&amp;rsquo;s really awesome for programmer like me.&lt;/li&gt;&#xA;&lt;li&gt;Hosting on github. There are not enough words to express how github revolutionized my daily workflow. I use this brilliant application in my everyday work, so why shouldn&amp;rsquo;t I use it for blogging too.&lt;/li&gt;&#xA;&lt;li&gt;Ruby. I love ruby. Octopress is based on ruby, thus I love octopress too :)&lt;/li&gt;&#xA;&lt;li&gt;Emacs. I&amp;rsquo;m org-mode addicted. Having a possibility to blog using org-mode is priceless.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;If you consider simmilar transition and you need more reasons, look at &lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress main page&lt;/a&gt;. It says why and how you may start your journey with Octopress.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

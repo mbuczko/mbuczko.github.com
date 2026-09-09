@@ -1,82 +1,87 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on Bit side of life</title>
-    <link>https://blog.bitside.pl/tags/</link>
-    <description>Recent content in Tags on Bit side of life</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 00:43:14 +0200</lastBuildDate>
-    <atom:link href="https://blog.bitside.pl/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>career</title>
-      <link>https://blog.bitside.pl/tags/career/</link>
-      <pubDate>Wed, 15 Jul 2026 00:32:00 +0200</pubDate>
-      <guid>https://blog.bitside.pl/tags/career/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>clojure</title>
-      <link>https://blog.bitside.pl/tags/clojure/</link>
-      <pubDate>Sun, 30 Oct 2022 21:45:00 +0100</pubDate>
-      <guid>https://blog.bitside.pl/tags/clojure/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>rust</title>
-      <link>https://blog.bitside.pl/tags/rust/</link>
-      <pubDate>Sun, 30 Oct 2022 21:45:00 +0100</pubDate>
-      <guid>https://blog.bitside.pl/tags/rust/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>sql</title>
-      <link>https://blog.bitside.pl/tags/sql/</link>
-      <pubDate>Sun, 30 Oct 2022 21:45:00 +0100</pubDate>
-      <guid>https://blog.bitside.pl/tags/sql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>emacs</title>
-      <link>https://blog.bitside.pl/tags/emacs/</link>
-      <pubDate>Sun, 16 Oct 2016 17:16:00 +0200</pubDate>
-      <guid>https://blog.bitside.pl/tags/emacs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>javascript</title>
-      <link>https://blog.bitside.pl/tags/javascript/</link>
-      <pubDate>Mon, 16 Jul 2012 21:20:00 +0200</pubDate>
-      <guid>https://blog.bitside.pl/tags/javascript/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>keyboard</title>
-      <link>https://blog.bitside.pl/tags/keyboard/</link>
-      <pubDate>Mon, 09 Jul 2012 18:50:00 +0200</pubDate>
-      <guid>https://blog.bitside.pl/tags/keyboard/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>octopress</title>
-      <link>https://blog.bitside.pl/tags/octopress/</link>
-      <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
-      <guid>https://blog.bitside.pl/tags/octopress/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>gnus</title>
-      <link>https://blog.bitside.pl/tags/gnus/</link>
-      <pubDate>Fri, 30 Mar 2012 21:30:00 +0200</pubDate>
-      <guid>https://blog.bitside.pl/tags/gnus/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>orgmode</title>
-      <link>https://blog.bitside.pl/tags/orgmode/</link>
-      <pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
-      <guid>https://blog.bitside.pl/tags/orgmode/</guid>
-      <description></description>
-    </item>
-  </channel>
+	<channel>
+		<title>Tags on Bit side of life</title>
+		<link>https://blog.bitside.pl/tags/</link>
+		<description>Recent content in Tags on Bit side of life</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 15 Jul 2026 00:43:14 +0200</lastBuildDate>
+		
+			<atom:link href="https://blog.bitside.pl/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Career</title>
+				<link>https://blog.bitside.pl/tags/career/</link>
+				<pubDate>Wed, 15 Jul 2026 00:32:00 +0200</pubDate>
+				<guid>https://blog.bitside.pl/tags/career/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Clojure</title>
+				<link>https://blog.bitside.pl/tags/clojure/</link>
+				<pubDate>Sun, 30 Oct 2022 21:45:00 +0100</pubDate>
+				<guid>https://blog.bitside.pl/tags/clojure/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Rust</title>
+				<link>https://blog.bitside.pl/tags/rust/</link>
+				<pubDate>Sun, 30 Oct 2022 21:45:00 +0100</pubDate>
+				<guid>https://blog.bitside.pl/tags/rust/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Sql</title>
+				<link>https://blog.bitside.pl/tags/sql/</link>
+				<pubDate>Sun, 30 Oct 2022 21:45:00 +0100</pubDate>
+				<guid>https://blog.bitside.pl/tags/sql/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Emacs</title>
+				<link>https://blog.bitside.pl/tags/emacs/</link>
+				<pubDate>Sun, 16 Oct 2016 17:16:00 +0200</pubDate>
+				<guid>https://blog.bitside.pl/tags/emacs/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Javascript</title>
+				<link>https://blog.bitside.pl/tags/javascript/</link>
+				<pubDate>Mon, 16 Jul 2012 21:20:00 +0200</pubDate>
+				<guid>https://blog.bitside.pl/tags/javascript/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Keyboard</title>
+				<link>https://blog.bitside.pl/tags/keyboard/</link>
+				<pubDate>Mon, 09 Jul 2012 18:50:00 +0200</pubDate>
+				<guid>https://blog.bitside.pl/tags/keyboard/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Octopress</title>
+				<link>https://blog.bitside.pl/tags/octopress/</link>
+				<pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
+				<guid>https://blog.bitside.pl/tags/octopress/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Gnus</title>
+				<link>https://blog.bitside.pl/tags/gnus/</link>
+				<pubDate>Fri, 30 Mar 2012 21:30:00 +0200</pubDate>
+				<guid>https://blog.bitside.pl/tags/gnus/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Orgmode</title>
+				<link>https://blog.bitside.pl/tags/orgmode/</link>
+				<pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
+				<guid>https://blog.bitside.pl/tags/orgmode/</guid>
+				<description></description>
+			</item>
+	</channel>
 </rss>

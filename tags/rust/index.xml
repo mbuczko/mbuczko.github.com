@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>rust on Bit side of life</title>
-    <link>https://blog.bitside.pl/tags/rust/</link>
-    <description>Recent content in rust on Bit side of life</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 00:43:14 +0200</lastBuildDate>
-    <atom:link href="https://blog.bitside.pl/tags/rust/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>HugSQLx - SQL queries turned into Rust functions</title>
-      <link>https://blog.bitside.pl/posts/hugsqlx/</link>
-      <pubDate>Sun, 30 Oct 2022 21:45:00 +0100</pubDate>
-      <guid>https://blog.bitside.pl/posts/hugsqlx/</guid>
-      <description>The Clojure community is fortunate to have HugSQL - a brilliant library that simplifies working with SQL. HugSQL separates queries from the code, preventing them from cluttering .clj files and transforming them into plain Clojure functions within a namespace. These functions are quite intelligent; the underlying magic connects to PostgreSQL, SQLite, or any supported database via JDBC, executing defined queries with the provided function arguments.&#xA;Simple, yet remarkably effective&amp;hellip;&#xA;Can we achieve something similar in Rust?</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Rust on Bit side of life</title>
+		<link>https://blog.bitside.pl/tags/rust/</link>
+		<description>Recent content in Rust on Bit side of life</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 15 Jul 2026 00:43:14 +0200</lastBuildDate>
+		
+			<atom:link href="https://blog.bitside.pl/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>HugSQLx - SQL queries turned into Rust functions</title>
+				<link>https://blog.bitside.pl/posts/hugsqlx/</link>
+				<pubDate>Sun, 30 Oct 2022 21:45:00 +0100</pubDate>
+				<guid>https://blog.bitside.pl/posts/hugsqlx/</guid>
+				<description>&lt;p&gt;The Clojure community is fortunate to have &lt;a href=&#34;https://www.hugsql.org/&#34;&gt;HugSQL&lt;/a&gt; - a brilliant library that simplifies working with SQL. HugSQL separates queries from the code, preventing them from cluttering .clj files and transforming them into plain Clojure functions within a namespace. These functions are quite intelligent; the underlying magic connects to PostgreSQL, SQLite, or any supported database via JDBC, executing defined queries with the provided function arguments.&lt;/p&gt;&#xA;&lt;p&gt;Simple, yet remarkably effective&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Can we achieve something similar in Rust?&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

@@ -43,9 +43,9 @@
             <pubDate>Sun, 30 Oct 2022 21:45:00 +0100</pubDate>
             
             <guid>https://blog.bitside.pl/posts/hugsqlx/</guid>
-            <description>The Clojure community is fortunate to have HugSQL - a brilliant library that simplifies working with SQL. HugSQL separates queries from the code, preventing them from cluttering .clj files and transforming them into plain Clojure functions within a namespace. These functions are quite intelligent; the underlying magic connects to PostgreSQL, SQLite, or any supported database via JDBC, executing defined queries with the provided function arguments.
-Simple, yet remarkably effective&amp;hellip;
-Can we achieve something similar in Rust?</description>
+            <description>&lt;p&gt;The Clojure community is fortunate to have &lt;a href=&#34;https://www.hugsql.org/&#34;&gt;HugSQL&lt;/a&gt; - a brilliant library that simplifies working with SQL. HugSQL separates queries from the code, preventing them from cluttering .clj files and transforming them into plain Clojure functions within a namespace. These functions are quite intelligent; the underlying magic connects to PostgreSQL, SQLite, or any supported database via JDBC, executing defined queries with the provided function arguments.&lt;/p&gt;
+&lt;p&gt;Simple, yet remarkably effective&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Can we achieve something similar in Rust?&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>The Clojure community is fortunate to have <a href="https://www.hugsql.org/">HugSQL</a> - a brilliant library that simplifies working with SQL. HugSQL separates queries from the code, preventing them from cluttering .clj files and transforming them into plain Clojure functions within a namespace. These functions are quite intelligent; the underlying magic connects to PostgreSQL, SQLite, or any supported database via JDBC, executing defined queries with the provided function arguments.</p>
 <p>Simple, yet remarkably effective&hellip;</p>
 <p>Can we achieve something similar in Rust?</p>
@@ -71,8 +71,9 @@ Can we achieve something similar in Rust?</description>
             <pubDate>Sun, 16 Oct 2016 17:16:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/focus-mode/</guid>
-            <description>Focus is a remarkable addition that enhances the Emacs experience, bringing joy to programmers.
-Staring at numerous lines of code for eight hours a day can be quite tedious. While a readable font like Fira Code is often the go-to solution for improving readability, it doesn&amp;rsquo;t address the need for focus on a specific block of code. That&amp;rsquo;s where Focus shines—it dims the text outside the function currently highlighted by the cursor, effectively drawing the user&amp;rsquo;s attention to that particular code block.</description>
+            <description>&lt;p&gt;&lt;a href=&#34;https://github.com/larstvei/Focus&#34;&gt;Focus&lt;/a&gt; is a remarkable addition that enhances the Emacs experience, bringing joy to programmers.&lt;/p&gt;
+&lt;p&gt;Staring at numerous lines of code for eight hours a day can be quite tedious. While a readable font like Fira Code is often the go-to solution for improving readability, it doesn&amp;rsquo;t address the need for focus on a specific block of code. That&amp;rsquo;s where Focus shines—it dims the text outside the function currently highlighted by the cursor, effectively drawing the user&amp;rsquo;s attention to that particular code block.
+Try it out and keep calm while watching your code.&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p><a href="https://github.com/larstvei/Focus">Focus</a> is a remarkable addition that enhances the Emacs experience, bringing joy to programmers.</p>
 <p>Staring at numerous lines of code for eight hours a day can be quite tedious. While a readable font like Fira Code is often the go-to solution for improving readability, it doesn&rsquo;t address the need for focus on a specific block of code. That&rsquo;s where Focus shines—it dims the text outside the function currently highlighted by the cursor, effectively drawing the user&rsquo;s attention to that particular code block.
 Try it out and keep calm while watching your code.</p>
@@ -85,8 +86,8 @@ Try it out and keep calm while watching your code.</p>
             <pubDate>Sun, 09 Oct 2016 13:40:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/bootize-your-project/</guid>
-            <description>Maven or gradle? Grunt or gulp? Leiningen or boot…?
-It doesn&amp;rsquo;t matter whether you&amp;rsquo;re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you&amp;rsquo;re barely able to check all of them out, understand the philosophy behind and take a reasonable decision.</description>
+            <description>&lt;p&gt;Maven or gradle? Grunt or gulp? Leiningen or boot…?&lt;/p&gt;
+&lt;p&gt;It doesn&amp;rsquo;t matter whether you&amp;rsquo;re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you&amp;rsquo;re barely able to check all of them out, understand the philosophy behind and take a reasonable decision. In particular it&amp;rsquo;s noticeable in javascript world where new ideas emerge with the speed of light. Do you know what&amp;rsquo;s the usual lifetime of shiny new javascript library, one of 4 hundreds coming out daily? Well, I don&amp;rsquo;t know too but I guess you wouldn&amp;rsquo;t be able to complete a todo app before the library of your choice became deprecated :)&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>Maven or gradle? Grunt or gulp? Leiningen or boot…?</p>
 <p>It doesn&rsquo;t matter whether you&rsquo;re a front- or back-end dev, sooner or later you have to complete your toolbox and choose a right hammer for the right nail. The problem is, all these tools in our ever changing programming world rotate so fast and details between them become so subtle that you&rsquo;re barely able to check all of them out, understand the philosophy behind and take a reasonable decision. In particular it&rsquo;s noticeable in javascript world where new ideas emerge with the speed of light. Do you know what&rsquo;s the usual lifetime of shiny new javascript library, one of 4 hundreds coming out daily? Well, I don&rsquo;t know too but I guess you wouldn&rsquo;t be able to complete a todo app before the library of your choice became deprecated :)</p>
 <p>Speaking of project building tools, as a Clojurists we happily sit in a comfort zone. Up until recently, there was only one way to keep your clojure project organized - <a href="http://http//leiningen.org/">Leiningen</a>. Elegant declarative way which leiningen used to describe entire project with all its dependencies and profiles immediately reminded me of maven tons of hand-crafted pom.xmls. Easy when you finally get it, extremally hard when you try to customize.</p>
@@ -118,8 +119,8 @@ It doesn&amp;rsquo;t matter whether you&amp;rsquo;re a front- or back-end dev, s
             <pubDate>Sun, 09 Oct 2016 16:52:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/emacs-windows-switching/</guid>
-            <description>It takes a few days for beginner Emacs user to learn what&amp;rsquo;s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?
-The most obvious way is to use mouse/touchpad of course. It&amp;rsquo;s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn&amp;rsquo;t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows.</description>
+            <description>&lt;p&gt;It takes a few days for beginner Emacs user to learn what&amp;rsquo;s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?&lt;/p&gt;
+&lt;p&gt;The most obvious way is to use mouse/touchpad of course. It&amp;rsquo;s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn&amp;rsquo;t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows. Well, good luck with selecting windows this way longer than a day.&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>It takes a few days for beginner Emacs user to learn what&rsquo;s the difference between windows and frames. Then usually next question arises: how to switch between multiple windows within same Emacs frame?</p>
 <p>The most obvious way is to use mouse/touchpad of course. It&rsquo;s easy at the beginning but horribly distracting in a long term. Emacs unfortunately doesn&rsquo;t really help with its crazy default shortcuts. There is C-x o described as “select another window” which cycles through all available windows. Well, good luck with selecting windows this way longer than a day.</p>
 <p>But hey, there is a hope. Default windows switching is so insane that lot of people tried to address this problem with additional packages. One of the most popular is <a href="https://melpa.org/#/window-numbering">window numbering</a>:</p>
@@ -140,8 +141,8 @@ The most obvious way is to use mouse/touchpad of course. It&amp;rsquo;s easy at 
             <pubDate>Sun, 02 Aug 2015 11:29:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/clojure-for-fun-and-profit/</guid>
-            <description>This is my initial blog note - first from series I&amp;rsquo;m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.
-Lot of arcticles have been already written about Clojure and why it&amp;rsquo;s so attractive. Not to repeat all of these oh&amp;rsquo;s and ah&amp;rsquo;s I would like to sum up things most important for me as a long-time professional java programmer:</description>
+            <description>&lt;p&gt;This is my initial blog note - first from series I&amp;rsquo;m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.&lt;/p&gt;
+&lt;p&gt;Lot of arcticles have been already written about Clojure and why it&amp;rsquo;s so attractive. Not to repeat all of these oh&amp;rsquo;s and ah&amp;rsquo;s I would like to sum up things most important for me as a long-time professional java programmer:&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>This is my initial blog note - first from series I&rsquo;m going to write about one of the most innovative programming languages we can hear of nowadays - about Clojure. New incarnation of almost forgotten Lisp came back onto scene bending minds of thousands of programmers who suddenly discover again the joy of programming.</p>
 <p>Lot of arcticles have been already written about Clojure and why it&rsquo;s so attractive. Not to repeat all of these oh&rsquo;s and ah&rsquo;s I would like to sum up things most important for me as a long-time professional java programmer:</p>
 <ul>
@@ -185,9 +186,9 @@ Lot of arcticles have been already written about Clojure and why it&amp;rsquo;s 
             <pubDate>Mon, 16 Jul 2012 21:20:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/swank-js/</guid>
-            <description>Have you ever wanted to modify your browser&amp;rsquo;s content directly from a text editor?
-Episode 11 of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&amp;rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&amp;rsquo;s a great source of tips and tricks for daily Emacs use.
-So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket.</description>
+            <description>&lt;p&gt;Have you ever wanted to modify your browser&amp;rsquo;s content directly from a text editor?&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://emacsrocks.com/e11.html&#34;&gt;Episode 11&lt;/a&gt; of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&amp;rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&amp;rsquo;s a great source of tips and tricks for daily Emacs use.&lt;/p&gt;
+&lt;p&gt;So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket.IO. In practice, this means any JavaScript expression you type in the REPL immediately affects the page you&amp;rsquo;re connected to. Better yet, you don&amp;rsquo;t even need the shell - you can send code and CSS to the browser directly from your working buffer.&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>Have you ever wanted to modify your browser&rsquo;s content directly from a text editor?</p>
 <p><a href="http://emacsrocks.com/e11.html">Episode 11</a> of Emacs Rocks shows how swank-js can seriously speed up your web development workflow. If you haven&rsquo;t added Emacs Rocks to your RSS reader yet, I highly recommend it - it&rsquo;s a great source of tips and tricks for daily Emacs use.</p>
 <p>So what is swank-js? As its GitHub description says, it provides a JavaScript REPL (read-eval-print loop) connected to your browser via Socket.IO. In practice, this means any JavaScript expression you type in the REPL immediately affects the page you&rsquo;re connected to. Better yet, you don&rsquo;t even need the shell - you can send code and CSS to the browser directly from your working buffer.</p>
@@ -214,7 +215,7 @@ So what is swank-js? As its GitHub description says, it provides a JavaScript RE
             <pubDate>Thu, 05 Jul 2012 20:30:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/javascript-programming/</guid>
-            <description>Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention node.js) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn&amp;rsquo;t support it at all.</description>
+            <description>&lt;p&gt;Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt;) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn&amp;rsquo;t support it at all.&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>Javascript has undoubtedly its great time nowadays. Not only it is used by web browsers but also became popular as an efficient server side solution (just to mention <a href="http://nodejs.org/">node.js</a>) for many performance problems. Along with javascript growth we could observe raise and fall of dedicated IDEs. Years ago when I started my adventure with javascript I had to choose between Aptana and (paid) IntelliJ Idea. All other editors either supported javascript poorly or didn&rsquo;t support it at all.</p>
 <p>Today, looks like we have quite different situation. We have <a href="http://www.sublimetext.com/">Sublime Text</a>, <a href="http://www.eclipse.org/">Eclipse</a> with tons of plugins, and (surprise) Emacs with <a href="https://github.com/mooz/js2-mode">js2-mode</a>. If you are considering Emacs as your primary IDE for javascript - js2-mode is a must.</p>
 <p>Recently, its co-author - Dmitry Gutov implemented one thing that convinced me to drop other editors (yes, including Sublime). Let&rsquo;s start with a few words of explanation what the ‘imenu&rsquo; is.</p>
@@ -248,9 +249,10 @@ So what is swank-js? As its GitHub description says, it provides a JavaScript RE
             <pubDate>Wed, 04 Jul 2012 21:10:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/be-social/</guid>
-            <description>Emacs isn’t only a best-class editor which offers you productivity boost for free. It’s also all-in-one environment which embeds most frequently used tools like console (eshell), irc (erc), news reader (gnus) and… well known “social” gadgets like gtalk and twitter. Yes, that means, you may communicate with friends and check your tweets not even leaving editor window.
-Let me show how to configure both.
-GTalk Gtalk bases on open protocol (jabber), so the only thing we need is a jabber client.</description>
+            <description>&lt;p&gt;Emacs isn’t only a best-class editor which offers you productivity boost for free. It’s also all-in-one environment which embeds most frequently used tools like console (eshell), irc (erc), news reader (gnus) and… well known “social” gadgets like gtalk and twitter. Yes, that means, you may communicate with friends and check your tweets not even leaving editor window.&lt;/p&gt;
+&lt;p&gt;Let me show how to configure both.&lt;/p&gt;
+&lt;h2 id=&#34;gtalk&#34;&gt;GTalk&lt;/h2&gt;
+&lt;p&gt;Gtalk bases on open protocol (jabber), so the only thing we need is a jabber client. Looking at emacs wiki you will easily find &lt;a href=&#34;http://www.emacswiki.org/emacs/JabberEl&#34;&gt;this one&lt;/a&gt; along with exhaustive documentation.&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>Emacs isn’t only a best-class editor which offers you productivity boost for free. It’s also all-in-one environment which embeds most frequently used tools like console (eshell), irc (erc), news reader (gnus) and… well known “social” gadgets like gtalk and twitter. Yes, that means, you may communicate with friends and check your tweets not even leaving editor window.</p>
 <p>Let me show how to configure both.</p>
 <h2 id="gtalk">GTalk</h2>
@@ -321,8 +323,14 @@ GTalk Gtalk bases on open protocol (jabber), so the only thing we need is a jabb
             <pubDate>Wed, 04 Jul 2012 22:10:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/moving-to-octopress/</guid>
-            <description>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:
-I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&amp;rsquo;s really awesome for programmer like me. Hosting on github. There are not enough words to express how github revolutionized my daily workflow.</description>
+            <description>&lt;p&gt;Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&amp;rsquo;s really awesome for programmer like me.&lt;/li&gt;
+&lt;li&gt;Hosting on github. There are not enough words to express how github revolutionized my daily workflow. I use this brilliant application in my everyday work, so why shouldn&amp;rsquo;t I use it for blogging too.&lt;/li&gt;
+&lt;li&gt;Ruby. I love ruby. Octopress is based on ruby, thus I love octopress too :)&lt;/li&gt;
+&lt;li&gt;Emacs. I&amp;rsquo;m org-mode addicted. Having a possibility to blog using org-mode is priceless.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you consider simmilar transition and you need more reasons, look at &lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress main page&lt;/a&gt;. It says why and how you may start your journey with Octopress.&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>Finally, after few attempts I decided to move all my posts from tumblr blog to octopress. There were few reasons behind this decision:</p>
 <ul>
 <li>I like having entire blog under my own control. Octopress keeps whole the stuff under git which gives history of all changes, branches and tags. That&rsquo;s really awesome for programmer like me.</li>
@@ -340,8 +348,9 @@ I like having entire blog under my own control. Octopress keeps whole the stuff 
             <pubDate>Fri, 30 Mar 2012 21:30:00 +0200</pubDate>
             
             <guid>https://blog.bitside.pl/posts/gnus/</guid>
-            <description>A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition. If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that&amp;rsquo;s definitely wrong place.
-On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU&amp;rsquo;s Not Unix, you&amp;rsquo;re welcomed to read further.</description>
+            <description>&lt;aside&gt;A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition.&lt;/aside&gt;
+&lt;p&gt;If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that&amp;rsquo;s definitely wrong place.&lt;/p&gt;
+&lt;p&gt;On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU&amp;rsquo;s Not Unix, you&amp;rsquo;re welcomed to read further. You will find out how set up awesome email/news reader (Gnus) on great operating system with faulty editor (Emacs).&lt;/p&gt;</description>
             <content type="html"><![CDATA[<aside>A side note. This is a rough translation of my original article sent a few years ago to “Magic of the black screen” competition.</aside>
 <p>If you are jaunty masochist fascinated by use ‘n cry email readers, or you were just searching for something about white-tailed gnus and you found this article - sorry to dissapoint you - that&rsquo;s definitely wrong place.</p>
 <p>On the other hand, if you value your time, simplicity and usability, and the only thing that comes to your mind when talking about GNU is GNU&rsquo;s Not Unix, you&rsquo;re welcomed to read further. You will find out how set up awesome email/news reader (Gnus) on great operating system with faulty editor (Emacs).</p>
@@ -421,7 +430,7 @@ Emacs*font: DejaVu Sans Mono-9
 <p>Ok, I guess it&rsquo;s clear more or less, but there is still question: what it that combination used for?</p>
 <p>I bet you have already seen labels in GMail. Yes, it&rsquo;s one of these addicting little things that you can&rsquo;t live without. Moreover, such a label makes your searches and filtering much easier! So why not to try it out with Gnus?</p>
 <p>Here is the result:</p>
-<figure><img src="/images/gnus4.jpeg"/>
+<figure><img src="/images/gnus4.jpeg">
 </figure>
 
 <p>Red 4-letter labels distinguish interesting emails from the overall noise. This is realised exactly by previously mentioned snippet <code>%6{%-4,4ur%}</code> put inside our gnus-summary-line-format. As we remember <code>%-4,4ur</code> injects result of <code>gnus-user-format-function-r</code> function. This is how this function looks like:</p>
@@ -446,7 +455,7 @@ Emacs*font: DejaVu Sans Mono-9
 </span></span><span class="line"><span class="cl">     <span class="p">(</span><span class="k">if</span> <span class="nv">current-prefix-arg</span> <span class="s">&#34;Exclude&#34;</span> <span class="s">&#34;Limit to&#34;</span><span class="p">)))</span> <span class="nv">current-prefix-arg</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">gnus-summary-limit-to-extra</span> <span class="ss">&#39;X-Label</span> <span class="nv">regexp</span> <span class="nv">not-matching</span><span class="p">))</span>
 </span></span></code></pre></div><p>Next, invoke this function <code>M-x rs-gnus-summary-limit-to-label</code> providing the label you want to filter by (use tab to autocomplete!) and enjoy with result:</p>
-<figure><img src="/images/gnus6.jpeg"/>
+<figure><img src="/images/gnus6.jpeg">
 </figure>
 
 <p>Simple and easy, isn&rsquo;t it?</p>
@@ -474,9 +483,9 @@ Emacs*font: DejaVu Sans Mono-9
             <pubDate>Wed, 04 Jan 2012 17:38:00 +0100</pubDate>
             
             <guid>https://blog.bitside.pl/posts/get-notified/</guid>
-            <description>org-mode is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.
-Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.
-However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&amp;hellip;</description>
+            <description>&lt;p&gt;&lt;a href=&#34;http://orgmode.org/&#34;&gt;org-mode&lt;/a&gt; is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.&lt;/p&gt;
+&lt;p&gt;Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.&lt;/p&gt;
+&lt;p&gt;However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&amp;hellip;&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p><a href="http://orgmode.org/">org-mode</a> is undoubtedly one of the most versatile note-taking and planning tools I have ever encountered. It also ranks as my top choice for daily GTD practices.</p>
 <p>Recently, I discovered a small feature that enhances my experience with org-mode even further - notifications. Imagine you’ve just scheduled an incredibly important meeting with your girlfriend, and being a natural programmer, you’ve already made an entry in your org-mode planner.</p>
 <p>However, org-mode does not automatically alert you to upcoming events, making it easy to overlook them, especially when you are deep into your work, deciphering yet another Perl script&hellip;</p>
@@ -501,7 +510,7 @@ However, org-mode does not automatically alert you to upcoming events, making it
 </span></span><span class="line"><span class="cl">  <span class="nv">appt-display-format</span> <span class="ss">&#39;window</span><span class="p">)</span>
 </span></span></code></pre></div><p>With these settings, appointments will be displayed in two ways: in your mode-line and in a separate popup. By default, ToDoChiKu overrides appt-disp-window-function, redirecting all messages to the Snarl process, so no additional action is needed on your part.</p>
 <p>Now it&rsquo;s time for a final test. Create an appointment in your org-mode and wait&hellip;</p>
-<figure><img src="/images/get_notified_2.png"/>
+<figure><img src="/images/get_notified_2.png">
 </figure>
 
 ]]></content>
@@ -513,10 +522,19 @@ However, org-mode does not automatically alert you to upcoming events, making it
             <pubDate>Mon, 02 Jan 2012 10:20:00 +0100</pubDate>
             
             <guid>https://blog.bitside.pl/posts/world-of-bookmarks/</guid>
-            <description>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn&amp;rsquo;t even imagine. As the wiki page states:
-Richer bookmarks. They record more. They are more accurate.
-Here are some key features available to us for free:
-Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks. Usage statistics: sort and filter your bookmarks based on how frequently they are used.</description>
+            <description>&lt;p&gt;Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn&amp;rsquo;t even imagine. As the wiki page states:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Richer bookmarks. They record more. They are more accurate.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here are some key features available to us for free:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bookmark tagging: similar to Delicious, you can use tags for sorting and filtering your bookmarks.&lt;/li&gt;
+&lt;li&gt;Usage statistics: sort and filter your bookmarks based on how frequently they are used.&lt;/li&gt;
+&lt;li&gt;Function, sequence, and variable-list bookmarking: While it may sound unusual, you can bookmark (and later invoke) a simple function or save/restore the value of a specific variable. If you find this too basic, you can combine various bookmarks into a sequence, which can be restored (or evaluated) by simply selecting the corresponding sequence bookmark.&lt;/li&gt;
+&lt;li&gt;Region bookmarking: You can bookmark a region that becomes active whenever you select the associated bookmark.&lt;/li&gt;
+&lt;li&gt;Improved relocation: According to the documentation, bookmarks+ are better at tracking their assigned locations in a more intelligent manner.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, turning to bookmark types. In addition to the function, sequence, and variable-list bookmarks mentioned earlier, bookmark+ introduces several additional types:&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>Vanilla Emacs bookmarks are for lhamas. Real octopodes use bookmark+ which enhances well known bookmarking in the way you didn&rsquo;t even imagine. As the wiki page states:</p>
 <blockquote>
 <p>Richer bookmarks. They record more. They are more accurate.</p>
@@ -559,9 +577,9 @@ Bookmark tagging: similar to Delicious, you can use tags for sorting and filteri
             <pubDate>Fri, 16 Dec 2011 22:10:00 +0100</pubDate>
             
             <guid>https://blog.bitside.pl/posts/interactive-search-rediscovered/</guid>
-            <description>Here&amp;rsquo;s a helpful tip I discovered while searching interactively (using C-s).
-If you want to see all occurrences of your current search term, press M-s o. This will open a new buffer listing all the relevant instances. You can also conveniently extend your search by selecting additional words with C-w.
-By using the sequence C-s C-w C-w M-s o, you can select two words starting from the current cursor position and view all their occurrences in the current buffer.</description>
+            <description>&lt;p&gt;Here&amp;rsquo;s a helpful tip I discovered while searching interactively (using &lt;code&gt;C-s&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;If you want to see all occurrences of your current search term, press &lt;code&gt;M-s o&lt;/code&gt;. This will open a new buffer listing all the relevant instances. You can also conveniently extend your search by selecting additional words with &lt;code&gt;C-w&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;By using the sequence &lt;code&gt;C-s C-w C-w M-s o&lt;/code&gt;, you can select two words starting from the current cursor position and view all their occurrences in the current buffer.&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>Here&rsquo;s a helpful tip I discovered while searching interactively (using <code>C-s</code>).</p>
 <p>If you want to see all occurrences of your current search term, press <code>M-s o</code>. This will open a new buffer listing all the relevant instances. You can also conveniently extend your search by selecting additional words with <code>C-w</code>.</p>
 <p>By using the sequence <code>C-s C-w C-w M-s o</code>, you can select two words starting from the current cursor position and view all their occurrences in the current buffer.</p>
@@ -575,7 +593,7 @@ By using the sequence C-s C-w C-w M-s o, you can select two words starting from 
             <pubDate>Fri, 16 Dec 2011 17:20:00 +0100</pubDate>
             
             <guid>https://blog.bitside.pl/posts/the-kill-ring/</guid>
-            <description>It may sound intimidating, but don&amp;rsquo;t worry - it&amp;rsquo;s not about killing this time. The term &amp;ldquo;kill ring&amp;rdquo; in Emacs refers to a list of text blocks that have been cut (or &amp;ldquo;killed&amp;rdquo;). That&amp;rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)</description>
+            <description>&lt;p&gt;It may sound intimidating, but don&amp;rsquo;t worry - it&amp;rsquo;s not about killing this time. The term &amp;ldquo;kill ring&amp;rdquo; in Emacs refers to a list of text blocks that have been cut (or &amp;ldquo;killed&amp;rdquo;). That&amp;rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)&lt;/p&gt;</description>
             <content type="html"><![CDATA[<p>It may sound intimidating, but don&rsquo;t worry - it&rsquo;s not about killing this time. The term &ldquo;kill ring&rdquo; in Emacs refers to a list of text blocks that have been cut (or &ldquo;killed&rdquo;). That&rsquo;s right! It involves multiple blocks of text that you can cut and paste. Emacs, as an exceptional text editor, allows you to maintain a history of what you have killed. Just be sure to close it before you start doing nasty things :)</p>
 <p>Now, how do you use handy kill ring? It&rsquo;s quite simple; just imagine transforming into an octopus and placing your eight hands on the keyboard:</p>
 <ul>
